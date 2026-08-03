@@ -3,10 +3,10 @@ extends CharacterBody3D
 @export var speed: float = 3.0
 
 var target_velocity := Vector3.ZERO
-var interactable_list : Array = []
+var interactable_list: Array = []
 
-@onready var visual_pivot: Node3D = $Pivot
-@onready var interactable_area: Area3D = $Pivot/Area3D
+@onready var visual_pivot: Node3D = %Pivot
+@onready var interactable_area: Area3D = %InteractArea
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,7 +23,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		interact()
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var direction = Vector3.ZERO
 	
 	if Input.is_action_pressed("move_forward"):
@@ -47,23 +47,19 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_3d_area_entered(area: Area3D) -> void:
-	#print("entró un area3d")
 	if area.has_method("update_ui"):
 		area.update_ui(true)
 		
 	if not interactable_list.has(area):
 		interactable_list.append(area)
-	#print(interactable_list)
 
 
 func _on_area_3d_area_exited(area: Area3D) -> void:
-	#print("salió un area3d")
 	if area.has_method("update_ui"):
 		area.update_ui(false)
 	
 	if interactable_list.has(area):
 		interactable_list.erase(area)
-	#print(interactable_list)
 
 
 func interact() -> void:

@@ -13,7 +13,7 @@ size = Vector3(1, 1.7, 0.75)
 radius = 0.3
 height = 1.7
 
-[node name="Player" type="CharacterBody3D" unique_id=426401111]
+[node name="Player" type="CharacterBody3D" unique_id=426401111 groups=["player"]]
 collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_symyc")
@@ -23,18 +23,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 shape = SubResource("CapsuleShape3D_cv0ty")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=1737258043]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 
-[node name="Area3D" type="Area3D" parent="Pivot" unique_id=1116860452]
+[node name="InteractArea" type="Area3D" parent="Pivot" unique_id=1116860452]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.6)
 collision_layer = 0
 collision_mask = 8
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/Area3D" unique_id=5176743]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/InteractArea" unique_id=5176743]
 shape = SubResource("BoxShape3D_cke8t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=1059782088]
 mesh = SubResource("CapsuleMesh_cke8t")
 
-[connection signal="area_entered" from="Pivot/Area3D" to="." method="_on_area_3d_area_entered"]
-[connection signal="area_exited" from="Pivot/Area3D" to="." method="_on_area_3d_area_exited"]
+[connection signal="area_entered" from="Pivot/InteractArea" to="." method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="Pivot/InteractArea" to="." method="_on_area_3d_area_exited"]

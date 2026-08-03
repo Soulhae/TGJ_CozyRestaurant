@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bjpwp5mkjv8nc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uut8w"]
+size = Vector3(0.3, 2.5, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e7cra"]
+size = Vector3(0.3, 2.5, 4)
+
+[node name="BasicWall" type="StaticBody3D" unique_id=2131870468]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=875318737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+shape = SubResource("BoxShape3D_uut8w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=847718804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+mesh = SubResource("BoxMesh_e7cra")

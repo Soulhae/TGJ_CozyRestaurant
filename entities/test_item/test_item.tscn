@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://cn5o0mlxuoim"]
+
+[ext_resource type="Script" uid="uid://d28bwu3xilgxl" path="res://entities/test_item/area_3d.gd" id="2_3dqdi"]
+[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="2_riajg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bf5uu"]
+radius = 0.25
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cv0ty"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_cke8t"]
+radius = 0.25
+height = 0.3
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3dqdi"]
+viewport_path = NodePath("CanInteractIcon/SubViewport")
+
+[node name="TestItem" type="StaticBody3D" unique_id=2131828178]
+collision_layer = 8
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1445106845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+shape = SubResource("SphereShape3D_bf5uu")
+
+[node name="Pivot" type="Node3D" parent="." unique_id=2025114556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+
+[node name="Area3D" type="Area3D" parent="Pivot" unique_id=600272139]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("2_3dqdi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/Area3D" unique_id=829244275]
+shape = SubResource("SphereShape3D_cv0ty")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=1444092579]
+mesh = SubResource("SphereMesh_cke8t")
+
+[node name="TestInteractText" type="Label3D" parent="." unique_id=668896426]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.65, -0.15)
+visible = false
+billboard = 1
+text = "Ouch!"
+
+[node name="CanInteractIcon" type="Sprite3D" parent="." unique_id=734687932]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.25)
+visible = false
+billboard = 1
+texture = SubResource("ViewportTexture_3dqdi")
+
+[node name="SubViewport" type="SubViewport" parent="CanInteractIcon" unique_id=792143596]
+transparent_bg = true
+size = Vector2i(32, 32)
+
+[node name="TextureRect" type="TextureRect" parent="CanInteractIcon/SubViewport" unique_id=1660652350]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_riajg")
+expand_mode = 1

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bpibe8p7a6aar"]
+
+[node name="MinigameQTE" type="CanvasLayer" unique_id=332936367]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1019800381]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="Control" type="Control" parent="." unique_id=1407007045]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=472824181]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control" unique_id=119525767]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect3" type="ColorRect" parent="Control" unique_id=1017691133]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

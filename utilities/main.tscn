@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b20sxx1tiw5a2" path="res://utilities/camera_3d.gd" id="2_03cc7"]
 [ext_resource type="PackedScene" uid="uid://ikxmvnvqpwb" path="res://entities/player/player.tscn" id="2_qid5v"]
 [ext_resource type="PackedScene" uid="uid://cn5o0mlxuoim" path="res://entities/test_item/test_item.tscn" id="3_2o3ha"]
+[ext_resource type="PackedScene" uid="uid://cfhmn0i1vi5to" path="res://utilities/hud/hud.tscn" id="5_ikqsx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qid5v"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -42,3 +43,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
 
 [node name="TestItem2" parent="World3D" unique_id=141263326 instance=ExtResource("3_2o3ha")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3.6749656)
+
+[node name="HUD" parent="World3D" unique_id=1380144273 instance=ExtResource("5_ikqsx")]

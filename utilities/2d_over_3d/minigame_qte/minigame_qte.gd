@@ -15,6 +15,7 @@ var needle_final_position: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	TimeManager.set_slowed_speed()
 	success_zone.position.x = randf_range(0, qte_bar.size.x - success_zone.size.x)
 
 
@@ -34,6 +35,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			outcome_label.visible = true
 			qte_finished.emit(false)
 		await get_tree().create_timer(1.5).timeout
+		TimeManager.set_normal_speed()
 		queue_free()
 
 

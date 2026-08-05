@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://xguis2uoggg2"]
+
+[ext_resource type="Script" uid="uid://cefn48qkon4hh" path="res://utilities/2d_over_3d/item_selector_ui/item_selector_ui.gd" id="1_2y4rr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8s6v"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.872361, 0.58959687, 0, 1)
+
+[sub_resource type="Theme" id="Theme_85pkc"]
+Button/styles/focus = SubResource("StyleBoxFlat_a8s6v")
+
+[node name="ItemSelectorUI" type="CanvasLayer" unique_id=2113071151]
+script = ExtResource("1_2y4rr")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1602170757]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_85pkc")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer" unique_id=1992344116]
+custom_minimum_size = Vector2(550, 600)
+layout_mode = 2
+follow_focus = true
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/ScrollContainer" unique_id=91759014]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 2

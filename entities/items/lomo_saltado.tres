@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ytr4tltk6ry5"]
+
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_8e3x3"]
+[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_pptc3"]
+
+[resource]
+script = ExtResource("1_8e3x3")
+item_name = "Lomo Saltado"
+item_icon = ExtResource("1_pptc3")
+item_color = Color(0.2950047, 0.6196462, 0.7105407, 1)
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

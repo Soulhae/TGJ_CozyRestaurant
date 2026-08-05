@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d2x2lmwj00u0f"]
+
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_738qk"]
+[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_j8qat"]
+[ext_resource type="Resource" uid="uid://blj3q4u7vaymt" path="res://entities/items/sliced_meat.tres" id="2_aktqb"]
+
+[resource]
+script = ExtResource("1_738qk")
+item_name = "Raw Meat"
+item_icon = ExtResource("1_j8qat")
+processed_result = ExtResource("2_aktqb")
+item_color = Color(0.94272435, 0.32897457, 0.38634938, 1)
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

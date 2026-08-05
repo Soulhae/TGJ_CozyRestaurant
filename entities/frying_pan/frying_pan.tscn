@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://vyuwbi4o0pi"]
+
+[ext_resource type="Script" uid="uid://qahbla850kom" path="res://entities/frying_pan/interactable_area.gd" id="1_bxy0p"]
+[ext_resource type="Script" uid="uid://c5u3f86brbmqi" path="res://utilities/recipe_data/recipe_data.gd" id="2_cjwuk"]
+[ext_resource type="Resource" uid="uid://4dxe11csnnrb" path="res://entities/recipes/mini_lomo_saltado_recipe.tres" id="3_ielkf"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_bf5uu"]
+height = 0.2
+radius = 0.3
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cke8t"]
+top_radius = 0.3
+bottom_radius = 0.3
+height = 0.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cke8t"]
+size = Vector3(1, 0.2, 1)
+
+[node name="FryingPan" type="StaticBody3D" unique_id=2134181477]
+collision_layer = 8
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1440321723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("CylinderShape3D_bf5uu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2047027042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+mesh = SubResource("CylinderMesh_cke8t")
+
+[node name="InteractableArea" type="Area3D" parent="." unique_id=1737516340]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_bxy0p")
+available_recipes = Array[ExtResource("2_cjwuk")]([ExtResource("3_ielkf")])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea" unique_id=2070421394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_cke8t")
+
+[node name="StationSprite" type="Sprite3D" parent="InteractableArea" unique_id=1727093998]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+pixel_size = 0.003
+billboard = 1
+
+[node name="StationItemName" type="Label3D" parent="InteractableArea/StationSprite" unique_id=118531216]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2000001, 0.4000001, -0.20000006)
+billboard = 1
+
+[node name="CookingTimer" type="Timer" parent="InteractableArea" unique_id=800944137]
+unique_name_in_owner = true
+one_shot = true
+
+[connection signal="timeout" from="InteractableArea/CookingTimer" to="InteractableArea" method="_on_cooking_timer_timeout"]

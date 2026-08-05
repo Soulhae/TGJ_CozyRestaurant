@@ -4,9 +4,11 @@ extends CharacterBody3D
 
 var target_velocity := Vector3.ZERO
 var interactable_list: Array = []
+var held_item: ItemData = null
 
 @onready var visual_pivot: Node3D = %Pivot
 @onready var interactable_area: Area3D = %InteractArea
+@onready var held_item_sprite: Sprite3D = %HeldItemSprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -86,3 +88,12 @@ func get_distance_to_interactable() -> Area3D:
 	
 	interactable_list = interactable_list.filter(is_instance_valid)
 	return closest_item
+
+
+func update_held_item_visual() -> void:
+	if held_item and held_item.item_icon:
+		held_item_sprite.texture = held_item.item_icon
+		held_item_sprite.modulate = held_item.item_color
+		held_item_sprite.visible = true
+	else:
+		held_item_sprite.visible = false

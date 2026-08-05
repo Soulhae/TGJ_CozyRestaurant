@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RecipeData" format=3 uid="uid://4dxe11csnnrb"]
+
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_qeqnw"]
+[ext_resource type="Resource" uid="uid://ytr4tltk6ry5" path="res://entities/items/lomo_saltado.tres" id="1_vajqj"]
+[ext_resource type="Script" uid="uid://c5u3f86brbmqi" path="res://utilities/recipe_data/recipe_data.gd" id="2_ektpu"]
+[ext_resource type="Resource" uid="uid://blj3q4u7vaymt" path="res://entities/items/sliced_meat.tres" id="3_ein8f"]
+[ext_resource type="Resource" uid="uid://dnxllhi71yvnp" path="res://entities/items/sliced_potato.tres" id="4_g52hg"]
+
+[resource]
+script = ExtResource("2_ektpu")
+required_items = Array[ExtResource("1_qeqnw")]([ExtResource("3_ein8f"), ExtResource("4_g52hg")])
+cooking_time = 10.0
+final_result = ExtResource("1_vajqj")
+metadata/_custom_type_script = "uid://c5u3f86brbmqi"

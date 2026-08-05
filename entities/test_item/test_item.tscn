@@ -34,6 +34,17 @@ script = ExtResource("2_3dqdi")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/InteractableArea" unique_id=829244275]
 shape = SubResource("SphereShape3D_cv0ty")
 
+[node name="TableItemSprite" type="Sprite3D" parent="Pivot/InteractableArea" unique_id=2102586852]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6999999, 0)
+pixel_size = 0.003
+billboard = 1
+
+[node name="TableItemName" type="Label3D" parent="Pivot/InteractableArea/TableItemSprite" unique_id=121336239]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20000005, 0)
+billboard = 1
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=1444092579]
 mesh = SubResource("SphereMesh_cke8t")
 

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://0y850h1a4j34"]
+
+[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_pqhiw"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_xhibm"]
+[ext_resource type="Resource" uid="uid://dnxllhi71yvnp" path="res://entities/items/sliced_potato.tres" id="2_8d71b"]
+
+[resource]
+script = ExtResource("1_xhibm")
+item_name = "Full Potato"
+item_icon = ExtResource("1_pqhiw")
+processed_result = ExtResource("2_8d71b")
+item_color = Color(0.42980793, 0.8449361, 0.9295708, 1)
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

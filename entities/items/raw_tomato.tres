@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://p7b8glo8p4ej"]
+
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_lo6en"]
+[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_xpcxh"]
+[ext_resource type="Resource" uid="uid://d4ls44qp6c38m" path="res://entities/items/sliced_tomato.tres" id="2_i0ji4"]
+
+[resource]
+script = ExtResource("1_lo6en")
+item_name = "Raw Tomato"
+item_icon = ExtResource("1_xpcxh")
+processed_result = ExtResource("2_i0ji4")
+item_color = Color(0, 1, 0, 1)
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

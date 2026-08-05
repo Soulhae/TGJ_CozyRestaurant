@@ -38,5 +38,11 @@ shape = SubResource("BoxShape3D_cke8t")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=1059782088]
 mesh = SubResource("CapsuleMesh_cke8t")
 
+[node name="HeldItemSprite" type="Sprite3D" parent="." unique_id=635524727]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+pixel_size = 0.003
+billboard = 1
+
 [connection signal="area_entered" from="Pivot/InteractArea" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="Pivot/InteractArea" to="." method="_on_area_3d_area_exited"]

@@ -8,6 +8,8 @@
 height = 0.2
 radius = 0.3
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bxy0p"]
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_cke8t"]
 top_radius = 0.3
 bottom_radius = 0.3
@@ -25,7 +27,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 shape = SubResource("CylinderShape3D_bf5uu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2047027042]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+material_override = SubResource("StandardMaterial3D_bxy0p")
 mesh = SubResource("CylinderMesh_cke8t")
 
 [node name="InteractableArea" type="Area3D" parent="." unique_id=1737516340]

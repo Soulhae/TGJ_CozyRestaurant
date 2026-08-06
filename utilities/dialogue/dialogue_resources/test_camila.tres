@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cqjp5oq2gbkjn"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_kkkxi"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="1_shn55"]
+[ext_resource type="Resource" uid="uid://ytr4tltk6ry5" path="res://entities/items/lomo_saltado.tres" id="2_e28qs"]
+[ext_resource type="Resource" uid="uid://blj3q4u7vaymt" path="res://entities/items/sliced_meat.tres" id="3_xnok3"]
+[ext_resource type="Resource" uid="uid://d4ls44qp6c38m" path="res://entities/items/sliced_tomato.tres" id="4_hxmev"]
+
+[sub_resource type="Resource" id="Resource_hv6jh"]
+script = ExtResource("1_kkkxi")
+choice_text = "Lomo Saltado"
+associated_dish = ExtResource("2_e28qs")
+metadata/_custom_type_script = "uid://sqowrwv16roo"
+
+[sub_resource type="Resource" id="Resource_th7qu"]
+script = ExtResource("1_kkkxi")
+choice_text = "Sliced Meat"
+associated_dish = ExtResource("3_xnok3")
+metadata/_custom_type_script = "uid://sqowrwv16roo"
+
+[sub_resource type="Resource" id="Resource_xy3t5"]
+script = ExtResource("1_kkkxi")
+choice_text = "Sliced Tomato"
+associated_dish = ExtResource("4_hxmev")
+metadata/_custom_type_script = "uid://sqowrwv16roo"
+
+[resource]
+script = ExtResource("1_shn55")
+character_name = "Camila"
+choices = Array[ExtResource("1_kkkxi")]([SubResource("Resource_hv6jh"), SubResource("Resource_th7qu"), SubResource("Resource_xy3t5")])
+lines = Array[String](["Hola! hoy hace buen clima, vi este restaurante a la pasada.", "¿Qué platos tienes para recomendarme?"])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

@@ -7,16 +7,27 @@ var ready_dish: ItemData = null
 var is_cooking: bool = false
 var current_recipe: RecipeData = null
 var player: CharacterBody3D = null
-
+var pulse_tween: Tween
+var og_color: Color
+var mat: StandardMaterial3D = null
 @onready var station_sprite: Sprite3D = %StationSprite
 @onready var station_item_name: Label3D = %StationItemName
 @onready var cooking_timer: Timer = %CookingTimer
+@onready var mesh_instance_3d: MeshInstance3D = %MeshInstance3D
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
+	
+	if mesh_instance_3d.material_override:
+		mat = mesh_instance_3d.material_override as StandardMaterial3D
+	elif mesh_instance_3d.mesh and mesh_instance_3d.mesh.get_material():
+		mat = mesh_instance_3d.mesh.get_material() as StandardMaterial3D
+		
+	if mat:
+		og_color = mat.albedo_color
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -68,11 +79,24 @@ func update_ready_dish_visual() -> void:
 func start_cooking() -> void:
 	is_cooking = true
 	TimeManager.set_slowed_speed()
+	
+	if mat:
+		pulse_tween = create_tween().set_loops()
+		pulse_tween.tween_property(mat, "albedo_color", Color.RED, 0.5)
+		pulse_tween.tween_property(mat, "albedo_color", og_color, 0.5)
+		
 	cooking_timer.start(current_recipe.cooking_time)
 
 
 func _on_cooking_timer_timeout() -> void:
 	is_cooking = false
+	
+	if pulse_tween and pulse_tween.is_valid():
+		pulse_tween.kill()
+		
+	var reset_tween = create_tween()
+	reset_tween.tween_property(mat, "albedo_color", og_color, 0.2)
+	
 	ready_dish = current_recipe.final_result
 	added_items.clear()
 	current_recipe = null

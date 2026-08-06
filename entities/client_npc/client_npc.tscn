@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bkh3e2xuguexr"]
+
+[ext_resource type="Script" uid="uid://dgmyyifak5hey" path="res://entities/client_npc/interactable_area.gd" id="1_ngrek"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cke8t"]
+radius = 0.3
+height = 1.6
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cv0ty"]
+radius = 0.3
+height = 1.6
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c1bfg"]
+size = Vector3(1.5, 1.6, 1.5)
+
+[node name="ClientNPC" type="CharacterBody3D" unique_id=426055892]
+collision_layer = 8
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1947572351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("CapsuleShape3D_cke8t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1109196315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+mesh = SubResource("CapsuleMesh_cv0ty")
+
+[node name="InteractableArea" type="Area3D" parent="." unique_id=127561350]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_ngrek")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea" unique_id=1444956358]
+shape = SubResource("BoxShape3D_c1bfg")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=101096791]

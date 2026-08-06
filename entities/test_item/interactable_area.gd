@@ -5,7 +5,7 @@ const MINIGAME_QTE_SCENE: PackedScene = preload("res://utilities/2d_over_3d/mini
 @export var item_on_table: ItemData = null
 
 #var is_busy: bool = false
-var _is_player_in_range: bool = false
+#var _is_player_in_range: bool = false
 var player: CharacterBody3D = null
 
 @onready var test_interact_label: Label3D = %TestInteractLabel
@@ -37,7 +37,7 @@ func play_minigame_qte() -> void:
 	minigame_qte.qte_finished.connect(self._on_qte_finished)
 	
 	#is_busy = true
-	update_ui()
+	#update_ui()
 	#test_interact_label.visible = true
 	get_tree().current_scene.add_child(minigame_qte)
 
@@ -56,10 +56,10 @@ func on_interact() -> void:
 		player.update_held_item_visual()
 		update_table_item_visual()
 
-func update_ui(_in_range: bool = _is_player_in_range) -> void:
-	#_is_player_in_range = in_range
-	#can_interact_icon.visible = _is_player_in_range and not is_busy
-	pass
+#func update_ui(_in_range: bool = _is_player_in_range) -> void:
+	##_is_player_in_range = in_range
+	##can_interact_icon.visible = _is_player_in_range and not is_busy
+	#pass
 
 
 func _on_qte_finished(success) -> void:
@@ -69,7 +69,7 @@ func _on_qte_finished(success) -> void:
 		update_table_item_visual()
 	test_interact_label.visible = false
 	#is_busy = false
-	update_ui()
+	#update_ui()
 	player.set_physics_process(true)
 	player.set_process_unhandled_input(true)
 

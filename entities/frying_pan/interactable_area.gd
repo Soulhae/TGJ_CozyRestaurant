@@ -37,18 +37,21 @@ func on_interact() -> void:
 			update_ready_dish_visual()
 	
 	if player.held_item:
-		#if current_recipe != null:
-			#if added_items.size() == current_recipe.required_items.size():
-				#start_cooking()
-		
+		var added_items_copy = added_items.duplicate()
+		added_items_copy.append(player.held_item)
 		for recipe in available_recipes:
-			if recipe.required_items.has(player.held_item) and not added_items.has(player.held_item):
+			if (
+					is_recipe_compatible(recipe, added_items_copy)
+					and recipe.required_items.has(player.held_item)
+					and added_items.count(player.held_item) < recipe.required_items.count(player.held_item)
+				):
 				added_items.append(player.held_item)
 				player.held_item = null
 				player.update_held_item_visual()
-				current_recipe = recipe
-				if added_items.size() == current_recipe.required_items.size():
+				if added_items.size() == recipe.required_items.size():
+					current_recipe = recipe
 					start_cooking()
+				break
 
 
 func update_ready_dish_visual() -> void:
@@ -75,3 +78,10 @@ func _on_cooking_timer_timeout() -> void:
 	current_recipe = null
 	TimeManager.set_normal_speed()
 	update_ready_dish_visual()
+
+
+func is_recipe_compatible(recipe: RecipeData, test_items: Array[ItemData]) -> bool:
+	for item in test_items:
+		if test_items.count(item) > recipe.required_items.count(item):
+			return false
+	return true

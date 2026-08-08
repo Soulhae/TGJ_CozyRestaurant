@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_pqhiw"]
 [ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_xhibm"]
-[ext_resource type="Resource" uid="uid://dnxllhi71yvnp" path="res://entities/items/sliced_potato.tres" id="2_8d71b"]
+[ext_resource type="Resource" uid="uid://dnxllhi71yvnp" path="res://entities/food_items/sliced_potato.tres" id="2_8d71b"]
 
 [resource]
 script = ExtResource("1_xhibm")

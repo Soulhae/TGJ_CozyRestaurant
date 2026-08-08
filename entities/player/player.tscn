@@ -1,6 +1,17 @@
 [gd_scene format=3 uid="uid://ikxmvnvqpwb"]
 
 [ext_resource type="Script" uid="uid://j4ay4y7mcx82" path="res://entities/player/player.gd" id="1_symyc"]
+[ext_resource type="Texture2D" uid="uid://c0hkpsokfrfgy" path="res://entities/player/sprites/normal/a.png" id="2_abrql"]
+[ext_resource type="Texture2D" uid="uid://bcjowy2t4ggdw" path="res://entities/player/sprites/normal/as.png" id="3_b2kln"]
+[ext_resource type="Texture2D" uid="uid://dgns7dxp6le4d" path="res://entities/player/sprites/left/a.png" id="3_bls4j"]
+[ext_resource type="Texture2D" uid="uid://c20w0beov2bmt" path="res://entities/player/sprites/normal/s.png" id="3_fkugw"]
+[ext_resource type="Texture2D" uid="uid://c34482tgj2e0x" path="res://entities/player/sprites/right/a.png" id="4_fkugw"]
+[ext_resource type="Texture2D" uid="uid://dxmodtflp7k14" path="res://entities/player/sprites/normal/aw.png" id="4_we0b7"]
+[ext_resource type="Texture2D" uid="uid://cjfog8etlosdt" path="res://entities/player/sprites/normal/w.png" id="5_wvtmh"]
+[ext_resource type="Texture2D" uid="uid://bsc2418ksl0vb" path="res://entities/player/sprites/left/s.png" id="6_qiwj3"]
+[ext_resource type="Texture2D" uid="uid://dhkhudfkjnp73" path="res://entities/player/sprites/right/s.png" id="7_26q78"]
+[ext_resource type="Texture2D" uid="uid://b5mjjv7rubln3" path="res://entities/player/sprites/left/w.png" id="10_7thud"]
+[ext_resource type="Texture2D" uid="uid://caktyhg0o0ucr" path="res://entities/player/sprites/right/w.png" id="11_a1qjk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cv0ty"]
 radius = 0.3
@@ -12,6 +23,100 @@ size = Vector3(1, 1.7, 0.75)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cke8t"]
 radius = 0.3
 height = 1.7
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cke8t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_abrql")
+}],
+"loop": 1,
+"name": &"idle_a",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_b2kln")
+}],
+"loop": 1,
+"name": &"idle_as",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_we0b7")
+}],
+"loop": 1,
+"name": &"idle_aw",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_fkugw")
+}],
+"loop": 1,
+"name": &"idle_s",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wvtmh")
+}],
+"loop": 1,
+"name": &"idle_w",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bls4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_abrql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fkugw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_abrql")
+}],
+"loop": 1,
+"name": &"walk_a",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_qiwj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fkugw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_26q78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fkugw")
+}],
+"loop": 1,
+"name": &"walk_s",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_7thud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wvtmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_a1qjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wvtmh")
+}],
+"loop": 1,
+"name": &"walk_w",
+"speed": 6.0
+}]
 
 [node name="Player" type="CharacterBody3D" unique_id=426401111 groups=["player"]]
 collision_layer = 2
@@ -36,7 +141,16 @@ collision_mask = 8
 shape = SubResource("BoxShape3D_cke8t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=1059782088]
+visible = false
 mesh = SubResource("CapsuleMesh_cke8t")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Pivot" unique_id=184721849]
+unique_name_in_owner = true
+pixel_size = 0.001
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_cke8t")
+animation = &"idle_a"
+autoplay = "idle_s"
 
 [node name="HeldItemSprite" type="Sprite3D" parent="." unique_id=635524727]
 unique_name_in_owner = true

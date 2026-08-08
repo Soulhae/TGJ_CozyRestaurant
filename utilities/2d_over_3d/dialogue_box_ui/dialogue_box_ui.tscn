@@ -2,17 +2,11 @@
 
 [ext_resource type="Script" uid="uid://c61gql8h046gg" path="res://utilities/2d_over_3d/dialogue_box_ui/dialogue_box_ui.gd" id="1_hv6jh"]
 [ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_jojgr"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1ld3"]
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.8132109, 0.70263565, 0.9404098, 1)
+[ext_resource type="StyleBox" uid="uid://wbtxw44f3k50" path="res://utilities/ui_presets/new_style_box_flat.tres" id="2_th7qu"]
 
 [sub_resource type="Theme" id="Theme_2y4rr"]
 Button/font_sizes/font_size = 20
-Button/styles/focus = SubResource("StyleBoxFlat_f1ld3")
+Button/styles/focus = ExtResource("2_th7qu")
 
 [node name="DialogueBoxUI" type="CanvasLayer" unique_id=909620650]
 script = ExtResource("1_hv6jh")

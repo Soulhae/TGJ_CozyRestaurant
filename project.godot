@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TGJ_CozyRestaurant"
-run/main_scene="uid://bqbt3x2chjvdy"
+run/main_scene="uid://dycsaem7apu8s"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

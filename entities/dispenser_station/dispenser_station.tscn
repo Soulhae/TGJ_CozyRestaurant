@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dhu1n73m0w46s" path="res://entities/dispenser_station/dispenser_station_area.gd" id="1_71ijm"]
 [ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="2_minyl"]
-[ext_resource type="Resource" uid="uid://p7b8glo8p4ej" path="res://entities/items/raw_tomato.tres" id="3_28hjs"]
-[ext_resource type="Resource" uid="uid://d2x2lmwj00u0f" path="res://entities/items/raw_meat.tres" id="4_61c1s"]
-[ext_resource type="Resource" uid="uid://0y850h1a4j34" path="res://entities/items/full_potato.tres" id="5_p35pc"]
+[ext_resource type="Resource" uid="uid://p7b8glo8p4ej" path="res://entities/food_items/raw_tomato.tres" id="3_28hjs"]
+[ext_resource type="Resource" uid="uid://d2x2lmwj00u0f" path="res://entities/food_items/raw_meat.tres" id="4_61c1s"]
+[ext_resource type="Resource" uid="uid://0y850h1a4j34" path="res://entities/food_items/full_potato.tres" id="5_p35pc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cke8t"]
 

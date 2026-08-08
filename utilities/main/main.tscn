@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bho5fa5orac3x" path="res://entities/garbage_can/garbage_can.tscn" id="8_6mne0"]
 [ext_resource type="PackedScene" uid="uid://vyuwbi4o0pi" path="res://entities/frying_pan/frying_pan.tscn" id="8_h2y38"]
 [ext_resource type="PackedScene" uid="uid://bkh3e2xuguexr" path="res://entities/client_npc/client_npc.tscn" id="9_sdbsj"]
+[ext_resource type="Script" uid="uid://bujjbbfm8mrl1" path="res://utilities/day_flow_manager/day_flow_manager.gd" id="11_2as35"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qid5v"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -22,6 +23,9 @@ background_mode = 2
 sky = SubResource("Sky_2o3ha")
 
 [node name="Main" type="Node" unique_id=1361994903]
+
+[node name="DayFlowManager" type="Node" parent="." unique_id=319189262]
+script = ExtResource("11_2as35")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=537767560]
 environment = SubResource("Environment_03cc7")

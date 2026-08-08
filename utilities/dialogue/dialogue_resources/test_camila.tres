@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_kkkxi"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="1_shn55"]
-[ext_resource type="Resource" uid="uid://ytr4tltk6ry5" path="res://entities/items/lomo_saltado.tres" id="2_e28qs"]
-[ext_resource type="Resource" uid="uid://blj3q4u7vaymt" path="res://entities/items/sliced_meat.tres" id="3_xnok3"]
-[ext_resource type="Resource" uid="uid://d4ls44qp6c38m" path="res://entities/items/sliced_tomato.tres" id="4_hxmev"]
+[ext_resource type="Resource" uid="uid://ytr4tltk6ry5" path="res://entities/food_items/lomo_saltado.tres" id="2_e28qs"]
+[ext_resource type="Resource" uid="uid://blj3q4u7vaymt" path="res://entities/food_items/sliced_meat.tres" id="3_xnok3"]
+[ext_resource type="Resource" uid="uid://d4ls44qp6c38m" path="res://entities/food_items/sliced_tomato.tres" id="4_hxmev"]
 
 [sub_resource type="Resource" id="Resource_hv6jh"]
 script = ExtResource("1_kkkxi")

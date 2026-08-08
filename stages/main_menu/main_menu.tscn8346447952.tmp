@@ -6,9 +6,6 @@
 [sub_resource type="Theme" id="Theme_tvbev"]
 Button/styles/focus = ExtResource("1_phs36")
 
-[sub_resource type="Theme" id="Theme_owbi8"]
-Button/styles/focus = ExtResource("1_phs36")
-
 [node name="MainMenu" type="Control" unique_id=958853584]
 layout_mode = 3
 anchors_preset = 15
@@ -85,75 +82,36 @@ text = "Salir"
 
 [node name="SettingsView" type="ColorRect" parent="." unique_id=260745063]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 color = Color(0.74965525, 0.00011859417, 0.63749146, 1)
 
 [node name="BackButton" type="Button" parent="SettingsView" unique_id=2066371392]
-custom_minimum_size = Vector2(240, 0)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.025
-anchor_top = 0.975
-anchor_right = 0.025
-anchor_bottom = 0.975
-offset_top = -96.0
-offset_right = 240.0
-grow_vertical = 0
-theme = SubResource("Theme_owbi8")
-theme_override_font_sizes/font_size = 32
-text = "Ir Atrás"
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="ControlsView" type="ColorRect" parent="." unique_id=1807615445]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 color = Color(0.12616834, 0.6415548, 0.74908507, 1)
 
 [node name="BackButton" type="Button" parent="ControlsView" unique_id=1610127514]
-custom_minimum_size = Vector2(240, 0)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.025
-anchor_top = 0.975
-anchor_right = 0.025
-anchor_bottom = 0.975
-offset_top = -96.0
-offset_right = 240.0
-grow_vertical = 0
-theme = SubResource("Theme_owbi8")
-theme_override_font_sizes/font_size = 32
-text = "Ir Atrás"
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
 
 [node name="CreditsView" type="ColorRect" parent="." unique_id=1304839252]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 color = Color(0.797629, 0.6776064, 0, 1)
 
 [node name="BackButton" type="Button" parent="CreditsView" unique_id=1903480665]
-custom_minimum_size = Vector2(240, 0)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.025
-anchor_top = 0.975
-anchor_right = 0.025
-anchor_bottom = 0.975
-offset_top = -96.0
-offset_right = 240.0
-grow_vertical = 0
-theme = SubResource("Theme_owbi8")
-theme_override_font_sizes/font_size = 32
-text = "Ir Atrás"
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

@@ -123,6 +123,12 @@ collision_layer = 2
 collision_mask = 13
 script = ExtResource("1_symyc")
 
+[node name="HeldItemSprite" type="Sprite3D" parent="." unique_id=635524727]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+pixel_size = 0.003
+billboard = 1
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=718188567]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
 shape = SubResource("CapsuleShape3D_cv0ty")
@@ -146,17 +152,15 @@ mesh = SubResource("CapsuleMesh_cke8t")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Pivot" unique_id=184721849]
 unique_name_in_owner = true
-pixel_size = 0.001
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20000005, 0)
+pixel_size = 0.00127
 billboard = 1
+alpha_hash_scale = 2.0
+texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_cke8t")
 animation = &"idle_a"
 autoplay = "idle_s"
-
-[node name="HeldItemSprite" type="Sprite3D" parent="." unique_id=635524727]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-pixel_size = 0.003
-billboard = 1
+frame_progress = 0.73105735
 
 [connection signal="area_entered" from="Pivot/InteractArea" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="Pivot/InteractArea" to="." method="_on_area_3d_area_exited"]

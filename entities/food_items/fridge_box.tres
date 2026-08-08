@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cgl6cg16kg4fw"]
+
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_81iqw"]
+[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_tuemg"]
+
+[resource]
+script = ExtResource("1_81iqw")
+item_name = "Refrigerados de la Abuela"
+item_icon = ExtResource("1_tuemg")
+item_color = Color(0.7030602, 0.13917267, 0.49834633, 1)
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

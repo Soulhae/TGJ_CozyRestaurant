@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_8pjsv")
-item_name = "Compras de la Abuela"
+item_name = "Abarrotes de la Abuela"
 item_icon = ExtResource("1_vncrp")
-item_color = Color(0.9549965, 0.21579498, 0.553993, 1)
+item_color = Color(0.72652006, 0.8290644, 0.9888714, 1)
 metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

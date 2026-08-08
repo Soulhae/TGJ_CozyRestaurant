@@ -1,6 +1,6 @@
 extends Area3D
 
-const GROCERIES_BOX: ItemData = preload("res://entities/food_items/groceries_box.tres")
+const FRIDGE_BOX: ItemData = preload("res://entities/food_items/fridge_box.tres")
 
 var player: CharacterBody3D = null
 
@@ -16,7 +16,7 @@ func _process(_delta: float) -> void:
 
 func on_interact() -> void:
 	if player.held_item == null:
-		player.held_item = GROCERIES_BOX
+		player.held_item = FRIDGE_BOX
 		player.update_held_item_visual()
 		
 		get_parent().queue_free()

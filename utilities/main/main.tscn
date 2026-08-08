@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://vyuwbi4o0pi" path="res://entities/frying_pan/frying_pan.tscn" id="8_h2y38"]
 [ext_resource type="PackedScene" uid="uid://bkh3e2xuguexr" path="res://entities/client_npc/client_npc.tscn" id="9_sdbsj"]
 [ext_resource type="Script" uid="uid://bujjbbfm8mrl1" path="res://utilities/day_flow_manager/day_flow_manager.gd" id="11_2as35"]
+[ext_resource type="PackedScene" uid="uid://crwdr7d5dkngr" path="res://entities/groceries_box/groceries_box.tscn" id="11_gb4hc"]
+[ext_resource type="PackedScene" uid="uid://dhf2y3s4vt8ea" path="res://entities/fridge_station/fridge_station.tscn" id="12_gb4hc"]
+[ext_resource type="PackedScene" uid="uid://beyirkbwuel1b" path="res://entities/fridge_box/fridge_box.tscn" id="13_gx7we"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qid5v"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -24,8 +27,9 @@ sky = SubResource("Sky_2o3ha")
 
 [node name="Main" type="Node" unique_id=1361994903]
 
-[node name="DayFlowManager" type="Node" parent="." unique_id=319189262]
+[node name="DayFlowManager" type="Node" parent="." unique_id=319189262 node_paths=PackedStringArray("client_npc")]
 script = ExtResource("11_2as35")
+client_npc = NodePath("../World3D/ClientNPC")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=537767560]
 environment = SubResource("Environment_03cc7")
@@ -39,8 +43,9 @@ shadow_enabled = true
 [node name="MainLevel" parent="World3D" unique_id=1578905525 instance=ExtResource("2_sdbsj")]
 
 [node name="Camera3D" type="Camera3D" parent="World3D" unique_id=873299954]
-transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 6, 2)
+transform = Transform3D(1, 0, 0, 0, 0.57357645, 0.81915206, 0, -0.81915206, 0.57357645, 0, 6, 2)
 script = ExtResource("3_yll3d")
+player_offset = Vector3(0, 5, 2)
 
 [node name="Player" parent="World3D" unique_id=426401111 instance=ExtResource("4_2as35")]
 unique_name_in_owner = true
@@ -65,3 +70,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4, 0, 4.5)
 
 [node name="ClientNPC" parent="World3D" unique_id=426055892 instance=ExtResource("9_sdbsj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, 5.4)
+
+[node name="GroceriesBox" parent="World3D" unique_id=255311217 instance=ExtResource("11_gb4hc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="FridgeStation" parent="World3D" unique_id=1353862936 instance=ExtResource("12_gb4hc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3, 0, 0.6)
+
+[node name="FridgeBox" parent="World3D" unique_id=1511041932 instance=ExtResource("13_gx7we")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.70000005, 0, 5)

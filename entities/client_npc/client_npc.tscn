@@ -14,12 +14,14 @@ height = 1.6
 size = Vector3(1.5, 1.6, 1.5)
 
 [node name="ClientNPC" type="CharacterBody3D" unique_id=426055892]
+visible = false
 collision_layer = 8
 collision_mask = 15
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1947572351]
+[node name="MainCollisionShape" type="CollisionShape3D" parent="." unique_id=1947572351]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
 shape = SubResource("CapsuleShape3D_cke8t")
+disabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1109196315]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
@@ -29,6 +31,8 @@ mesh = SubResource("CapsuleMesh_cv0ty")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
 collision_layer = 8
 collision_mask = 0
+monitoring = false
+monitorable = false
 script = ExtResource("1_ngrek")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea" unique_id=1444956358]

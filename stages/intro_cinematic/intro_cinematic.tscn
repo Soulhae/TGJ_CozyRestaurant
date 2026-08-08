@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dycsaem7apu8s"]
+
+[ext_resource type="Script" uid="uid://wloheccckhrx" path="res://stages/intro_cinematic/intro_cinematic.gd" id="1_8gqef"]
+
+[node name="IntroCinematic" type="CanvasLayer" unique_id=1514258513]
+script = ExtResource("1_8gqef")
+mateo_phrases = Array[String](["A medida que vas creciendo, te vuelves más consciente de todo.", "Y no dudo que los adultos siempre hablan por nuestro bien.
+", "Pero a veces, no todos tenemos que seguir el camino que dicta la sociedad...
+", "...¿Verdad?...
+", "Mientras más consciente te vuelves, más pesan tus decisiones.
+", "Y a decir verdad, no creo que sea algo malo.
+", "Pero sí me causa mucho dolor.
+", "Dolor de ver como todos, a excepción de mí, como si por arte de magia fuera, saben a qué dedicar su vida.
+", "Y yo...
+Yo me esfuerzo cuanto puedo, pero...", "¿De verdad vale la pena?
+", "Mientras más intento buscar un lugar al que pertenecer, más me lastima.
+", "Y ahí...
+Es ahí cuando me pregunto:", "¿Es imprudente quién sigue intentando, o acaso es sabio quién sabe cuando parar?
+", "Desconozco la respuesta, pero...
+", "De verdad, amaría poder descubrirla...
+"])
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=504985307]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=308639116]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "TESTING"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="ColorRect" unique_id=1923427413]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.995
+anchor_top = 0.995
+anchor_right = 0.995
+anchor_bottom = 0.995
+offset_left = -291.0
+offset_top = -45.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Espacio para saltar"

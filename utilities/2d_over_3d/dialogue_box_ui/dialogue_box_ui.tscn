@@ -36,9 +36,13 @@ layout_mode = 2
 color = Color(0, 0, 0, 0.78431374)
 
 [node name="TextureRect" type="TextureRect" parent="Control/PanelContainer" unique_id=1897121642]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 250)
 layout_mode = 2
 size_flags_horizontal = 8
 texture = ExtResource("1_jojgr")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer" unique_id=688857700]
 layout_mode = 2

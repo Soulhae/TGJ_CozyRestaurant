@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_c2ev8")
-item_name = "Sliced Onion"
+item_name = "Cebolla Picada"
 item_icon = ExtResource("1_f3r2p")
 item_color = Color(0.32333153, 0.11285726, 0.23431727, 1)
 metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

@@ -2,6 +2,13 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_6ea7w"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_mdw21"]
+[ext_resource type="Texture2D" uid="uid://bmhiidmaotkeg" path="res://entities/abuela_npc/expresiones/1.png" id="2_xhkgf"]
+[ext_resource type="Texture2D" uid="uid://ijffumdqbkv7" path="res://entities/player/expresiones/7.png" id="3_he04s"]
+[ext_resource type="Texture2D" uid="uid://b67hc68jnghai" path="res://entities/abuela_npc/expresiones/2.png" id="3_knygu"]
+[ext_resource type="Texture2D" uid="uid://ccpx0hkedx8jm" path="res://entities/player/expresiones/6.png" id="5_he04s"]
+[ext_resource type="Texture2D" uid="uid://bvfmtn8snw1h2" path="res://entities/player/expresiones/5.png" id="6_e1j7q"]
+[ext_resource type="Texture2D" uid="uid://dq57mevrn4qol" path="res://entities/player/expresiones/1.png" id="7_ix3im"]
+[ext_resource type="Texture2D" uid="uid://47vj7di56835" path="res://entities/player/expresiones/8.png" id="8_2fgg8"]
 
 [resource]
 script = ExtResource("2_mdw21")
@@ -10,4 +17,5 @@ lines = Array[String](["Carmen: Mateito, despierta, ya amaneció hijo.
 ", "Carmen: Es que en este lugar el dinero no es lo que más importa, sino lo son las personas.", "Mateo: Sigo sin entender. ¿Por qué atenderías a una sola persona?. Eso no debe generar muchas ganancias.
 ", "Carmen: Cuando cumples cierta edad, te das cuenta que el dinero no lo es todo...", "Carmen: Hay muchas personas que gustan no solo comer un buen plato de comida, sino también poder compartir contigo lo que les aqueja.", "Mateo: ...", "Carmen: No te sientas mal, Mateo, ven, deja que te enseñe más de la cocina.", "Carmen: Aquí está el fregadero, como adivinarás, es dónde se lavan los platos.", "Carmen: Por aquí está el verdulero, desde papas hasta zanahorias, todo va por aquí.", "Carmen: Está es la cocina. Hace poco fue renovada así que está como nueva.", "Carmen: Aquí está la refrigeradora.", "Carmen: Y por último, el escobillón, siempre es importante dar una buena barrida.", "Carmen: El resto de cosas son utensilios que están a la vista, no será mayor problema.", "Mateo: Nunca he sido de estar mucho en la cocina.
 ", "Mateo: Y si... ¿Lo hago mal?...", "Carmen: Eso no pasará, porque yo estaré aquí para ayudarte.", "Carmen: Se que empezar algo nuevo no es fácil, pero nunca es tarde para hacerlo.", "Carmen: Empecemos por algo fácil, cuando veas algo sucio, solo debes traerlo al fregadero y lavarlo. (“E“ para interactuar)", "Carmen: ¡No te olvides de barrer luego!"])
+portraits = Array[Texture2D]([ExtResource("2_xhkgf"), ExtResource("3_he04s"), ExtResource("3_knygu"), ExtResource("3_he04s"), ExtResource("3_knygu"), ExtResource("3_knygu"), ExtResource("2_xhkgf"), ExtResource("5_he04s"), ExtResource("2_xhkgf"), ExtResource("5_he04s"), ExtResource("3_knygu"), ExtResource("2_xhkgf"), ExtResource("6_e1j7q"), ExtResource("3_knygu"), ExtResource("3_knygu"), ExtResource("2_xhkgf"), ExtResource("3_knygu"), ExtResource("2_xhkgf"), ExtResource("2_xhkgf"), ExtResource("3_knygu"), ExtResource("7_ix3im"), ExtResource("8_2fgg8"), ExtResource("2_xhkgf"), ExtResource("3_knygu"), ExtResource("2_xhkgf"), ExtResource("3_knygu")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

@@ -10,7 +10,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_cv0ty"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cv0ty"]
-size = Vector3(2, 1, 2)
+size = Vector3(2, 1, 4)
 
 [node name="DispenserStation" type="StaticBody3D" unique_id=364757752]
 collision_layer = 8

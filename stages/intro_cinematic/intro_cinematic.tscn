@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dycsaem7apu8s"]
 
 [ext_resource type="Script" uid="uid://wloheccckhrx" path="res://stages/intro_cinematic/intro_cinematic.gd" id="1_8gqef"]
+[ext_resource type="Texture2D" uid="uid://dyji23huhmh4k" path="res://stages/main_menu/image.png" id="2_is0xm"]
+
+[sub_resource type="Theme" id="Theme_cke8t"]
 
 [node name="IntroCinematic" type="CanvasLayer" unique_id=1514258513]
 script = ExtResource("1_8gqef")
@@ -20,13 +23,14 @@ Es ahí cuando me pregunto:", "¿Es imprudente quién sigue intentando, o acaso 
 ", "De verdad, amaría poder descubrirla...
 "])
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=504985307]
+[node name="ColorRect" type="TextureRect" parent="." unique_id=746390286]
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+theme = SubResource("Theme_cke8t")
+texture = ExtResource("2_is0xm")
 
 [node name="Label" type="Label" parent="ColorRect" unique_id=308639116]
 unique_name_in_owner = true

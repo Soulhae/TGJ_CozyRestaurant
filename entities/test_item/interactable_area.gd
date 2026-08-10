@@ -49,7 +49,8 @@ func on_interact() -> void:
 		player.update_held_item_visual()
 		update_table_item_visual()
 	elif player.held_item == null and item_on_table != null and item_on_table.processed_result != null:
-		play_minigame_qte()
+		item_on_table = item_on_table.processed_result
+		update_table_item_visual()
 	elif player.held_item == null and item_on_table != null and item_on_table.processed_result == null:
 		player.held_item = item_on_table
 		item_on_table = null

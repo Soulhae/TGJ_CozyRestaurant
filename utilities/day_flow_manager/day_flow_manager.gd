@@ -4,6 +4,7 @@ signal phase_changed
 
 const DIALOGUE_BOX_UI_SCENE: PackedScene = preload("res://utilities/2d_over_3d/dialogue_box_ui/dialogue_box_ui.tscn")
 
+
 enum DayPhase {
 	MORNING_ORGANIZING,
 	AFTERNOON_CLIENT,
@@ -17,6 +18,7 @@ enum DayPhase {
 @export var frying_pan_node: StaticBody3D
 @export var garbage_can: StaticBody3D
 @export var next_day_scene: PackedScene
+#@export var main_menu_scene: PackedScene
 @export var has_morning_camera_tour: bool = false
 
 @export_group("Diálogos del Día")
@@ -83,7 +85,8 @@ func _start_morning_sequence() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	print(current_phase)
+	#print(current_phase)
+	pass
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -192,8 +195,8 @@ func _play_sleep_sequence() -> void:
 	
 	if next_day_scene:
 		get_tree().change_scene_to_packed(next_day_scene)
-	#else:
-		#get_tree().change_scene_to_file("res://ruta/a/tus/creditos.tscn")
+	else:
+		get_tree().change_scene_to_file("res://stages/main_menu/main_menu.tscn")
 
 
 func _on_dialogue_line_shown(index: int) -> void:

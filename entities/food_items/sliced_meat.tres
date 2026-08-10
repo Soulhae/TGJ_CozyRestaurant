@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_k71lu")
-item_name = "Sliced Meat"
+item_name = "Carne Trozada"
 item_icon = ExtResource("1_gou3p")
 metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

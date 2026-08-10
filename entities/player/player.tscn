@@ -18,10 +18,11 @@
 [ext_resource type="Texture2D" uid="uid://85mrc0ambeiq" path="res://entities/player/shadow/circle_gradient1.png" id="16_yqrof"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cv0ty"]
-height = 2.4
+radius = 0.3
+height = 3.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cke8t"]
-size = Vector3(1.2, 2.4, 1.25)
+size = Vector3(1.2, 3, 1.25)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cke8t"]
 radius = 0.3
@@ -156,12 +157,12 @@ script = ExtResource("1_symyc")
 
 [node name="HeldItemSprite" type="Sprite3D" parent="." unique_id=635524727]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -1.5)
 pixel_size = 0.003
 billboard = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=718188567]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0500001, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1500001, 0)
 shape = SubResource("CapsuleShape3D_cv0ty")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=1737258043]
@@ -175,7 +176,7 @@ collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/InteractArea" unique_id=5176743]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20000005, -0.20000005)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.30000007, -0.20000005)
 shape = SubResource("BoxShape3D_cke8t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=1059782088]
@@ -187,7 +188,7 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20000005, 0)
 cast_shadow = 0
 offset = Vector2(0, 250)
-pixel_size = 0.00167
+pixel_size = 0.002
 billboard = 1
 alpha_cut = 1
 alpha_hash_scale = 2.0

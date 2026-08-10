@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_xhibm")
-item_name = "Full Potato"
+item_name = "Papa Entera"
 item_icon = ExtResource("1_pqhiw")
 processed_result = ExtResource("2_8d71b")
 item_color = Color(0.42980793, 0.8449361, 0.9295708, 1)

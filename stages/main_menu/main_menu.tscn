@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://depxn0flyfjgc" path="res://stages/main_menu/main_menu.gd" id="1_owbi8"]
 [ext_resource type="StyleBox" uid="uid://wbtxw44f3k50" path="res://utilities/ui_presets/new_style_box_flat.tres" id="1_phs36"]
+[ext_resource type="Texture2D" uid="uid://uu410e84a2so" path="res://stages/main_menu/MENU.png" id="2_wxx16"]
 
 [sub_resource type="Theme" id="Theme_tvbev"]
 Button/styles/focus = ExtResource("1_phs36")
@@ -18,14 +19,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_owbi8")
 
-[node name="Background" type="ColorRect" parent="." unique_id=604886054]
+[node name="Background" type="TextureRect" parent="." unique_id=682625424]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.097013764, 0.41762608, 0.3828937, 1)
+texture = ExtResource("2_wxx16")
 
 [node name="TitleLabel" type="Label" parent="." unique_id=188569907]
 layout_mode = 1
@@ -35,6 +36,7 @@ anchor_right = 1.0
 anchor_bottom = 0.1
 offset_bottom = 23.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 128
 text = "Yuyay"
 horizontal_alignment = 1

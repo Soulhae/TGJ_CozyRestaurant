@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("1_4jrpt")
-item_name = "Full Onion"
+item_name = "Cebolla Entera"
 item_icon = ExtResource("1_ns68v")
 processed_result = ExtResource("2_1wgs4")
 item_color = Color(0.30865547, 0.48414755, 0.71976596, 1)

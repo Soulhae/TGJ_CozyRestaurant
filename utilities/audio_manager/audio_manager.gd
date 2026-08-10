@@ -9,6 +9,7 @@ var sponge_sfx = preload("res://audio/SFX/sponge cleaning.wav")
 var water_flow_sfx = preload("res://audio/SFX/water flow.wav")
 var track_menu = preload("res://audio/Music/Cozy Loop 1 - Family Time.wav")
 var track_gameplay = preload("res://audio/Music/Cozy Loop 2 - Happy-Tyzer_LONG.wav")
+var track_intro = preload("res://stages/main_menu/Intro VN.wav")
 
 @onready var music_player: AudioStreamPlayer = $MusicPlayer
 @onready var sfx_player: AudioStreamPlayer = $SFXPlayer

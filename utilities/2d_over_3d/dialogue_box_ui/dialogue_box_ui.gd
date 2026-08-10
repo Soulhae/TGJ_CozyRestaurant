@@ -17,6 +17,7 @@ var blip_timer: Timer
 @onready var dialogue_label: RichTextLabel = %DialogueLabel
 @onready var grid_container: GridContainer = %GridContainer
 @onready var audio_stream_player: AudioStreamPlayer = $Control/AudioStreamPlayer
+@onready var portrait_rect: TextureRect = %TextureRect
 
 
 # Called when the node enters the scene tree for the first time.
@@ -71,6 +72,12 @@ func start_dialogue(data: DialogueData = null) -> void:
 	else:
 		talking_character_name.text = local_data.character_name
 		dialogue_label.text = raw_line
+	
+	if local_data.portraits.size() > current_index and local_data.portraits[current_index] != null:
+		portrait_rect.texture = local_data.portraits[current_index]
+		portrait_rect.show()
+	else:
+		portrait_rect.hide()
 	
 	dialogue_label.visible_ratio = 0
 	line_shown.emit(current_index)

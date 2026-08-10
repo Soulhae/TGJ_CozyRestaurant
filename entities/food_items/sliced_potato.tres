@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_vl5p0")
-item_name = "Sliced Potato"
+item_name = "Papas en rodajas"
 item_icon = ExtResource("1_7xepj")
 item_color = Color(0.6541538, 0.5924685, 0.12006689, 1)
 metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

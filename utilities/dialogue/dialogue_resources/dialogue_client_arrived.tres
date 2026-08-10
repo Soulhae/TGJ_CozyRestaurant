@@ -1,9 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://b505pdbpv4r3i"]
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_xkpkg"]
+[ext_resource type="Texture2D" uid="uid://bmhiidmaotkeg" path="res://entities/abuela_npc/expresiones/1.png" id="2_754xt"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_dk65h"]
+[ext_resource type="Texture2D" uid="uid://ccpx0hkedx8jm" path="res://entities/player/expresiones/6.png" id="3_jje0h"]
+[ext_resource type="Texture2D" uid="uid://b67hc68jnghai" path="res://entities/abuela_npc/expresiones/2.png" id="4_75y2q"]
+[ext_resource type="Texture2D" uid="uid://47vj7di56835" path="res://entities/player/expresiones/8.png" id="5_c05gd"]
 
 [resource]
 script = ExtResource("2_dk65h")
 lines = Array[String](["Carmen: ¡Mateo!. Tenemos un cliente, te está esperando.", "Mateo: ¿Estás segura que quieres que yo lo atienda?.", "Carmen: Muy segura. No lo hagas esperar más!", "Mateo: Está bien…"])
+portraits = Array[Texture2D]([ExtResource("2_754xt"), ExtResource("3_jje0h"), ExtResource("4_75y2q"), ExtResource("5_c05gd")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

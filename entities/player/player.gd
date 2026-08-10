@@ -25,6 +25,9 @@ func _process(_delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		interact()
+	if event.is_action_pressed("delete_item"):
+		held_item = null
+		update_held_item_visual()
 
 
 func _physics_process(_delta: float) -> void:

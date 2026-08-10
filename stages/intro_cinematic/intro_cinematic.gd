@@ -19,6 +19,7 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	label.text = ""
 	label.modulate.a = 0
+	AudioManager.play_music(AudioManager.track_intro)
 	play_next_phrase()
 
 

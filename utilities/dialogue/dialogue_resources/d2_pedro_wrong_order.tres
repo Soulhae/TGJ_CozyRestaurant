@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cjxlyl5c3q0j2"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_ca3d0"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_8yo8s"]
+
+[resource]
+script = ExtResource("2_8yo8s")
+lines = Array[String](["Pedro: Nunca había probado esto!, pero...", "Pedro: En la vida nunca dejan de existir nuevas oportunidades.", "Pedro: Muchas gracias Mateo."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

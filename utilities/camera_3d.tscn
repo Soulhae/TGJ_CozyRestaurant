@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b1qddo55jmigu"]
+
+[ext_resource type="Script" uid="uid://b20sxx1tiw5a2" path="res://utilities/camera_3d.gd" id="1_2q52c"]
+
+[node name="Camera3D" type="Camera3D" unique_id=36892859]
+transform = Transform3D(1, 0, 0, 0, 0.57357645, 0.81915206, 0, -0.81915206, 0.57357645, 0, 0, 0)
+script = ExtResource("1_2q52c")
+player_offset = Vector3(0, 5, 2)

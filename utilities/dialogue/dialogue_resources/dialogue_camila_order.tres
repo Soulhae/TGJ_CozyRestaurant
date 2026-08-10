@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cqn5pb3wttros"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_545fp"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_nuuaw"]
+
+[resource]
+script = ExtResource("2_nuuaw")
+lines = Array[String](["Mateo: Ho-hola, bienvenida a Yuyay.", "Camila: Muy buenas tardes jovencito, no te había visto antes.", "Mateo: Acabo de llegar ayer, es mi primer día.", "Mateo: Soy el nieto de Carmen.", "Camila: Oh, ya veo, cuéntame, ¿que te trae por aquí?", "Mateo: Vine a ayudar a mi abuela por un par de días.", "Mateo: Dígame, ¿Hay algo en que la pueda ayudar?", "Camila: (Suspira) ...", "Camila: Hoy me he sentido con los ánimos muy bajos.", "Camila: Ayer mi amiga me invitó a comer a su casa...", "Camila: Fue muy lindo de ver, como estaba con sus hijas y su esposo,", "Camila: Pero al mismo tiempo...", "Camila: Me recordó los tiempos cuando mis hijas aún vivían conmigo.", "Camila: Ahora estar en la cocina se siente tan solitario.", "Camila: Ni siquiera tengo muchas ganas de cocinar.", "Camila: No digo que no lo haga, pero, hoy no tuve las fuerzas para eso.", "Mateo: Lamento oír eso...", "Mateo: Creo que puedo entender un poco a lo que se refiere, aunque no de la misma forma...", "Mateo: ¿Hay algo en particular que le gustaría comer?", "Camila: ...", "Camila: Un lomo saltado por favor.", "Mateo: En seguida, un momento por favor."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

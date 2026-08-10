@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cgipiewfx4vt"]
+
+[ext_resource type="Script" uid="uid://c3wr0g3ux2mwy" path="res://utilities/recipe_ui/recipe_ui.gd" id="1_1h6rd"]
+[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_tcscf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cke8t"]
+bg_color = Color(0, 0, 0, 0.6862745)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="RecipeUI" type="CanvasLayer" unique_id=936368506]
+script = ExtResource("1_1h6rd")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=650107728]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cke8t")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=418788224]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1515680325]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=861656616]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("1_tcscf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TitleLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=990070885]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="IngredientsLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1755935385]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 2

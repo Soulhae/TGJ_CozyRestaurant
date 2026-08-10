@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1got4pogs8gh"
+path="res://.godot/imported/cutting meat.wav-b41bdcf936841fd24073f601c2f26241.sample"
+
+[deps]
+
+source_file="res://audio/SFX/cutting meat.wav"
+dest_files=["res://.godot/imported/cutting meat.wav-b41bdcf936841fd24073f601c2f26241.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,7 +1,6 @@
 extends Area3D
 
 const ITEM_SELECTOR_SCENE: PackedScene = preload("res://utilities/2d_over_3d/item_selector_ui/item_selector_ui.tscn")
-const FRIDGE_BOX: ItemData = preload("res://entities/food_items/fridge_box.tres")
 
 @export var available_items: Array[ItemData]
 
@@ -19,20 +18,13 @@ func _process(_delta: float) -> void:
 
 
 func on_interact():
-	if player.held_item == FRIDGE_BOX:
-		player.held_item = null
-		player.update_held_item_visual()
-		
-		var day_manager := get_tree().current_scene.get_node("DayFlowManager")
-		if day_manager:
-			day_manager.fridge_stocked = true
-			day_manager.check_morning_tasks()
-		return
-	#else:
-		# acá sonido de error
+	var day_manager := get_tree().current_scene.get_node("DayFlowManager")
 	
-	# quizá agregar sonido de error para indicar que no puede sacar un item si ya tiene uno
 	if player.held_item != null:
+		AudioManager.play_sfx(AudioManager.error_sfx)
+		return
+	
+	if day_manager.current_phase != day_manager.DayPhase.AFTERNOON_COOKING:
 		return
 	
 	player.set_physics_process(false)

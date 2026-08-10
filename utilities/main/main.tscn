@@ -1,18 +1,36 @@
 [gd_scene format=3 uid="uid://bqbt3x2chjvdy"]
 
+[ext_resource type="Resource" uid="uid://bp34clpxyrhvh" path="res://utilities/dialogue/dialogue_resources/dialogue_morning_tour.tres" id="2_6mne0"]
+[ext_resource type="PackedScene" uid="uid://dysoa4683n6oe" path="res://utilities/main/main_day_2.tscn" id="2_qpxae"]
 [ext_resource type="PackedScene" uid="uid://8j47wxkehye2" path="res://stages/main_level/main_level.tscn" id="2_sdbsj"]
-[ext_resource type="Script" uid="uid://b20sxx1tiw5a2" path="res://utilities/camera_3d.gd" id="3_yll3d"]
+[ext_resource type="PackedScene" uid="uid://b1qddo55jmigu" path="res://utilities/camera_3d.tscn" id="3_gx7we"]
+[ext_resource type="Resource" uid="uid://b505pdbpv4r3i" path="res://utilities/dialogue/dialogue_resources/dialogue_client_arrived.tres" id="3_i7lud"]
 [ext_resource type="PackedScene" uid="uid://ikxmvnvqpwb" path="res://entities/player/player.tscn" id="4_2as35"]
+[ext_resource type="Resource" uid="uid://cqn5pb3wttros" path="res://utilities/dialogue/dialogue_resources/dialogue_camila_order.tres" id="4_wj0kv"]
 [ext_resource type="PackedScene" uid="uid://cn5o0mlxuoim" path="res://entities/test_item/test_item.tscn" id="5_gb4hc"]
+[ext_resource type="Resource" uid="uid://dh3tyt1gx3ry0" path="res://utilities/dialogue/dialogue_resources/dialogue_cooking_tutorial.tres" id="5_qptty"]
 [ext_resource type="PackedScene" uid="uid://cfhmn0i1vi5to" path="res://utilities/hud/hud.tscn" id="6_gx7we"]
+[ext_resource type="Resource" uid="uid://yijdgsvr1nnm" path="res://utilities/dialogue/dialogue_resources/dialogue_qte_tutorial.tres" id="6_wj0kv"]
 [ext_resource type="PackedScene" uid="uid://dinc8bynplcn2" path="res://entities/dispenser_station/dispenser_station.tscn" id="7_1vks7"]
+[ext_resource type="Resource" uid="uid://bbursvu3ecneb" path="res://utilities/dialogue/dialogue_resources/dialogue_dish_ready.tres" id="7_qptty"]
+[ext_resource type="Resource" uid="uid://dn1x5qtduwydt" path="res://utilities/dialogue/dialogue_resources/dialogue_night_congrats.tres" id="8_0lyew"]
 [ext_resource type="PackedScene" uid="uid://bho5fa5orac3x" path="res://entities/garbage_can/garbage_can.tscn" id="8_6mne0"]
 [ext_resource type="PackedScene" uid="uid://vyuwbi4o0pi" path="res://entities/frying_pan/frying_pan.tscn" id="8_h2y38"]
+[ext_resource type="Resource" uid="uid://2b2pi5pggvfl" path="res://utilities/dialogue/dialogue_resources/dialogue_mateo_thoughts.tres" id="9_861tw"]
 [ext_resource type="PackedScene" uid="uid://bkh3e2xuguexr" path="res://entities/client_npc/client_npc.tscn" id="9_sdbsj"]
 [ext_resource type="Script" uid="uid://bujjbbfm8mrl1" path="res://utilities/day_flow_manager/day_flow_manager.gd" id="11_2as35"]
-[ext_resource type="PackedScene" uid="uid://crwdr7d5dkngr" path="res://entities/groceries_box/groceries_box.tscn" id="11_gb4hc"]
+[ext_resource type="Resource" uid="uid://4dxe11csnnrb" path="res://entities/recipes/mini_lomo_saltado_recipe.tres" id="11_qxaxp"]
 [ext_resource type="PackedScene" uid="uid://dhf2y3s4vt8ea" path="res://entities/fridge_station/fridge_station.tscn" id="12_gb4hc"]
-[ext_resource type="PackedScene" uid="uid://beyirkbwuel1b" path="res://entities/fridge_box/fridge_box.tscn" id="13_gx7we"]
+[ext_resource type="PackedScene" uid="uid://beyirkbwuel1b" path="res://entities/dirty_dishes/dirty_dishes.tscn" id="13_gx7we"]
+[ext_resource type="PackedScene" uid="uid://djkmp2k1p7oy8" path="res://utilities/2d_over_3d/dialogue_box_ui/dialogue_box_ui.tscn" id="14_1vks7"]
+[ext_resource type="PackedScene" uid="uid://bd00r7ti4f8jw" path="res://entities/escobillon/escobillon.tscn" id="14_6mne0"]
+[ext_resource type="PackedScene" uid="uid://hmbprlxmdfj8" path="res://entities/fregadero/fregadero.tscn" id="15_bphc1"]
+[ext_resource type="Resource" uid="uid://cu76uhx7no1ix" path="res://utilities/dialogue/dialogue_resources/test_camila_already_talked.tres" id="18_dys2e"]
+[ext_resource type="Resource" uid="uid://y5euv1ilr6x2" path="res://utilities/dialogue/dialogue_resources/dialogue_camila_right_order.tres" id="19_6cesj"]
+[ext_resource type="Resource" uid="uid://ytr4tltk6ry5" path="res://entities/food_items/lomo_saltado.tres" id="19_adixg"]
+[ext_resource type="Resource" uid="uid://ba88a46hjqr32" path="res://utilities/dialogue/dialogue_resources/dialogue_camila_wrong_order.tres" id="20_qpxae"]
+[ext_resource type="PackedScene" uid="uid://cvsvpsivg1g5v" path="res://entities/abuela_npc/abuela_npc.tscn" id="21_3mhvi"]
+[ext_resource type="PackedScene" uid="uid://cgipiewfx4vt" path="res://utilities/recipe_ui/recipe_ui.tscn" id="30_whu2a"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qid5v"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -27,9 +45,23 @@ sky = SubResource("Sky_2o3ha")
 
 [node name="Main" type="Node" unique_id=1361994903]
 
-[node name="DayFlowManager" type="Node" parent="." unique_id=319189262 node_paths=PackedStringArray("client_npc")]
+[node name="DayFlowManager" type="Node" parent="." unique_id=319189262 node_paths=PackedStringArray("client_npc", "abuela_npc", "frying_pan_node", "garbage_can")]
 script = ExtResource("11_2as35")
 client_npc = NodePath("../World3D/ClientNPC")
+abuela_npc = NodePath("../World3D/AbuelaNPC")
+frying_pan_node = NodePath("../World3D/FryingPan")
+garbage_can = NodePath("../World3D/GarbageCan")
+next_day_scene = ExtResource("2_qpxae")
+has_morning_camera_tour = true
+morning_dialogue = ExtResource("2_6mne0")
+dialogue_client_arrived = ExtResource("3_i7lud")
+dialogue_client_order = ExtResource("4_wj0kv")
+dialogue_cooking_tutorial = ExtResource("5_qptty")
+dialogue_qte_tutorial = ExtResource("6_wj0kv")
+dialogue_dish_ready = ExtResource("7_qptty")
+dialogue_night_congrats = ExtResource("8_0lyew")
+dialogue_mateo_thoughts = ExtResource("9_861tw")
+recipe_of_the_day = ExtResource("11_qxaxp")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=537767560]
 environment = SubResource("Environment_03cc7")
@@ -42,40 +74,106 @@ shadow_enabled = true
 
 [node name="MainLevel" parent="World3D" unique_id=1578905525 instance=ExtResource("2_sdbsj")]
 
-[node name="Camera3D" type="Camera3D" parent="World3D" unique_id=873299954]
-transform = Transform3D(1, 0, 0, 0, 0.57357645, 0.81915206, 0, -0.81915206, 0.57357645, 0, 6, 2)
-script = ExtResource("3_yll3d")
-player_offset = Vector3(0, 5, 2)
+[node name="Camera3D" parent="World3D" unique_id=36892859 instance=ExtResource("3_gx7we")]
+player_offset = Vector3(0, 5, 2.5)
+min_limit = Vector2(-28, -9.6)
+max_limit = Vector2(3, 6)
 
 [node name="Player" parent="World3D" unique_id=426401111 instance=ExtResource("4_2as35")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-
-[node name="TestItem" parent="World3D" unique_id=2131828178 instance=ExtResource("5_gb4hc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
-
-[node name="TestItem2" parent="World3D" unique_id=141263326 instance=ExtResource("5_gb4hc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3.6749656)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -12)
+speed = 15.0
 
 [node name="HUD" parent="World3D" unique_id=1380144273 instance=ExtResource("6_gx7we")]
+visible = false
 
 [node name="DispenserStation" parent="World3D" unique_id=364757752 instance=ExtResource("7_1vks7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0, -13.400001)
 
 [node name="GarbageCan" parent="World3D" unique_id=1174244789 instance=ExtResource("8_6mne0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 5.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1, 0, 5.6)
 
 [node name="FryingPan" parent="World3D" unique_id=2134181477 instance=ExtResource("8_h2y38")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4, 0, 4.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.300001, 0, -4.6000004)
 
 [node name="ClientNPC" parent="World3D" unique_id=426055892 instance=ExtResource("9_sdbsj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, 5.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, -0.5999999)
 
-[node name="GroceriesBox" parent="World3D" unique_id=255311217 instance=ExtResource("11_gb4hc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+[node name="InteractableArea" parent="World3D/ClientNPC" index="2" unique_id=127561350]
+waiting_dialogue = ExtResource("18_dys2e")
+correct_food_dialogue = ExtResource("19_6cesj")
+wrong_food_dialogue = ExtResource("20_qpxae")
+target_dish = ExtResource("19_adixg")
 
 [node name="FridgeStation" parent="World3D" unique_id=1353862936 instance=ExtResource("12_gb4hc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3, 0, 0.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3, 0, -13.4)
 
-[node name="FridgeBox" parent="World3D" unique_id=1511041932 instance=ExtResource("13_gx7we")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.70000005, 0, 5)
+[node name="DirtyDishes" parent="World3D" unique_id=1511041932 instance=ExtResource("13_gx7we")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.000002, 1.4, 4)
+
+[node name="Fregadero" parent="World3D" unique_id=862213590 instance=ExtResource("15_bphc1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3, 0, -7.7)
+
+[node name="Escobillon" parent="World3D" unique_id=1922825790 instance=ExtResource("14_6mne0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1.6)
+
+[node name="CuttingBoard" parent="World3D" unique_id=2131828178 instance=ExtResource("5_gb4hc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4248495, 0, -1)
+
+[node name="AbuelaNPC" parent="World3D" unique_id=232783527 instance=ExtResource("21_3mhvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -2)
+
+[node name="CameraTargets" type="Node3D" parent="." unique_id=89219904]
+
+[node name="FregaderoMarker" type="Marker3D" parent="CameraTargets" unique_id=67070762]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3, 3, -6)
+
+[node name="VerduleroMarker" type="Marker3D" parent="CameraTargets" unique_id=357559024]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 3, -11.4)
+
+[node name="RefriMarker" type="Marker3D" parent="CameraTargets" unique_id=1790804654]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3, 3, -11.4)
+
+[node name="CocinaMarker" type="Marker3D" parent="CameraTargets" unique_id=951291661]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3, 3, -2.5999994)
+
+[node name="EscobillaMarker" type="Marker3D" parent="CameraTargets" unique_id=1042461921]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, 4)
+
+[node name="PlatosMarker" type="Marker3D" parent="CameraTargets" unique_id=701378344]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 5, 6)
+
+[node name="TPTargets" type="Node3D" parent="." unique_id=1476620431]
+
+[node name="PlayerKitchenMarker" type="Marker3D" parent="TPTargets" unique_id=2140201627]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0.25, 0)
+
+[node name="AbuelaKitchenMarker" type="Marker3D" parent="TPTargets" unique_id=949938910]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0.25, -2)
+
+[node name="AbuelaBarCounterMarker" type="Marker3D" parent="TPTargets" unique_id=48036892]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0.25, -2)
+
+[node name="AbuelaWakeUpMarker" type="Marker3D" parent="TPTargets" unique_id=1200537281]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -12.4)
+
+[node name="DialogueBoxUI" parent="." unique_id=909620650 instance=ExtResource("14_1vks7")]
+unique_name_in_owner = true
+visible = false
+
+[node name="RecipeUI" parent="." unique_id=936368506 instance=ExtResource("30_whu2a")]
+unique_name_in_owner = true
+visible = false
+
+[editable path="World3D/GarbageCan"]
+[editable path="World3D/ClientNPC"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bhxo2i4a00d3t"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_bhf4q"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_2dqgf"]
+
+[resource]
+script = ExtResource("2_2dqgf")
+lines = Array[String](["Mateo: (Creo que ha quedado bien, espero le guste).", "Mateo: Joven Pedro, aquí tiene su comida, espero que sea de su agrado.", "Pedro: Esta era la comida favorita de mis padres.
+", "Pedro: Aún recuerdo cuando nos llamaban a la mesa con mi hermano y nunca hacíamos caso.", "Pedro: Habían veces en las que incluso no bajábamos a comer con ellos...", "Pedro: En ese entonces estaba tan centrado en mí que no podía ver a mi alrededor.", "Pedro: Y ahora que ya no los tengo cerca, es dónde más siento que quisiera compartirlo con ellos.", "Pedro: ...", "Pedro: Gracias Mateo, me aseguraré de dejar el plato totalmente limpio!.", "Mateo: ¡Provecho!"])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

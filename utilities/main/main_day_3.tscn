@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://cy6uujnnj5yo8"]
+
+[ext_resource type="Script" uid="uid://bujjbbfm8mrl1" path="res://utilities/day_flow_manager/day_flow_manager.gd" id="1_kg48s"]
+[ext_resource type="Resource" uid="uid://bmr4kxjjtwacu" path="res://utilities/dialogue/dialogue_resources/d3_morning_dialogue.tres" id="3_n72uh"]
+[ext_resource type="Resource" uid="uid://8611xestobvv" path="res://utilities/dialogue/dialogue_resources/d3_client_arrived.tres" id="4_y1dn4"]
+[ext_resource type="Resource" uid="uid://dox8amx1chpks" path="res://utilities/dialogue/dialogue_resources/d3_diego_order.tres" id="5_kg48s"]
+[ext_resource type="Resource" uid="uid://7w74t4myg0qa" path="res://utilities/dialogue/dialogue_resources/d3_night_congrats.tres" id="6_c3ncx"]
+[ext_resource type="Resource" uid="uid://qnuls234hq5" path="res://utilities/dialogue/dialogue_resources/d3_mateo_thoughts.tres" id="7_n72uh"]
+[ext_resource type="Resource" uid="uid://bbursvu3ecneb" path="res://utilities/dialogue/dialogue_resources/dialogue_dish_ready.tres" id="8_kgjms"]
+[ext_resource type="Resource" uid="uid://4dxe11csnnrb" path="res://entities/recipes/mini_lomo_saltado_recipe.tres" id="11_ykdxn"]
+[ext_resource type="PackedScene" uid="uid://8j47wxkehye2" path="res://stages/main_level/main_level.tscn" id="12_soqgn"]
+[ext_resource type="PackedScene" uid="uid://b1qddo55jmigu" path="res://utilities/camera_3d.tscn" id="13_5lsep"]
+[ext_resource type="PackedScene" uid="uid://ikxmvnvqpwb" path="res://entities/player/player.tscn" id="14_sdnnt"]
+[ext_resource type="PackedScene" uid="uid://cfhmn0i1vi5to" path="res://utilities/hud/hud.tscn" id="15_605yf"]
+[ext_resource type="PackedScene" uid="uid://dinc8bynplcn2" path="res://entities/dispenser_station/dispenser_station.tscn" id="16_kpwo2"]
+[ext_resource type="PackedScene" uid="uid://bho5fa5orac3x" path="res://entities/garbage_can/garbage_can.tscn" id="17_i3er2"]
+[ext_resource type="Resource" uid="uid://dxo0qku7p0oky" path="res://utilities/dialogue/dialogue_resources/d3_diego_waiting_order.tres" id="18_ep1m6"]
+[ext_resource type="PackedScene" uid="uid://vyuwbi4o0pi" path="res://entities/frying_pan/frying_pan.tscn" id="18_pl3wd"]
+[ext_resource type="Resource" uid="uid://bv1j5xh3cdhc3" path="res://utilities/dialogue/dialogue_resources/d3_diego_right_order.tres" id="19_favvo"]
+[ext_resource type="PackedScene" uid="uid://bkh3e2xuguexr" path="res://entities/client_npc/client_npc.tscn" id="19_hjiaa"]
+[ext_resource type="Resource" uid="uid://d3jx5xgsfdlg0" path="res://utilities/dialogue/dialogue_resources/d3_diego_wrong_order.tres" id="20_n72uh"]
+[ext_resource type="Resource" uid="uid://ytr4tltk6ry5" path="res://entities/food_items/lomo_saltado.tres" id="23_8qrys"]
+[ext_resource type="PackedScene" uid="uid://dhf2y3s4vt8ea" path="res://entities/fridge_station/fridge_station.tscn" id="24_s7dwr"]
+[ext_resource type="PackedScene" uid="uid://beyirkbwuel1b" path="res://entities/dirty_dishes/dirty_dishes.tscn" id="25_5eesi"]
+[ext_resource type="PackedScene" uid="uid://hmbprlxmdfj8" path="res://entities/fregadero/fregadero.tscn" id="26_t4sd3"]
+[ext_resource type="PackedScene" uid="uid://bd00r7ti4f8jw" path="res://entities/escobillon/escobillon.tscn" id="27_vya3u"]
+[ext_resource type="PackedScene" uid="uid://cn5o0mlxuoim" path="res://entities/test_item/test_item.tscn" id="28_hqo1n"]
+[ext_resource type="PackedScene" uid="uid://cvsvpsivg1g5v" path="res://entities/abuela_npc/abuela_npc.tscn" id="29_he3vs"]
+[ext_resource type="PackedScene" uid="uid://djkmp2k1p7oy8" path="res://utilities/2d_over_3d/dialogue_box_ui/dialogue_box_ui.tscn" id="30_jyahr"]
+[ext_resource type="PackedScene" uid="uid://cgipiewfx4vt" path="res://utilities/recipe_ui/recipe_ui.tscn" id="31_v5slc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qid5v"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_2o3ha"]
+sky_material = SubResource("ProceduralSkyMaterial_qid5v")
+
+[sub_resource type="Environment" id="Environment_03cc7"]
+background_mode = 2
+sky = SubResource("Sky_2o3ha")
+
+[node name="Main" type="Node" unique_id=1361994903]
+
+[node name="DayFlowManager" type="Node" parent="." unique_id=319189262 node_paths=PackedStringArray("client_npc", "abuela_npc", "frying_pan_node", "garbage_can")]
+script = ExtResource("1_kg48s")
+client_npc = NodePath("../World3D/ClientNPC")
+abuela_npc = NodePath("../World3D/AbuelaNPC")
+frying_pan_node = NodePath("../World3D/FryingPan")
+garbage_can = NodePath("../World3D/GarbageCan")
+morning_dialogue = ExtResource("3_n72uh")
+dialogue_client_arrived = ExtResource("4_y1dn4")
+dialogue_client_order = ExtResource("5_kg48s")
+dialogue_dish_ready = ExtResource("8_kgjms")
+dialogue_night_congrats = ExtResource("6_c3ncx")
+dialogue_mateo_thoughts = ExtResource("7_n72uh")
+recipe_of_the_day = ExtResource("11_ykdxn")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=537767560]
+environment = SubResource("Environment_03cc7")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1048446641]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="World3D" type="Node3D" parent="." unique_id=1606488160]
+
+[node name="MainLevel" parent="World3D" unique_id=1578905525 instance=ExtResource("12_soqgn")]
+
+[node name="Camera3D" parent="World3D" unique_id=36892859 instance=ExtResource("13_5lsep")]
+player_offset = Vector3(0, 5, 2.5)
+min_limit = Vector2(-28, -9.6)
+max_limit = Vector2(3, 6)
+
+[node name="Player" parent="World3D" unique_id=426401111 instance=ExtResource("14_sdnnt")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -12)
+speed = 15.0
+
+[node name="HUD" parent="World3D" unique_id=1380144273 instance=ExtResource("15_605yf")]
+visible = false
+
+[node name="DispenserStation" parent="World3D" unique_id=364757752 instance=ExtResource("16_kpwo2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 0, -13.400001)
+
+[node name="GarbageCan" parent="World3D" unique_id=1174244789 instance=ExtResource("17_i3er2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1, 0, 5.6)
+
+[node name="FryingPan" parent="World3D" unique_id=2134181477 instance=ExtResource("18_pl3wd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.300001, 0, -4.6000004)
+
+[node name="ClientNPC" parent="World3D" unique_id=426055892 instance=ExtResource("19_hjiaa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, -0.5999999)
+
+[node name="InteractableArea" parent="World3D/ClientNPC" index="2" unique_id=127561350]
+waiting_dialogue = ExtResource("18_ep1m6")
+correct_food_dialogue = ExtResource("19_favvo")
+wrong_food_dialogue = ExtResource("20_n72uh")
+target_dish = ExtResource("23_8qrys")
+
+[node name="FridgeStation" parent="World3D" unique_id=1353862936 instance=ExtResource("24_s7dwr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3, 0, -13.4)
+
+[node name="DirtyDishes" parent="World3D" unique_id=1511041932 instance=ExtResource("25_5eesi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.000002, 1.4, 4)
+
+[node name="Fregadero" parent="World3D" unique_id=862213590 instance=ExtResource("26_t4sd3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3, 0, -7.7)
+
+[node name="Escobillon" parent="World3D" unique_id=1922825790 instance=ExtResource("27_vya3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1.6)
+
+[node name="CuttingBoard" parent="World3D" unique_id=2131828178 instance=ExtResource("28_hqo1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4248495, 0, -1)
+
+[node name="AbuelaNPC" parent="World3D" unique_id=232783527 instance=ExtResource("29_he3vs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -2)
+
+[node name="CameraTargets" type="Node3D" parent="." unique_id=89219904]
+
+[node name="FregaderoMarker" type="Marker3D" parent="CameraTargets" unique_id=67070762]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3, 3, -6)
+
+[node name="VerduleroMarker" type="Marker3D" parent="CameraTargets" unique_id=357559024]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8, 3, -11.4)
+
+[node name="RefriMarker" type="Marker3D" parent="CameraTargets" unique_id=1790804654]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3, 3, -11.4)
+
+[node name="CocinaMarker" type="Marker3D" parent="CameraTargets" unique_id=951291661]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3, 3, -2.5999994)
+
+[node name="EscobillaMarker" type="Marker3D" parent="CameraTargets" unique_id=1042461921]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, 4)
+
+[node name="PlatosMarker" type="Marker3D" parent="CameraTargets" unique_id=701378344]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 5, 6)
+
+[node name="TPTargets" type="Node3D" parent="." unique_id=1476620431]
+
+[node name="PlayerKitchenMarker" type="Marker3D" parent="TPTargets" unique_id=2140201627]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0.25, 0)
+
+[node name="AbuelaKitchenMarker" type="Marker3D" parent="TPTargets" unique_id=949938910]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0.25, -2)
+
+[node name="AbuelaBarCounterMarker" type="Marker3D" parent="TPTargets" unique_id=48036892]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0.25, -2)
+
+[node name="AbuelaWakeUpMarker" type="Marker3D" parent="TPTargets" unique_id=1200537281]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -12.4)
+
+[node name="DialogueBoxUI" parent="." unique_id=909620650 instance=ExtResource("30_jyahr")]
+unique_name_in_owner = true
+visible = false
+
+[node name="RecipeUI" parent="." unique_id=936368506 instance=ExtResource("31_v5slc")]
+unique_name_in_owner = true
+visible = false
+
+[editable path="World3D/GarbageCan"]
+[editable path="World3D/ClientNPC"]

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://beyirkbwuel1b"]
+
+[ext_resource type="Script" uid="uid://b8r7nxr53vm6b" path="res://entities/dirty_dishes/interactable_area.gd" id="1_s0d8y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ixq5"]
+size = Vector3(0.35, 0.35, 0.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oiqvi"]
+albedo_color = Color(1, 0.1254902, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cke8t"]
+material = SubResource("StandardMaterial3D_oiqvi")
+size = Vector3(0.35, 0.35, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_74gyn"]
+size = Vector3(0.5, 0.35, 0.5)
+
+[node name="DirtyDishes" type="StaticBody3D" unique_id=255311217]
+collision_layer = 8
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1012790394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+shape = SubResource("BoxShape3D_8ixq5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1783802311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+mesh = SubResource("BoxMesh_cke8t")
+
+[node name="InteractableArea" type="Area3D" parent="." unique_id=2025734237]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_s0d8y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea" unique_id=302397450]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+shape = SubResource("BoxShape3D_74gyn")

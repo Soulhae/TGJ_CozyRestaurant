@@ -6,19 +6,22 @@
 [ext_resource type="Texture2D" uid="uid://dgns7dxp6le4d" path="res://entities/player/sprites/left/a.png" id="3_bls4j"]
 [ext_resource type="Texture2D" uid="uid://c20w0beov2bmt" path="res://entities/player/sprites/normal/s.png" id="3_fkugw"]
 [ext_resource type="Texture2D" uid="uid://c34482tgj2e0x" path="res://entities/player/sprites/right/a.png" id="4_fkugw"]
-[ext_resource type="Texture2D" uid="uid://dxmodtflp7k14" path="res://entities/player/sprites/normal/aw.png" id="4_we0b7"]
+[ext_resource type="Texture2D" uid="uid://dvi0rqe3k584b" path="res://entities/player/sprites/normal/aw.png" id="4_we0b7"]
 [ext_resource type="Texture2D" uid="uid://cjfog8etlosdt" path="res://entities/player/sprites/normal/w.png" id="5_wvtmh"]
 [ext_resource type="Texture2D" uid="uid://bsc2418ksl0vb" path="res://entities/player/sprites/left/s.png" id="6_qiwj3"]
 [ext_resource type="Texture2D" uid="uid://dhkhudfkjnp73" path="res://entities/player/sprites/right/s.png" id="7_26q78"]
+[ext_resource type="Texture2D" uid="uid://bj5l6hq4hb7iq" path="res://entities/player/sprites/left/as.png" id="9_afbqv"]
 [ext_resource type="Texture2D" uid="uid://b5mjjv7rubln3" path="res://entities/player/sprites/left/w.png" id="10_7thud"]
+[ext_resource type="Texture2D" uid="uid://cobb43dbytkqw" path="res://entities/player/sprites/right/as.png" id="10_gx6sm"]
 [ext_resource type="Texture2D" uid="uid://caktyhg0o0ucr" path="res://entities/player/sprites/right/w.png" id="11_a1qjk"]
+[ext_resource type="Texture2D" uid="uid://d2pia7qjb6sb" path="res://entities/player/sprites/left/aw.png" id="11_gx6sm"]
+[ext_resource type="Texture2D" uid="uid://85mrc0ambeiq" path="res://entities/player/shadow/circle_gradient1.png" id="16_yqrof"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cv0ty"]
-radius = 0.3
-height = 1.7
+height = 2.4
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cke8t"]
-size = Vector3(1, 1.7, 0.75)
+size = Vector3(1.2, 2.4, 1.25)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cke8t"]
 radius = 0.3
@@ -85,6 +88,34 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("9_afbqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b2kln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gx6sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_b2kln")
+}],
+"loop": 1,
+"name": &"walk_as (falta left_as)",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_gx6sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_we0b7")
+}],
+"loop": 1,
+"name": &"walk_aw (falta right_aw)",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("6_qiwj3")
 }, {
 "duration": 1.0,
@@ -125,12 +156,12 @@ script = ExtResource("1_symyc")
 
 [node name="HeldItemSprite" type="Sprite3D" parent="." unique_id=635524727]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -0.5)
 pixel_size = 0.003
 billboard = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=718188567]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0500001, 0)
 shape = SubResource("CapsuleShape3D_cv0ty")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=1737258043]
@@ -144,6 +175,7 @@ collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/InteractArea" unique_id=5176743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20000005, -0.20000005)
 shape = SubResource("BoxShape3D_cke8t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=1059782088]
@@ -153,14 +185,23 @@ mesh = SubResource("CapsuleMesh_cke8t")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Pivot" unique_id=184721849]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.20000005, 0)
-pixel_size = 0.00127
+cast_shadow = 0
+offset = Vector2(0, 250)
+pixel_size = 0.00167
 billboard = 1
+alpha_cut = 1
 alpha_hash_scale = 2.0
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_cke8t")
-animation = &"idle_a"
+animation = &"walk_as (falta left_as)"
 autoplay = "idle_s"
-frame_progress = 0.73105735
+frame = 2
+frame_progress = 0.93688506
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=286949282]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.1, 0.3010803)
+pixel_size = 0.001
+texture = ExtResource("16_yqrof")
 
 [connection signal="area_entered" from="Pivot/InteractArea" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="Pivot/InteractArea" to="." method="_on_area_3d_area_exited"]

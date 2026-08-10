@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://7w74t4myg0qa"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_e4a4o"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_prhl3"]
+
+[resource]
+script = ExtResource("2_prhl3")
+lines = Array[String](["Mateo: Abue, creo que me iré a dormir por hoy...", "Carmen: Te lo has ganado hijo, que tengas una muy buena noche."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

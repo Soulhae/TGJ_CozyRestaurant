@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bbursvu3ecneb"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_bcg7o"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_j3k6n"]
+
+[resource]
+script = ExtResource("2_j3k6n")
+lines = Array[String](["Mateo: Abuela, ¡mira!", "Carmen: Sabía que lo conseguirías, se ve delicioso.", "Carmen: Ahora ve y entrega tu platillo.", "Carmen: Ya limpiamos el resto para el día de mañana.", "Mateo: Claro, ahora voy!"])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

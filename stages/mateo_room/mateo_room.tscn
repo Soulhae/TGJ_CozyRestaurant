@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cmmdgo1qefwuk"]
+
+[ext_resource type="Script" uid="uid://cvydacjx1oysf" path="res://stages/mateo_room/mateo_room.gd" id="1_dqmf7"]
+[ext_resource type="PackedScene" uid="uid://ehf37n8gir18" path="res://stages/main_level/floor.tscn" id="1_yrf8k"]
+[ext_resource type="Resource" uid="uid://cekngxcx335cj" path="res://utilities/dialogue/dialogue_resources/dialogue_mateo_room.tres" id="2_h3t2m"]
+[ext_resource type="PackedScene" uid="uid://djkmp2k1p7oy8" path="res://utilities/2d_over_3d/dialogue_box_ui/dialogue_box_ui.tscn" id="2_speah"]
+[ext_resource type="PackedScene" uid="uid://ikxmvnvqpwb" path="res://entities/player/player.tscn" id="3_dqmf7"]
+[ext_resource type="PackedScene" uid="uid://b1qddo55jmigu" path="res://utilities/camera_3d.tscn" id="4_speah"]
+
+[node name="MateoRoom" type="Node3D" unique_id=1832662836]
+script = ExtResource("1_dqmf7")
+room_dialogue = ExtResource("2_h3t2m")
+
+[node name="Floor" parent="." unique_id=846501738 instance=ExtResource("1_yrf8k")]
+
+[node name="Player" parent="." unique_id=426401111 instance=ExtResource("3_dqmf7")]
+unique_name_in_owner = true
+
+[node name="DialogueBoxUI" parent="." unique_id=909620650 instance=ExtResource("2_speah")]
+
+[node name="Camera3D" parent="." unique_id=36892859 instance=ExtResource("4_speah")]

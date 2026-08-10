@@ -1,6 +1,6 @@
 extends Control
 
-const GAME_SCENE: PackedScene = preload("res://utilities/main/main.tscn")
+const GAME_SCENE: PackedScene = preload("res://stages/mateo_room/mateo_room.tscn")
 
 @onready var start_button: Button = %StartButton
 @onready var settings_button: Button = %SettingsButton
@@ -17,6 +17,7 @@ const GAME_SCENE: PackedScene = preload("res://utilities/main/main.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	AudioManager.play_music(AudioManager.track_menu)
 	settings_view.visible = false
 	controls_view.visible = false
 	credits_view.visible = false

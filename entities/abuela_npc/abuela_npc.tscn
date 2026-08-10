@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cvsvpsivg1g5v"]
+
+[ext_resource type="Texture2D" uid="uid://r1v11gvmd0cx" path="res://entities/abuela_npc/sprites/main/s.png" id="1_ays0u"]
+[ext_resource type="Texture2D" uid="uid://85mrc0ambeiq" path="res://entities/player/shadow/circle_gradient1.png" id="2_fri4r"]
+
+[node name="AbuelaNPC" type="Node3D" unique_id=232783527]
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=499510182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49999994, 0)
+cast_shadow = 0
+offset = Vector2(0, 315)
+pixel_size = 0.00155
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_ays0u")
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1257978087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07, 0.05, 0.347)
+pixel_size = 0.001
+axis = 1
+texture = ExtResource("2_fri4r")

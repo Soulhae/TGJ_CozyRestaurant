@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bp34clpxyrhvh"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_6ea7w"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_mdw21"]
+
+[resource]
+script = ExtResource("2_mdw21")
+lines = Array[String](["Carmen: Mateito, despierta, ya amaneció hijo.
+", "Mateo: Buenos días abue.", "Carmen: ¡Muy buenos días! Apenas puedas, agradecería me ayudarás a limpiar un poco la cocina, por favor.", "Mateo: Claro que sí, ahora voy abue.", "Carmen: Primero, voy a explicarte un poco sobre este lugar.", "Carmen: Ya habías venido antes, pero eras muy pequeño para recordarlo.", "Carmen: En este lugar solo se atiende a una persona por día.", "Mateo: Eso me parece algo extraño.
+", "Carmen: Es que en este lugar el dinero no es lo que más importa, sino lo son las personas.", "Mateo: Sigo sin entender. ¿Por qué atenderías a una sola persona?. Eso no debe generar muchas ganancias.
+", "Carmen: Cuando cumples cierta edad, te das cuenta que el dinero no lo es todo...", "Carmen: Hay muchas personas que gustan no solo comer un buen plato de comida, sino también poder compartir contigo lo que les aqueja.", "Mateo: ...", "Carmen: No te sientas mal, Mateo, ven, deja que te enseñe más de la cocina.", "Carmen: Aquí está el fregadero, como adivinarás, es dónde se lavan los platos.", "Carmen: Por aquí está el verdulero, desde papas hasta zanahorias, todo va por aquí.", "Carmen: Está es la cocina. Hace poco fue renovada así que está como nueva.", "Carmen: Aquí está la refrigeradora.", "Carmen: Y por último, el escobillón, siempre es importante dar una buena barrida.", "Carmen: El resto de cosas son utensilios que están a la vista, no será mayor problema.", "Mateo: Nunca he sido de estar mucho en la cocina.
+", "Mateo: Y si... ¿Lo hago mal?...", "Carmen: Eso no pasará, porque yo estaré aquí para ayudarte.", "Carmen: Se que empezar algo nuevo no es fácil, pero nunca es tarde para hacerlo.", "Carmen: Empecemos por algo fácil, cuando veas algo sucio, solo debes traerlo al fregadero y lavarlo. (“E“ para interactuar)", "Carmen: ¡No te olvides de barrer luego!"])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

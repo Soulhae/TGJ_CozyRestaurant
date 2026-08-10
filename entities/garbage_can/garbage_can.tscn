@@ -12,12 +12,14 @@ size = Vector3(0.4, 0.6, 0.4)
 size = Vector3(0.7, 0.6, 0.7)
 
 [node name="GarbageCan" type="StaticBody3D" unique_id=1174244789]
+visible = false
 collision_layer = 8
 collision_mask = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=829023008]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 shape = SubResource("BoxShape3D_cv0ty")
+disabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=858134260]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
@@ -26,6 +28,8 @@ mesh = SubResource("BoxMesh_cke8t")
 [node name="InteractableArea" type="Area3D" parent="." unique_id=2092578883]
 collision_layer = 8
 collision_mask = 0
+monitoring = false
+monitorable = false
 script = ExtResource("1_85pkc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea" unique_id=1281288314]

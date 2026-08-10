@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dhf2y3s4vt8ea"]
 
 [ext_resource type="Script" uid="uid://brnhy0jb377pq" path="res://entities/fridge_station/fridge_station_area.gd" id="1_2x75h"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="2_5eet2"]
+[ext_resource type="Resource" uid="uid://d2x2lmwj00u0f" path="res://entities/food_items/raw_meat.tres" id="3_8m2h0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cke8t"]
 
@@ -29,6 +31,7 @@ mesh = SubResource("BoxMesh_cv0ty")
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_2x75h")
+available_items = Array[ExtResource("2_5eet2")]([ExtResource("3_8m2h0")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DispenserStationArea" unique_id=748922211]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

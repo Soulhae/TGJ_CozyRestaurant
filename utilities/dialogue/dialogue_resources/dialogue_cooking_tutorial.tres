@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dh3tyt1gx3ry0"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_pj0oi"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_lwej4"]
+
+[resource]
+script = ExtResource("2_lwej4")
+lines = Array[String](["Carmen: Aquí tienes la receta hijo, te enseñaré cómo hacerlo.", "Carmen: Presiona \"R\" para ver la receta.", "Mateo: Gracias abuela.", "Carmen: Esta será la mesa en dónde prepararás todos los ingredientes que necesites antes de que los cocines.", "Carmen: Todo lo que te haga falta está en su respectivo lugar; las verduras en la verdulera y la carne en el congelador.", "Carmen: Hay ingredientes que solamente se hacen en la olla y otros que van en la sartén, todo depende del tipo de receta que tengas.", "Carmen: Para interactuar con los elementos que necesites presiona la letra “E”.", "Mateo: Entendido.", "Carmen: Me quedaré aquí mientras preparas tu primer plato, recuerda, la única forma de lograrlo es primero intentándolo!.", "Mateo: Tienes razón abue."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cnkna27kftmi3"]
+
+[ext_resource type="Script" uid="uid://dqaxu85vty853" path="res://stages/arrival_scene/arrival_scene.gd" id="1_llwpk"]
+[ext_resource type="Resource" uid="uid://cv52i7j51nhsw" path="res://utilities/dialogue/dialogue_resources/dialogue_arrival_scene.tres" id="2_8v0sh"]
+[ext_resource type="PackedScene" uid="uid://djkmp2k1p7oy8" path="res://utilities/2d_over_3d/dialogue_box_ui/dialogue_box_ui.tscn" id="2_up5aa"]
+
+[node name="ArrivalScene" type="Control" unique_id=594893098]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_llwpk")
+room_dialogue = ExtResource("2_8v0sh")
+
+[node name="DialogueBoxUI" parent="." unique_id=909620650 instance=ExtResource("2_up5aa")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1415889278]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

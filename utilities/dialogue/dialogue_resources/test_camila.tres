@@ -26,7 +26,6 @@ metadata/_custom_type_script = "uid://sqowrwv16roo"
 
 [resource]
 script = ExtResource("1_shn55")
-character_name = "Camila"
 choices = Array[ExtResource("1_kkkxi")]([SubResource("Resource_hv6jh"), SubResource("Resource_th7qu"), SubResource("Resource_xy3t5")])
-lines = Array[String](["Hola! hoy hace buen clima, vi este restaurante a la pasada.", "¿Qué platos tienes para recomendarme?"])
+lines = Array[String](["Camila: Hola! hoy hace buen clima, vi este restaurante a la pasada.", "Camila: ¿Qué platos tienes para recomendarme?"])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

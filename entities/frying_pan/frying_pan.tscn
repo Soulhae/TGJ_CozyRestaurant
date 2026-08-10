@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://4dxe11csnnrb" path="res://entities/recipes/mini_lomo_saltado_recipe.tres" id="3_ielkf"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_bf5uu"]
-height = 0.2
+height = 0.5
 radius = 0.3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bxy0p"]
@@ -13,22 +13,22 @@ radius = 0.3
 [sub_resource type="CylinderMesh" id="CylinderMesh_cke8t"]
 top_radius = 0.3
 bottom_radius = 0.3
-height = 0.2
+height = 0.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cke8t"]
-size = Vector3(1, 0.2, 1)
+size = Vector3(1, 0.5, 1)
 
 [node name="FryingPan" type="StaticBody3D" unique_id=2134181477]
 collision_layer = 8
 collision_mask = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1440321723]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 shape = SubResource("CylinderShape3D_bf5uu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2047027042]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 material_override = SubResource("StandardMaterial3D_bxy0p")
 mesh = SubResource("CylinderMesh_cke8t")
 
@@ -39,12 +39,12 @@ script = ExtResource("1_bxy0p")
 available_recipes = Array[ExtResource("2_cjwuk")]([ExtResource("3_ielkf")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea" unique_id=2070421394]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 shape = SubResource("BoxShape3D_cke8t")
 
 [node name="StationSprite" type="Sprite3D" parent="InteractableArea" unique_id=1727093998]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
 pixel_size = 0.003
 billboard = 1
 

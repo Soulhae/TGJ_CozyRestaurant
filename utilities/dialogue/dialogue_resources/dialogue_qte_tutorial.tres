@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://yijdgsvr1nnm"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_7yvpd"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_qu4fx"]
+
+[resource]
+script = ExtResource("2_qu4fx")
+lines = Array[String](["Carmen: Habrá veces en que debas estar atento a la llama.", "Carmen: Si es muy alta podría llegar a cambiar el sabor de los alimentos!", "Carmen: Cuando esto suceda, aparecerá en la pantalla una pequeña barra con una aguja y un margen verde pequeño.", "Carmen: Intenta acercarte lo más posible a su centro y frenar la aguja con “Espacio“.", "Carmen: Cuando se termine de cocinar el plato, ve y entrega el plato al cliente."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

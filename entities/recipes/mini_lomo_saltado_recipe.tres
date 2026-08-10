@@ -5,10 +5,11 @@
 [ext_resource type="Script" uid="uid://c5u3f86brbmqi" path="res://utilities/recipe_data/recipe_data.gd" id="2_ektpu"]
 [ext_resource type="Resource" uid="uid://blj3q4u7vaymt" path="res://entities/food_items/sliced_meat.tres" id="3_ein8f"]
 [ext_resource type="Resource" uid="uid://dnxllhi71yvnp" path="res://entities/food_items/sliced_potato.tres" id="4_g52hg"]
+[ext_resource type="Resource" uid="uid://bf2nve00o658b" path="res://entities/food_items/sliced_onion.tres" id="5_ein8f"]
 
 [resource]
 script = ExtResource("2_ektpu")
-required_items = Array[ExtResource("1_qeqnw")]([ExtResource("3_ein8f"), ExtResource("4_g52hg")])
-cooking_time = 10.0
+required_items = Array[ExtResource("1_qeqnw")]([ExtResource("3_ein8f"), ExtResource("4_g52hg"), ExtResource("5_ein8f")])
+cooking_time = 4.0
 final_result = ExtResource("1_vajqj")
 metadata/_custom_type_script = "uid://c5u3f86brbmqi"

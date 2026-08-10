@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://2b2pi5pggvfl"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_8ejqt"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_pjaox"]
+
+[resource]
+script = ExtResource("2_pjaox")
+lines = Array[String](["Mateo: Hay muchas cosas en mi cabeza que quizá aún no termino de entender.", "Mateo: Se que con el tiempo seré capaz de hacerlo.", "Mateo: Pero por ahora...", "Mateo: Puedo decir que no fue un mal día."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

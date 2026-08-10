@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c61gql8h046gg" path="res://utilities/2d_over_3d/dialogue_box_ui/dialogue_box_ui.gd" id="1_hv6jh"]
 [ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_jojgr"]
 [ext_resource type="StyleBox" uid="uid://wbtxw44f3k50" path="res://utilities/ui_presets/new_style_box_flat.tres" id="2_th7qu"]
+[ext_resource type="AudioStream" uid="uid://j5wu7wc3046h" path="res://audio/UI/hover.wav" id="4_xy3t5"]
 
 [sub_resource type="Theme" id="Theme_2y4rr"]
 Button/font_sizes/font_size = 20
@@ -30,11 +31,28 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_2y4rr")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer" unique_id=1358274344]
+[node name="ColorRect" type="ColorRect" parent="Control/PanelContainer" unique_id=1393056188]
+layout_mode = 2
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="TextureRect" type="TextureRect" parent="Control/PanelContainer" unique_id=1897121642]
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("1_jojgr")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/PanelContainer" unique_id=688857700]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/MarginContainer" unique_id=1358274344]
+custom_maximum_size = Vector2(1780, -1)
 layout_mode = 2
 theme_override_constants/separation = 4
 
-[node name="TalkingCharacterName" type="Label" parent="Control/PanelContainer/VBoxContainer" unique_id=560845461]
+[node name="TalkingCharacterName" type="Label" parent="Control/PanelContainer/MarginContainer/VBoxContainer" unique_id=560845461]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
@@ -42,13 +60,16 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(0.8404456, 0.64751, 0.14201656, 1)
 theme_override_font_sizes/font_size = 64
 
-[node name="DialogueLabel" type="RichTextLabel" parent="Control/PanelContainer/VBoxContainer" unique_id=1763598458]
+[node name="DialogueLabel" type="RichTextLabel" parent="Control/PanelContainer/MarginContainer/VBoxContainer" unique_id=1763598458]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/normal_font_size = 42
+scroll_active = false
+autowrap_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="Control/PanelContainer/VBoxContainer/DialogueLabel" unique_id=2131039614]
+[node name="GridContainer" type="GridContainer" parent="Control/PanelContainer/MarginContainer/VBoxContainer/DialogueLabel" unique_id=2131039614]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 7
@@ -62,11 +83,6 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/v_separation = 10
 
-[node name="TextureRect" type="TextureRect" parent="Control/PanelContainer" unique_id=1897121642]
-layout_mode = 2
-size_flags_horizontal = 8
-texture = ExtResource("1_jojgr")
-
 [node name="ColorRect" type="ColorRect" parent="Control" unique_id=1109068460]
 layout_mode = 1
 anchors_preset = -1
@@ -74,4 +90,8 @@ anchor_right = 1.0
 anchor_bottom = 0.682
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.5019608)
+color = Color(0, 0, 0, 0.15686275)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control" unique_id=416981117]
+stream = ExtResource("4_xy3t5")
+volume_db = -1.0

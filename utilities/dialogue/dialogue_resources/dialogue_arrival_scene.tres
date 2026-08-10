@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cv52i7j51nhsw"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_o5s26"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_y58rv"]
+
+[resource]
+script = ExtResource("2_y58rv")
+lines = Array[String](["Mary: eo..", "Mary: teo..", "Mary: Mateo, reacciona, tu abuela está esperándote en la mesa.", "Mateo: (¿En qué momento llegamos?)", "Mateo: Hola abuela, hace mucho que no te veo, ¿Cómo has estado?", "Carmen: Mi querido nieto, me alegra tanto verte, has crecido más de lo que imaginé.", "Carmen: Yo me encuentro mejor que nunca, es decir, puedo caminar a pesar de tener 80 años, ¿No te parece increíble?", "Mateo: Tienes razón abue, si hay algo que siempre te ha caracterizado es la positividad que transmites al resto.", "Mateo: En cambio yo...", "Carmen: En cambio tú sigues siendo tan tenaz y perseverante como siempre, ¿No es así? Seguro estás cansado cariño, ven, te llevaré a tu cuarto.", "Mateo: Gracias abuela, si estoy a decir verdad.", "Carmen: Vamos, te llevaré a tu habitación y luego me despido de tu madre. Que tengas una muy buena noche hijito, ya nos pondremos al corriente mañana.", "Mateo: Abue...", "Carmen: ¿Si hijo?.", "Mateo: Dile a mamá que vuelva con cuidado por favor.", "Carmen: Se lo haré saber corazón, que tengas muy buena noche."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://d3jx5xgsfdlg0"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_u1qwn"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_xffg2"]
+
+[resource]
+script = ExtResource("2_xffg2")
+lines = Array[String](["Diego: Qué comida mas \"wena\"!.", "Diego: Creo que vendré más seguido acá.", "Diego: Gracias!"])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

@@ -1,5 +1,7 @@
 extends Area3D
 
+const MINIGAME_QTE_SCENE: PackedScene = preload("res://utilities/2d_over_3d/minigame_qte/minigame_qte.tscn")
+
 @export var available_recipes: Array[RecipeData]
 
 var added_items: Array[ItemData] = []
@@ -78,6 +80,24 @@ func update_ready_dish_visual() -> void:
 
 func start_cooking() -> void:
 	is_cooking = true
+	var day_manager = get_tree().current_scene.get_node_or_null("DayFlowManager")
+	
+	player.set_physics_process(false)
+	player.set_process_unhandled_input(false)
+	
+	if day_manager and day_manager.has_method("play_qte_tutorial"):
+		await day_manager.play_qte_tutorial()
+		
+	var minigame_qte = MINIGAME_QTE_SCENE.instantiate()
+	get_tree().current_scene.add_child(minigame_qte)
+	
+	var _success = await minigame_qte.qte_finished 
+	
+	await get_tree().create_timer(1.0).timeout 
+	
+	player.set_physics_process(true)
+	player.set_process_unhandled_input(true)
+	
 	TimeManager.set_slowed_speed()
 	
 	if mat:

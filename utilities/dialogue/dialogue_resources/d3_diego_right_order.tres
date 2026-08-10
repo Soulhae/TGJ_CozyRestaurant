@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bv1j5xh3cdhc3"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_ls8hq"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_t8vci"]
+
+[resource]
+script = ExtResource("2_t8vci")
+lines = Array[String](["Mateo: Aquí tiene, está listo!", "Diego: Hace mucho que no como este plato, no se prepara por aquí.", "Diego: El aroma y la comida se ven exactamente como los preparaba mi madre.", "Diego: Me alegra de haber venido aquí, muchas gracias.", "Mateo: Me alegra haber cumplido con sus expectativas."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

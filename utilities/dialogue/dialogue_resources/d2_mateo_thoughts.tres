@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cto3pww5u10w3"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_s0lmt"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_n84aj"]
+
+[resource]
+script = ExtResource("2_n84aj")
+lines = Array[String](["Mateo: Algunas personas si la tienen muy difícil.", "Mateo: Debería ser más agradecido y hacerle saber a mi mamá cuánto la quiero.", "Mateo: También se lo diré a mi abuela mañana.", "Mateo: ...", "Mateo: Me estoy sintiendo mejor de lo que esperaba."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

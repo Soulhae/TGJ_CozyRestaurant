@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://ep0oyf1kw6u"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_4i5uf"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_3xbqq"]
+
+[resource]
+script = ExtResource("2_3xbqq")
+lines = Array[String](["Carmen: Mateo, despierta!", "Carmen: Buenos días dormilón.", "Carmen: Duermes igual de profundo como lo hacía tu madre.", "Mateo: Abuela?", "Mateo: 5 minutos más por favor...", "Carmen: Al que madruga Dios lo ayuda hijito, vamos, aun queda limpiar lo del día de ayer.", "Carmen: El tiempo pasa más rápido de lo que crees.", "Mateo: Ya voy...", "Carmen: Yo estaré limpiando también!"])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

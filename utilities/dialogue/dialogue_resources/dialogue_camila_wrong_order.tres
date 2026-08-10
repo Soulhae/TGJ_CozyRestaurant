@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://ba88a46hjqr32"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_vcdug"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_fg1gt"]
+
+[resource]
+script = ExtResource("2_fg1gt")
+lines = Array[String](["Camila: Mmmm, esto no parece lomo saltado...", "Camila: Pero a veces las mejores cosas en la vida son imprevistas, muchas gracias de todas maneras!."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

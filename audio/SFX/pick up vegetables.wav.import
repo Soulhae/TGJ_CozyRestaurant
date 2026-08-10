@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d0n36ejve7kgt"
+path="res://.godot/imported/pick up vegetables.wav-8f2d78aed1c16cc80ce9c5660f4eb0e8.sample"
+
+[deps]
+
+source_file="res://audio/SFX/pick up vegetables.wav"
+dest_files=["res://.godot/imported/pick up vegetables.wav-8f2d78aed1c16cc80ce9c5660f4eb0e8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

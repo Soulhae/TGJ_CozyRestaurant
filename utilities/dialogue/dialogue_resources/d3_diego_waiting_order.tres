@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dxo0qku7p0oky"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_5ju1v"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_724nq"]
+
+[resource]
+script = ExtResource("2_724nq")
+lines = Array[String](["Diego: Aquí estaré esperando bro, muchas gracias."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

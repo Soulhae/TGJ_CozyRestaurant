@@ -47,8 +47,10 @@ stretch_mode = 5
 layout_mode = 2
 horizontal_alignment = 1
 
-[node name="IngredientsLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1755935385]
+[node name="IngredientsLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=413307222]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
-horizontal_alignment = 1
+bbcode_enabled = true
+fit_content = true
 autowrap_mode = 2
+horizontal_alignment = 1

@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://hmbprlxmdfj8"]
 
 [ext_resource type="Script" uid="uid://cgsjaublf0l0m" path="res://entities/fregadero/fregadero_area.gd" id="1_qj66i"]
-[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="2_ncl1k"]
-[ext_resource type="Script" uid="uid://cma2f3bk5niy0" path="res://utilities/bouncing_arrow.gd" id="3_d1xvm"]
+[ext_resource type="PackedScene" uid="uid://untsp21uyp2k" path="res://entities/flecha/arrow_indicator.tscn" id="2_ncl1k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cke8t"]
 
@@ -36,10 +35,6 @@ script = ExtResource("1_qj66i")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_cv0ty")
 
-[node name="ArrowIndicator" type="Sprite3D" parent="." unique_id=517621850]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4, -0.7)
-visible = false
-pixel_size = 0.007
-billboard = 1
-texture = ExtResource("2_ncl1k")
-script = ExtResource("3_d1xvm")
+[node name="ArrowIndicator" parent="." unique_id=582523931 instance=ExtResource("2_ncl1k")]
+unique_name_in_owner = true
+transform = Transform3D(0.2, 0, 0, 0, -8.742278e-09, 0.2, 0, -0.2, -8.742278e-09, 0, 1.4, 2.2000003)

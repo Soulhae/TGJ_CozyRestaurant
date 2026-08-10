@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://db27eumynmfen"]
+
+[ext_resource type="Texture2D" uid="uid://34g0co2dyrlt" path="res://entities/food_items/sprites/ingredientes/Aji_a_color-removebg-preview.png" id="1_f7a35"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_mxsx8"]
+
+[resource]
+script = ExtResource("1_mxsx8")
+item_name = "Ají de Color"
+item_icon = ExtResource("1_f7a35")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

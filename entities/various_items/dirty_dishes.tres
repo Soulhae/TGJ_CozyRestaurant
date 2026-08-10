@@ -1,11 +1,10 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://datu6dcfdrf75"]
 
 [ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_3osys"]
-[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_7dvsx"]
+[ext_resource type="Texture2D" uid="uid://bx52338svtdlk" path="res://entities/various_items/Sin_título2-removebg-preview.png" id="1_7dvsx"]
 
 [resource]
 script = ExtResource("1_3osys")
 item_name = "Platos Sucios"
 item_icon = ExtResource("1_7dvsx")
-item_color = Color(0.84088814, 0, 0.091616414, 1)
 metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

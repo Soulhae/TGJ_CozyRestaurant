@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://db8oaocfno8dj"]
+
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_fpudu"]
+[ext_resource type="Texture2D" uid="uid://wpkluftdt16r" path="res://entities/food_items/sprites/ingredientes/Ají_dulce-removebg-preview.png" id="1_ijc3y"]
+
+[resource]
+script = ExtResource("1_fpudu")
+item_name = "Ají Dulce"
+item_icon = ExtResource("1_ijc3y")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

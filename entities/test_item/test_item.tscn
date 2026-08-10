@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://cn5o0mlxuoim"]
 
 [ext_resource type="Script" uid="uid://d28bwu3xilgxl" path="res://entities/test_item/interactable_area.gd" id="2_3dqdi"]
-[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="2_riajg"]
 [ext_resource type="Script" uid="uid://bnptmi51ejl8s" path="res://entities/test_item/silueta_nombre_item.gd" id="3_dt62p"]
-[ext_resource type="Script" uid="uid://cma2f3bk5niy0" path="res://utilities/bouncing_arrow.gd" id="4_dt62p"]
+[ext_resource type="PackedScene" uid="uid://untsp21uyp2k" path="res://entities/flecha/arrow_indicator.tscn" id="3_riajg"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bf5uu"]
 radius = 0.25
@@ -31,29 +30,29 @@ collision_layer = 8
 collision_mask = 0
 script = ExtResource("2_3dqdi")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/InteractableArea" unique_id=829244275]
-shape = SubResource("BoxShape3D_3dqdi")
-
 [node name="TableItemSprite" type="Sprite3D" parent="Pivot/InteractableArea" unique_id=2102586852]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6999999, 0)
-pixel_size = 0.00075
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20000002, 0.6999999, -0.1)
+pixel_size = 0.0015
 billboard = 1
 texture_filter = 0
 
-[node name="TableItemName" type="Label3D" parent="Pivot/InteractableArea/TableItemSprite" unique_id=121336239]
+[node name="TableItemName" type="Label3D" parent="Pivot/InteractableArea" unique_id=121336239]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10000004, 0.20000005, -0.20000002)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30000007, 0.9, -0.30000004)
 billboard = 1
 alpha_cut = 1
 
-[node name="SiluetaNombreItem" type="Label3D" parent="Pivot/InteractableArea/TableItemSprite/TableItemName" unique_id=1287413137]
+[node name="SiluetaNombreItem" type="Label3D" parent="Pivot/InteractableArea/TableItemName" unique_id=1287413137]
 visible = false
 billboard = 1
 no_depth_test = true
 alpha_cut = 1
 render_priority = -1
 script = ExtResource("3_dt62p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/InteractableArea" unique_id=829244275]
+shape = SubResource("BoxShape3D_3dqdi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=1444092579]
 mesh = SubResource("SphereMesh_cke8t")
@@ -65,11 +64,6 @@ visible = false
 billboard = 1
 text = "Ouch!"
 
-[node name="ArrowIndicator" type="Sprite3D" parent="." unique_id=1621141128]
+[node name="ArrowIndicator" parent="." unique_id=582523931 instance=ExtResource("3_riajg")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-visible = false
-pixel_size = 0.005
-billboard = 1
-texture = ExtResource("2_riajg")
-script = ExtResource("4_dt62p")
+transform = Transform3D(0.3, 0, 0, 0, -1.3113417e-08, 0.3, 0, -0.3, -1.3113417e-08, -0.2, 0.1, 3.1)

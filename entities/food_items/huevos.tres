@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dtv8qfy0mj483"]
+
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_gb1h5"]
+[ext_resource type="Texture2D" uid="uid://u0jidyh7x7ig" path="res://entities/food_items/sprites/ingredientes/Huevos-removebg-preview.png" id="1_j7tav"]
+
+[resource]
+script = ExtResource("1_gb1h5")
+item_name = "Huevos"
+item_icon = ExtResource("1_j7tav")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

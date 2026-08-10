@@ -9,7 +9,7 @@ const MINIGAME_QTE_SCENE: PackedScene = preload("res://utilities/2d_over_3d/mini
 var player: CharacterBody3D = null
 
 @onready var test_interact_label: Label3D = %TestInteractLabel
-@onready var arrow_indicator: Sprite3D = %ArrowIndicator
+@onready var arrow_indicator: Node3D = %ArrowIndicator
 @onready var table_item_sprite: Sprite3D = %TableItemSprite
 @onready var table_item_name: Label3D = %TableItemName
 
@@ -49,6 +49,8 @@ func on_interact() -> void:
 		player.update_held_item_visual()
 		update_table_item_visual()
 	elif player.held_item == null and item_on_table != null and item_on_table.processed_result != null:
+		AudioManager.play_sfx(AudioManager.cutting_meat_sfx)
+		AudioManager.play_sfx(AudioManager.cutting_vegetables_sfx)
 		item_on_table = item_on_table.processed_result
 		update_table_item_visual()
 	elif player.held_item == null and item_on_table != null and item_on_table.processed_result == null:
@@ -56,6 +58,8 @@ func on_interact() -> void:
 		item_on_table = null
 		player.update_held_item_visual()
 		update_table_item_visual()
+	elif player.held_item != null and item_on_table != null:
+		AudioManager.play_sfx(AudioManager.cancel_sfx)
 
 #func update_ui(_in_range: bool = _is_player_in_range) -> void:
 	##_is_player_in_range = in_range
@@ -79,6 +83,8 @@ func update_table_item_visual() -> void:
 	if item_on_table and item_on_table.item_icon:
 		table_item_sprite.texture = item_on_table.item_icon
 		table_item_sprite.modulate = item_on_table.item_color
+		var s = item_on_table.custom_scale
+		table_item_sprite.scale = Vector3(s, s, s)
 		table_item_sprite.visible = true
 		table_item_name.text = item_on_table.item_name
 		table_item_name.modulate = item_on_table.item_color

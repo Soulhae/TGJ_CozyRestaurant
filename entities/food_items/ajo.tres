@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://pga1rqufxwn6"]
+
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_gkump"]
+[ext_resource type="Texture2D" uid="uid://bymqbi1s8mbcp" path="res://entities/food_items/sprites/ingredientes/Ajo-removebg-preview.png" id="1_j8k6j"]
+
+[resource]
+script = ExtResource("1_gkump")
+item_name = "Ajo"
+item_icon = ExtResource("1_j8k6j")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

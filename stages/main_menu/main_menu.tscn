@@ -63,6 +63,7 @@ text = "Iniciar"
 
 [node name="SettingsButton" type="Button" parent="ButtonsContainer" unique_id=1448137703]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Opciones"

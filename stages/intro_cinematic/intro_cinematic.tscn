@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://wloheccckhrx" path="res://stages/intro_cinematic/intro_cinematic.gd" id="1_8gqef"]
 [ext_resource type="Texture2D" uid="uid://dyji23huhmh4k" path="res://stages/main_menu/image.png" id="2_is0xm"]
 
-[sub_resource type="Theme" id="Theme_cke8t"]
-
 [node name="IntroCinematic" type="CanvasLayer" unique_id=1514258513]
 script = ExtResource("1_8gqef")
 mateo_phrases = Array[String](["A medida que vas creciendo, te vuelves más consciente de todo.", "Y no dudo que los adultos siempre hablan por nuestro bien.
@@ -29,7 +27,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_cke8t")
 texture = ExtResource("2_is0xm")
 
 [node name="Label" type="Label" parent="ColorRect" unique_id=308639116]

@@ -20,6 +20,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		select_canceled.emit()
 		queue_free()
+	elif event.is_action_pressed("interact"):
+		var focused_button = get_viewport().gui_get_focus_owner()
+		if focused_button and focused_button is Button:
+			focused_button.pressed.emit()
+			get_viewport().set_input_as_handled()
 
 
 func setup_catalog(available_items: Array[ItemData]) -> void:
@@ -28,7 +33,7 @@ func setup_catalog(available_items: Array[ItemData]) -> void:
 		item_button.text = item.item_name
 		item_button.icon = item.item_icon
 		item_button.expand_icon = true
-		item_button.custom_minimum_size = Vector2(273, 100)
+		item_button.custom_minimum_size = Vector2(265, 100)
 		item_button.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		item_button.vertical_icon_alignment = VERTICAL_ALIGNMENT_TOP
 		item_button.pressed.connect(_on_button_pressed.bind(item))

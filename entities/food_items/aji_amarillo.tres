@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c85tq5d50brm5"]
+
+[ext_resource type="Texture2D" uid="uid://b8ohl6y81p7tk" path="res://entities/food_items/sprites/ingredientes/Aji_amarillo_preparado-removebg-preview.png" id="1_hdyrs"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_xuwvr"]
+
+[resource]
+script = ExtResource("1_xuwvr")
+item_name = "Ají Amarillo"
+item_icon = ExtResource("1_hdyrs")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

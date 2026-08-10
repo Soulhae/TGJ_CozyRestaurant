@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b3uskp6oedarq"]
+
+[ext_resource type="Texture2D" uid="uid://b3h5rbiedji1w" path="res://entities/food_items/sprites/ingredientes/Poro-removebg-preview.png" id="1_a8gn0"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_ycx3m"]
+
+[resource]
+script = ExtResource("1_ycx3m")
+item_name = "Poro"
+item_icon = ExtResource("1_a8gn0")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

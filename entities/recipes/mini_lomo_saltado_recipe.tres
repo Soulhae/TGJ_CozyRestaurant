@@ -6,10 +6,18 @@
 [ext_resource type="Resource" uid="uid://blj3q4u7vaymt" path="res://entities/food_items/sliced_meat.tres" id="3_ein8f"]
 [ext_resource type="Resource" uid="uid://dnxllhi71yvnp" path="res://entities/food_items/sliced_potato.tres" id="4_g52hg"]
 [ext_resource type="Resource" uid="uid://bf2nve00o658b" path="res://entities/food_items/sliced_onion.tres" id="5_ein8f"]
+[ext_resource type="Resource" uid="uid://dgmdhmoe0k87w" path="res://entities/food_items/aceite.tres" id="6_t2pkm"]
+[ext_resource type="Resource" uid="uid://pga1rqufxwn6" path="res://entities/food_items/ajo.tres" id="7_7kv7f"]
+[ext_resource type="Resource" uid="uid://c85tq5d50brm5" path="res://entities/food_items/aji_amarillo.tres" id="8_omt76"]
+[ext_resource type="Resource" uid="uid://djbf3dgx17q3t" path="res://entities/food_items/sal.tres" id="9_y0pxt"]
+[ext_resource type="Resource" uid="uid://ba17ch8dcs5xb" path="res://entities/food_items/sillao.tres" id="10_84y0f"]
+[ext_resource type="Resource" uid="uid://bqk3a4rqx1dr4" path="res://entities/food_items/salsa_de_ostion.tres" id="11_1csi6"]
+[ext_resource type="Resource" uid="uid://f2emwla5meny" path="res://entities/food_items/agua.tres" id="12_g6naj"]
+[ext_resource type="Resource" uid="uid://d1ogy5kyrjrh7" path="res://entities/food_items/arroz.tres" id="13_0g70q"]
 
 [resource]
 script = ExtResource("2_ektpu")
-required_items = Array[ExtResource("1_qeqnw")]([ExtResource("3_ein8f"), ExtResource("4_g52hg"), ExtResource("5_ein8f")])
+required_items = Array[ExtResource("1_qeqnw")]([ExtResource("3_ein8f"), ExtResource("4_g52hg"), ExtResource("5_ein8f"), ExtResource("6_t2pkm"), ExtResource("7_7kv7f"), ExtResource("8_omt76"), ExtResource("9_y0pxt"), ExtResource("10_84y0f"), ExtResource("11_1csi6"), ExtResource("12_g6naj"), ExtResource("13_0g70q")])
 cooking_time = 4.0
 final_result = ExtResource("1_vajqj")
 metadata/_custom_type_script = "uid://c5u3f86brbmqi"

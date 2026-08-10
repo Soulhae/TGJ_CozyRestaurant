@@ -4,7 +4,7 @@ const DIRTY_DISHES: ItemData = preload("res://entities/various_items/dirty_dishe
 
 var player: CharacterBody3D = null
 
-@onready var arrow_indicator: Sprite3D = $"../ArrowIndicator"
+@onready var arrow_indicator: Node3D = %ArrowIndicator
 
 
 func _ready() -> void:

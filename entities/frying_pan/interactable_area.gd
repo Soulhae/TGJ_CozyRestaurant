@@ -44,10 +44,12 @@ func on_interact() -> void:
 	
 	if ready_dish:
 		if not player.held_item:
+			AudioManager.play_sfx(AudioManager.plate_sfx)
 			player.held_item = ready_dish
 			ready_dish = null
 			player.update_held_item_visual()
 			update_ready_dish_visual()
+			return
 	
 	if player.held_item:
 		var added_items_copy = added_items.duplicate()
@@ -57,14 +59,23 @@ func on_interact() -> void:
 					is_recipe_compatible(recipe, added_items_copy)
 					and recipe.required_items.has(player.held_item)
 					and added_items.count(player.held_item) < recipe.required_items.count(player.held_item)
-				):
+			):
 				added_items.append(player.held_item)
 				player.held_item = null
 				player.update_held_item_visual()
+				
+				AudioManager.play_sfx(AudioManager.confirm_sfx)
+				
+				var day_manager = get_tree().current_scene.get_node_or_null("DayFlowManager")
+				if day_manager and day_manager.recipe_ui:
+					day_manager.recipe_ui.update_ingredient_status(added_items)
+					
 				if added_items.size() == recipe.required_items.size():
 					current_recipe = recipe
 					start_cooking()
 				break
+		if player.held_item:
+			AudioManager.play_sfx(AudioManager.cancel_sfx)
 
 
 func update_ready_dish_visual() -> void:
@@ -82,6 +93,8 @@ func start_cooking() -> void:
 	is_cooking = true
 	var day_manager = get_tree().current_scene.get_node_or_null("DayFlowManager")
 	
+	if player.has_method("force_idle"):
+			player.force_idle()
 	player.set_physics_process(false)
 	player.set_process_unhandled_input(false)
 	
@@ -104,12 +117,17 @@ func start_cooking() -> void:
 		pulse_tween = create_tween().set_loops()
 		pulse_tween.tween_property(mat, "albedo_color", Color.RED, 0.5)
 		pulse_tween.tween_property(mat, "albedo_color", og_color, 0.5)
-		
+	
+	AudioManager.play_sfx(AudioManager.frying_long_sfx)
+	AudioManager.play_sfx(AudioManager.frying_short_sfx)
+	AudioManager.play_sfx(AudioManager.water_boiling_sfx)
+	AudioManager.play_sfx(AudioManager.salt_sfx)
 	cooking_timer.start(current_recipe.cooking_time)
 
 
 func _on_cooking_timer_timeout() -> void:
 	is_cooking = false
+	AudioManager.stop_all_sfx()
 	
 	if pulse_tween and pulse_tween.is_valid():
 		pulse_tween.kill()
@@ -118,12 +136,17 @@ func _on_cooking_timer_timeout() -> void:
 	reset_tween.tween_property(mat, "albedo_color", og_color, 0.2)
 	
 	ready_dish = current_recipe.final_result
+	AudioManager.play_sfx(AudioManager.notification_sfx)
 	
 	var day_manager = get_tree().current_scene.get_node_or_null("DayFlowManager")
 	if day_manager and day_manager.has_method("_on_dish_cooked"):
 		day_manager._on_dish_cooked(ready_dish)
 	
 	added_items.clear()
+	
+	if day_manager and day_manager.recipe_ui:
+		day_manager.recipe_ui.update_ingredient_status(added_items)
+	
 	current_recipe = null
 	TimeManager.set_normal_speed()
 	update_ready_dish_visual()

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://lmy4uqp70n8"]
 
 [ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_4jrpt"]
-[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_ns68v"]
+[ext_resource type="Texture2D" uid="uid://cxlos7kdl5p5k" path="res://entities/food_items/sprites/ingredientes/Cebolla-removebg-preview.png" id="1_ns68v"]
 [ext_resource type="Resource" uid="uid://bf2nve00o658b" path="res://entities/food_items/sliced_onion.tres" id="2_1wgs4"]
 
 [resource]
@@ -9,5 +9,4 @@ script = ExtResource("1_4jrpt")
 item_name = "Cebolla Entera"
 item_icon = ExtResource("1_ns68v")
 processed_result = ExtResource("2_1wgs4")
-item_color = Color(0.30865547, 0.48414755, 0.71976596, 1)
 metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

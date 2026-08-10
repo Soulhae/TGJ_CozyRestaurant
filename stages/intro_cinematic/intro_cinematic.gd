@@ -6,7 +6,7 @@ const MAIN_MENU_SCENE: PackedScene = preload("res://stages/main_menu/main_menu.t
 const SKIP_DELAY: float = 0.15
 
 @export_multiline var mateo_phrases: Array[String]
-@export var char_speed: float = 15.0
+@export var char_speed: float = 25.0
 
 var current_index: int = 0
 var tween: Tween

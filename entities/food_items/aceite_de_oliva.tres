@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://brhf62vxcsjko"]
+
+[ext_resource type="Texture2D" uid="uid://b6861y5v24pb3" path="res://entities/food_items/sprites/ingredientes/Aceite_de_oliva-removebg-preview.png" id="1_nuu4s"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_u8qyk"]
+
+[resource]
+script = ExtResource("1_u8qyk")
+item_name = "Aceite de Oliva"
+item_icon = ExtResource("1_nuu4s")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

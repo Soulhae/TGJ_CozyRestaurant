@@ -19,6 +19,7 @@
 [ext_resource type="Resource" uid="uid://gwbdn1jtwces" path="res://utilities/dialogue/dialogue_resources/d2_pedro_waiting_order.tres" id="16_icm7n"]
 [ext_resource type="Resource" uid="uid://bhxo2i4a00d3t" path="res://utilities/dialogue/dialogue_resources/d2_pedro_right_order.tres" id="17_bviao"]
 [ext_resource type="PackedScene" uid="uid://bkh3e2xuguexr" path="res://entities/client_npc/client_npc.tscn" id="17_if1y2"]
+[ext_resource type="Script" uid="uid://c5u3f86brbmqi" path="res://utilities/recipe_data/recipe_data.gd" id="17_puuue"]
 [ext_resource type="Resource" uid="uid://cjxlyl5c3q0j2" path="res://utilities/dialogue/dialogue_resources/d2_pedro_wrong_order.tres" id="18_b3a6g"]
 [ext_resource type="Resource" uid="uid://ntx8max2cvqy" path="res://entities/food_items/asado_negro.tres" id="20_b3a6g"]
 [ext_resource type="Texture2D" uid="uid://ci5lu0o6fids6" path="res://entities/client_npc/sprites/pe.png" id="21_b3a6g"]
@@ -115,9 +116,6 @@ shadow_enabled = true
 
 [node name="Camera3D" parent="World3D" unique_id=36892859 instance=ExtResource("11_t6r2x")]
 transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49999997, 0, 0, 0)
-player_offset = Vector3(0, 11, 5)
-min_limit = Vector2(-28, -9.6)
-max_limit = Vector2(15, 16)
 
 [node name="HUD" parent="World3D" unique_id=1380144273 instance=ExtResource("12_gx6yb")]
 visible = false
@@ -138,6 +136,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1, 0, 35.8)
 
 [node name="FryingPan" parent="World3D" unique_id=2134181477 instance=ExtResource("16_grexq")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10.800001, 4, 0.8999996)
+
+[node name="InteractableArea" parent="World3D/FryingPan" index="2" unique_id=1737516340]
+available_recipes = Array[ExtResource("17_puuue")]([ExtResource("10_gu6wn")])
 
 [node name="ClientNPC" parent="World3D" unique_id=426055892 instance=ExtResource("17_if1y2")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -19.1, 3, -5.6)
@@ -219,7 +220,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1, 10, 3.6999998)
 
 [node name="PlayerKitchenMarker" type="Marker3D" parent="TPTargets" unique_id=2140201627]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8, 2, 0)
 
 [node name="AbuelaKitchenMarker" type="Marker3D" parent="TPTargets" unique_id=949938910]
 unique_name_in_owner = true

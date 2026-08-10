@@ -26,7 +26,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		interact()
 	if event.is_action_pressed("delete_item"):
-		held_item = null
+		if held_item:
+			held_item = null
+			AudioManager.play_sfx(AudioManager.delete_sfx)
 		update_held_item_visual()
 
 
@@ -92,6 +94,8 @@ func update_held_item_visual() -> void:
 	if held_item and held_item.item_icon:
 		held_item_sprite.texture = held_item.item_icon
 		held_item_sprite.modulate = held_item.item_color
+		var s = held_item.custom_scale
+		held_item_sprite.scale = Vector3(s, s, s)
 		held_item_sprite.visible = true
 	else:
 		held_item_sprite.visible = false
@@ -119,6 +123,13 @@ func update_animation(input_dir: Vector2) -> void:
 			last_dir_name = anim_to_play
 			animated_sprite_3d.play("walk_" + last_dir_name)
 	else:
+		animated_sprite_3d.play("idle_" + last_dir_name)
+
+
+func force_idle() -> void:
+	velocity = Vector3.ZERO
+
+	if animated_sprite_3d:
 		animated_sprite_3d.play("idle_" + last_dir_name)
 
 

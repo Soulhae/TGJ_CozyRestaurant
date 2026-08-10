@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://f2emwla5meny"]
+
+[ext_resource type="Texture2D" uid="uid://bei7thvutb1w1" path="res://entities/food_items/sprites/ingredientes/Agua-removebg-preview.png" id="1_5scrf"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_28b38"]
+
+[resource]
+script = ExtResource("1_28b38")
+item_name = "Agua"
+item_icon = ExtResource("1_5scrf")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

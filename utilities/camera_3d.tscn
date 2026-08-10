@@ -5,4 +5,6 @@
 [node name="Camera3D" type="Camera3D" unique_id=36892859]
 transform = Transform3D(1, 0, 0, 0, 0.57357645, 0.81915206, 0, -0.81915206, 0.57357645, 0, 0, 0)
 script = ExtResource("1_2q52c")
-player_offset = Vector3(0, 5, 2)
+player_offset = Vector3(0, 11, 5)
+min_limit = Vector2(-28, -9.6)
+max_limit = Vector2(15, 8)

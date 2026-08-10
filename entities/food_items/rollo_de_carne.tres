@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b75y417v1mjiw"]
+
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_4cs8r"]
+[ext_resource type="Texture2D" uid="uid://cck02e7oohke3" path="res://entities/food_items/sprites/ingredientes/Carne_enrollada-removebg-preview.png" id="1_8ujkx"]
+
+[resource]
+script = ExtResource("1_4cs8r")
+item_name = "Rollo de Carne"
+item_icon = ExtResource("1_8ujkx")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

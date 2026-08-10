@@ -5,17 +5,78 @@
 [ext_resource type="Resource" uid="uid://cekngxcx335cj" path="res://utilities/dialogue/dialogue_resources/dialogue_mateo_room.tres" id="2_h3t2m"]
 [ext_resource type="PackedScene" uid="uid://djkmp2k1p7oy8" path="res://utilities/2d_over_3d/dialogue_box_ui/dialogue_box_ui.tscn" id="2_speah"]
 [ext_resource type="PackedScene" uid="uid://ikxmvnvqpwb" path="res://entities/player/player.tscn" id="3_dqmf7"]
+[ext_resource type="PackedScene" uid="uid://b41l70828bxar" path="res://stages/mapa_3d/cama.tscn" id="4_2cwyr"]
 [ext_resource type="PackedScene" uid="uid://b1qddo55jmigu" path="res://utilities/camera_3d.tscn" id="4_speah"]
+[ext_resource type="PackedScene" uid="uid://bjpwp5mkjv8nc" path="res://stages/main_level/basic_wall.tscn" id="7_tyf3s"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tyf3s"]
+sky_top_color = Color(0.23170143, 0.27769017, 0.34208068, 1)
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_2cwyr"]
+sky_material = SubResource("ProceduralSkyMaterial_tyf3s")
+
+[sub_resource type="Environment" id="Environment_c5sxr"]
+background_mode = 2
+sky = SubResource("Sky_2cwyr")
 
 [node name="MateoRoom" type="Node3D" unique_id=1832662836]
 script = ExtResource("1_dqmf7")
 room_dialogue = ExtResource("2_h3t2m")
 
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=875012747]
+environment = SubResource("Environment_c5sxr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=973743489]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0, 0, 0, 1)
+shadow_enabled = true
+
 [node name="Floor" parent="." unique_id=846501738 instance=ExtResource("1_yrf8k")]
+
+[node name="Node3D" parent="." unique_id=1259349944 instance=ExtResource("4_2cwyr")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -15, -0.7, -4.8)
 
 [node name="Player" parent="." unique_id=426401111 instance=ExtResource("3_dqmf7")]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.3, 0.17712024, -1.8236825)
+
+[node name="AnimatedSprite3D" parent="Player/Pivot" parent_id_path=PackedInt32Array(426401111, 1737258043) index="2" unique_id=184721849]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -0.89999986)
+modulate = Color(0.30323282, 0.30323282, 0.30323282, 1)
+
+[node name="Sprite3D" parent="Player" index="3" unique_id=286949282]
+visible = false
 
 [node name="DialogueBoxUI" parent="." unique_id=909620650 instance=ExtResource("2_speah")]
 
 [node name="Camera3D" parent="." unique_id=36892859 instance=ExtResource("4_speah")]
+player_offset = Vector3(0, 3, 1)
+
+[node name="BasicWall" parent="." unique_id=2131870468 instance=ExtResource("7_tyf3s")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -6)
+
+[node name="BasicWall2" parent="." unique_id=719502620 instance=ExtResource("7_tyf3s")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0, -6)
+
+[node name="BasicWall3" parent="." unique_id=444874556 instance=ExtResource("7_tyf3s")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8, 0, -6)
+
+[node name="BasicWall4" parent="." unique_id=35628064 instance=ExtResource("7_tyf3s")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -6)
+
+[node name="BasicWall5" parent="." unique_id=722489446 instance=ExtResource("7_tyf3s")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8, 0, -6)
+
+[node name="BasicWall6" parent="." unique_id=1363057613 instance=ExtResource("7_tyf3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -4)
+
+[node name="BasicWall7" parent="." unique_id=2006707157 instance=ExtResource("7_tyf3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="BasicWall8" parent="." unique_id=1742982156 instance=ExtResource("7_tyf3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[editable path="Node3D"]
+[editable path="Player"]

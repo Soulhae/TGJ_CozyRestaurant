@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b5217cn02y7h6"]
+
+[ext_resource type="Texture2D" uid="uid://d3fqo3k3otgml" path="res://entities/food_items/sprites/ingredientes/oregano-removebg-preview.png" id="1_4mc3u"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_sr4j0"]
+
+[resource]
+script = ExtResource("1_sr4j0")
+item_name = "Oregano"
+item_icon = ExtResource("1_4mc3u")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://blj3q4u7vaymt"]
 
-[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_gou3p"]
+[ext_resource type="Texture2D" uid="uid://cwaylsoe16jt2" path="res://entities/food_items/sprites/ingredientes/Carne-removebg-preview.png" id="1_gx5fw"]
 [ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_k71lu"]
 
 [resource]
 script = ExtResource("1_k71lu")
 item_name = "Carne Trozada"
-item_icon = ExtResource("1_gou3p")
+item_icon = ExtResource("1_gx5fw")
+item_color = Color(0.9575402, 0.656544, 0.77285403, 1)
 metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

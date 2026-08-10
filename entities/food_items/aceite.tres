@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dgmdhmoe0k87w"]
+
+[ext_resource type="Texture2D" uid="uid://bkut0jghi211o" path="res://entities/food_items/sprites/ingredientes/Aceite-removebg-preview.png" id="1_24kol"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_i3pak"]
+
+[resource]
+script = ExtResource("1_i3pak")
+item_name = "Aceite"
+item_icon = ExtResource("1_24kol")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

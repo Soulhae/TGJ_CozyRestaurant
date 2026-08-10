@@ -27,6 +27,8 @@ func on_interact():
 	if day_manager.current_phase != day_manager.DayPhase.AFTERNOON_COOKING:
 		return
 	
+	if player.has_method("force_idle"):
+		player.force_idle()
 	player.set_physics_process(false)
 	player.set_process_unhandled_input(false)
 	
@@ -40,7 +42,7 @@ func on_interact():
 
 
 func _on_item_selected(selected_item: ItemData) -> void:
-	AudioManager.sfx_player.stop()
+	AudioManager.stop_all_sfx()
 	AudioManager.play_sfx(AudioManager.veg_sfx)
 	player.held_item = selected_item
 	player.update_held_item_visual()
@@ -50,7 +52,7 @@ func _on_item_selected(selected_item: ItemData) -> void:
 
 
 func _on_select_canceled() -> void:
-	AudioManager.sfx_player.stop()
+	AudioManager.stop_all_sfx()
 	AudioManager.play_sfx(AudioManager.close_menu_sfx)
 	player.set_physics_process(true)
 	player.set_process_unhandled_input(true)

@@ -9,6 +9,7 @@ const NEXT_LEVEL_SCENE: PackedScene = preload("res://stages/arrival_scene/arriva
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 	AudioManager.music_player.stop()
 	player.set_physics_process(false)
 	player.set_process_unhandled_input(false)
@@ -40,4 +41,5 @@ func _on_dialogue_finished() -> void:
 
 
 func _change_to_next_level() -> void:
+	await get_tree().create_timer(2).timeout
 	get_tree().change_scene_to_packed(NEXT_LEVEL_SCENE)

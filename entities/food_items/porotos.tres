@@ -1,8 +1,11 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bnv2j711ml33m"]
 
+[ext_resource type="Texture2D" uid="uid://cfmcjetfsyoui" path="res://entities/food_items/sprites/platos/Layer_63_copy_4.png" id="1_a5h14"]
 [ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_l35gv"]
 
 [resource]
 script = ExtResource("1_l35gv")
 item_name = "Porotos con Rienda"
+item_icon = ExtResource("1_a5h14")
+custom_scale = 0.4
 metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

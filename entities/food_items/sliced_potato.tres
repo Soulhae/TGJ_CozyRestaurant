@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dnxllhi71yvnp"]
 
-[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="1_7xepj"]
+[ext_resource type="Texture2D" uid="uid://b54xe54e6si3r" path="res://entities/food_items/sprites/ingredientes/Papa-removebg-preview.png" id="1_aroph"]
 [ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_vl5p0"]
 
 [resource]
 script = ExtResource("1_vl5p0")
 item_name = "Papas en rodajas"
-item_icon = ExtResource("1_7xepj")
+item_icon = ExtResource("1_aroph")
 item_color = Color(0.6541538, 0.5924685, 0.12006689, 1)
 metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

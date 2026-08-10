@@ -160,14 +160,14 @@ script = ExtResource("1_symyc")
 [node name="HeldItemSprite" type="Sprite3D" parent="." unique_id=635524727]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1999998, -1.5)
-pixel_size = 0.00075
+pixel_size = 0.0015
 billboard = 1
 texture_filter = 0
 
 [node name="SiluetaHeldItem" type="Sprite3D" parent="HeldItemSprite" unique_id=965750451]
 cast_shadow = 0
 modulate = Color(0.2159017, 0.21590173, 0.21590167, 0.49803922)
-pixel_size = 0.00075
+pixel_size = 0.0015
 billboard = 1
 no_depth_test = true
 texture_filter = 0
@@ -206,10 +206,8 @@ billboard = 1
 alpha_hash_scale = 2.0
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_cke8t")
-animation = &"walk_as (falta left_as)"
+animation = &"idle_s"
 autoplay = "idle_s"
-frame = 2
-frame_progress = 0.93688506
 
 [node name="Silueta" type="AnimatedSprite3D" parent="Pivot/AnimatedSprite3D" unique_id=827597591]
 cast_shadow = 0
@@ -229,7 +227,7 @@ frame_progress = 0.93688506
 script = ExtResource("16_3wlsy")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=286949282]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.1, 0.3010803)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.1, 0.44526425)
 pixel_size = 0.001
 texture = ExtResource("16_yqrof")
 

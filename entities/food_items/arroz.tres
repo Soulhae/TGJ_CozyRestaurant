@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://d1ogy5kyrjrh7"]
+
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_4nw1m"]
+[ext_resource type="Texture2D" uid="uid://npl50qjmuk16" path="res://entities/food_items/sprites/ingredientes/Arroz-removebg-preview.png" id="1_wbs6g"]
+
+[resource]
+script = ExtResource("1_4nw1m")
+item_name = "Arroz"
+item_icon = ExtResource("1_wbs6g")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

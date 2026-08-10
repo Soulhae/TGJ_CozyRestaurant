@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://untsp21uyp2k"]
+
+[ext_resource type="PackedScene" uid="uid://dtqc6visiuog8" path="res://entities/flecha/Flecha.glb" id="1_c0jkp"]
+[ext_resource type="Script" uid="uid://cma2f3bk5niy0" path="res://utilities/bouncing_arrow.gd" id="2_p8ehj"]
+
+[node name="ArrowIndicator" unique_id=582523931 instance=ExtResource("1_c0jkp")]
+visible = false
+script = ExtResource("2_p8ehj")

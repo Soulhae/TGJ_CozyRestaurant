@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://djbf3dgx17q3t"]
+
+[ext_resource type="Texture2D" uid="uid://entedbwl4vln" path="res://entities/food_items/sprites/ingredientes/Sal-removebg-preview.png" id="1_5k25h"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_bjphe"]
+
+[resource]
+script = ExtResource("1_bjphe")
+item_name = "Sal"
+item_icon = ExtResource("1_5k25h")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

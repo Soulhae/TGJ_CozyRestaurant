@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://qahbla850kom" path="res://entities/frying_pan/interactable_area.gd" id="1_bxy0p"]
 [ext_resource type="Script" uid="uid://c5u3f86brbmqi" path="res://utilities/recipe_data/recipe_data.gd" id="2_cjwuk"]
 [ext_resource type="Resource" uid="uid://4dxe11csnnrb" path="res://entities/recipes/mini_lomo_saltado_recipe.tres" id="3_ielkf"]
+[ext_resource type="Resource" uid="uid://d1ujn1cn7lt2r" path="res://entities/recipes/asado_negro_recipe.tres" id="4_ielkf"]
+[ext_resource type="Resource" uid="uid://bmqfnh7pryu0g" path="res://entities/recipes/porotos_recipe.tres" id="5_i5w7g"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_bf5uu"]
 height = 0.5
@@ -16,7 +18,7 @@ bottom_radius = 0.3
 height = 0.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cke8t"]
-size = Vector3(1, 0.5, 1)
+size = Vector3(1.25, 0.75, 1.6)
 
 [node name="FryingPan" type="StaticBody3D" unique_id=2134181477]
 collision_layer = 8
@@ -36,10 +38,10 @@ mesh = SubResource("CylinderMesh_cke8t")
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_bxy0p")
-available_recipes = Array[ExtResource("2_cjwuk")]([ExtResource("3_ielkf")])
+available_recipes = Array[ExtResource("2_cjwuk")]([ExtResource("3_ielkf"), ExtResource("4_ielkf"), ExtResource("5_i5w7g")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea" unique_id=2070421394]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -0.1)
 shape = SubResource("BoxShape3D_cke8t")
 
 [node name="StationSprite" type="Sprite3D" parent="InteractableArea" unique_id=1727093998]

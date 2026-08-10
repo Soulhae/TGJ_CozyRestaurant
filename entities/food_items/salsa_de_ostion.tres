@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bqk3a4rqx1dr4"]
+
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_c82hk"]
+[ext_resource type="Texture2D" uid="uid://dh5jb074dqjpp" path="res://entities/food_items/sprites/ingredientes/Salsa_de_ostión-removebg-preview.png" id="1_otuh0"]
+
+[resource]
+script = ExtResource("1_c82hk")
+item_name = "Salsa de Ostión"
+item_icon = ExtResource("1_otuh0")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

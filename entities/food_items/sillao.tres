@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ba17ch8dcs5xb"]
+
+[ext_resource type="Texture2D" uid="uid://bpd8k51pyc1r8" path="res://entities/food_items/sprites/ingredientes/Sillao-removebg-preview.png" id="1_nrhji"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_pkn0e"]
+
+[resource]
+script = ExtResource("1_pkn0e")
+item_name = "Sillao"
+item_icon = ExtResource("1_nrhji")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

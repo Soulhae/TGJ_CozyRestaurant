@@ -64,12 +64,27 @@ func _ready() -> void:
 
 
 func _start_morning_sequence() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	
+	var canvas_layer := CanvasLayer.new()
+	get_tree().current_scene.add_child(canvas_layer)
+	var color_rect := ColorRect.new()
+	color_rect.color = Color.BLACK
+	color_rect.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	canvas_layer.add_child(color_rect)
+	
+	var fade_tween = create_tween()
+	fade_tween.tween_property(color_rect, "modulate:a", 0.0, 1.5)
+	fade_tween.tween_callback(canvas_layer.queue_free)
+	
 	player = get_tree().get_first_node_in_group("player")
 	AudioManager.play_music(AudioManager.track_gameplay)
 	if recipe_ui and recipe_of_the_day:
 		recipe_ui.setup_recipe(recipe_of_the_day)
 	
 	if player:
+		if player.has_method("force_idle"):
+			player.force_idle()
 		player.set_physics_process(false)
 		player.set_process_unhandled_input(false)
 	
@@ -101,6 +116,8 @@ func advance_to_afternoon() -> void:
 	current_phase = DayPhase.AFTERNOON_CLIENT
 	
 	if player:
+		if player.has_method("force_idle"):
+			player.force_idle()
 		player.set_physics_process(false)
 		player.set_process_unhandled_input(false)
 	
@@ -125,6 +142,7 @@ func advance_to_afternoon() -> void:
 
 
 func _on_mid_transition_afternoon() -> void:
+	AudioManager.play_music(AudioManager.track_clients)
 	current_phase = DayPhase.AFTERNOON_CLIENT
 	TimeManager.current_minute = 720
 	if abuela_npc and abuela_kitchen_marker:
@@ -194,7 +212,7 @@ func _play_sleep_sequence() -> void:
 	if dialogue_mateo_thoughts:
 		await _play_dialogue_and_wait(dialogue_mateo_thoughts)
 	
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(1).timeout
 	
 	if next_day_scene:
 		get_tree().change_scene_to_packed(next_day_scene)
@@ -247,6 +265,8 @@ func _on_morning_dialogue_finished() -> void:
 
 func play_afternoon_sequence() -> void:
 	if player:
+		if player.has_method("force_idle"):
+			player.force_idle()
 		player.set_physics_process(false)
 		player.set_process_unhandled_input(false)
 	
@@ -255,6 +275,7 @@ func play_afternoon_sequence() -> void:
 		
 	
 	if dialogue_cooking_tutorial:
+		AudioManager.play_music(AudioManager.track_cooking_tutorial)
 		var canvas_layer := CanvasLayer.new()
 		get_tree().current_scene.add_child(canvas_layer)
 		var color_rect := ColorRect.new()
@@ -283,6 +304,7 @@ func play_afternoon_sequence() -> void:
 			cutting_board_area.hide_tutorial_arrow()
 	
 	current_phase = DayPhase.AFTERNOON_COOKING
+	AudioManager.play_music(AudioManager.track_gameplay)
 	
 	if player:
 		player.set_physics_process(true)
@@ -298,6 +320,8 @@ func play_qte_tutorial() -> void:
 func _on_dish_cooked(_dish: ItemData) -> void:
 	if current_phase == DayPhase.AFTERNOON_COOKING:
 		if player:
+			if player.has_method("force_idle"):
+				player.force_idle()
 			player.set_physics_process(false)
 			player.set_process_unhandled_input(false)
 			
@@ -327,6 +351,8 @@ func advance_to_night() -> void:
 	current_phase = DayPhase.NIGHT_CLEANING
 	
 	if player:
+		if player.has_method("force_idle"):
+			player.force_idle()
 		player.set_physics_process(false)
 		player.set_process_unhandled_input(false)
 	
@@ -351,6 +377,7 @@ func advance_to_night() -> void:
 
 
 func _on_mid_transition_night() -> void:
+	AudioManager.play_music(AudioManager.track_night)
 	TimeManager.current_minute = 1260
 	if client_npc:
 		client_npc.visible = false

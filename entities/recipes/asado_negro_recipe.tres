@@ -3,9 +3,24 @@
 [ext_resource type="Resource" uid="uid://ntx8max2cvqy" path="res://entities/food_items/asado_negro.tres" id="1_g12lw"]
 [ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_nyj6o"]
 [ext_resource type="Script" uid="uid://c5u3f86brbmqi" path="res://utilities/recipe_data/recipe_data.gd" id="2_g12lw"]
+[ext_resource type="Resource" uid="uid://b75y417v1mjiw" path="res://entities/food_items/rollo_de_carne.tres" id="3_4ixmm"]
+[ext_resource type="Resource" uid="uid://c7eg4puwf8uid" path="res://entities/food_items/vino_tinto.tres" id="3_j4sii"]
+[ext_resource type="Resource" uid="uid://dgmdhmoe0k87w" path="res://entities/food_items/aceite.tres" id="4_5h2pk"]
+[ext_resource type="Resource" uid="uid://bf2nve00o658b" path="res://entities/food_items/sliced_onion.tres" id="5_kqx63"]
+[ext_resource type="Resource" uid="uid://cxjg8rkd1oty6" path="res://entities/food_items/jalapenos.tres" id="5_xgn3e"]
+[ext_resource type="Resource" uid="uid://b3uskp6oedarq" path="res://entities/food_items/poro.tres" id="6_7esoh"]
+[ext_resource type="Resource" uid="uid://6r72xpmh11k5" path="res://entities/food_items/pimenton.tres" id="7_72nad"]
+[ext_resource type="Resource" uid="uid://c05f41hao6ghw" path="res://entities/food_items/cebollin.tres" id="8_2gjsk"]
+[ext_resource type="Resource" uid="uid://pga1rqufxwn6" path="res://entities/food_items/ajo.tres" id="9_mb7gi"]
+[ext_resource type="Resource" uid="uid://db8oaocfno8dj" path="res://entities/food_items/aji_dulce.tres" id="10_nbvtf"]
+[ext_resource type="Resource" uid="uid://djbf3dgx17q3t" path="res://entities/food_items/sal.tres" id="12_dk20r"]
+[ext_resource type="Resource" uid="uid://f2emwla5meny" path="res://entities/food_items/agua.tres" id="13_4pvmc"]
+[ext_resource type="Resource" uid="uid://brhf62vxcsjko" path="res://entities/food_items/aceite_de_oliva.tres" id="15_2c4tp"]
+[ext_resource type="Resource" uid="uid://cooj4qbjiuslm" path="res://entities/food_items/salsa_inglesa.tres" id="16_ktt3x"]
 
 [resource]
 script = ExtResource("2_g12lw")
+required_items = Array[ExtResource("1_nyj6o")]([ExtResource("3_4ixmm"), ExtResource("4_5h2pk"), ExtResource("5_kqx63"), ExtResource("6_7esoh"), ExtResource("7_72nad"), ExtResource("8_2gjsk"), ExtResource("9_mb7gi"), ExtResource("10_nbvtf"), ExtResource("5_xgn3e"), ExtResource("12_dk20r"), ExtResource("13_4pvmc"), ExtResource("3_j4sii"), ExtResource("15_2c4tp"), ExtResource("16_ktt3x")])
 cooking_time = 4.0
 final_result = ExtResource("1_g12lw")
 metadata/_custom_type_script = "uid://c5u3f86brbmqi"

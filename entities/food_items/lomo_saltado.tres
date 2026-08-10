@@ -7,4 +7,5 @@
 script = ExtResource("1_8e3x3")
 item_name = "Lomo Saltado"
 item_icon = ExtResource("1_d1gy7")
+custom_scale = 0.4
 metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

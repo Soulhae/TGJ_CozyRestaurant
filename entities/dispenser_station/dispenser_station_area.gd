@@ -27,6 +27,8 @@ func on_interact():
 	if day_manager.current_phase != day_manager.DayPhase.AFTERNOON_COOKING:
 		return
 	
+	if player.has_method("force_idle"):
+		player.force_idle()
 	player.set_physics_process(false)
 	player.set_process_unhandled_input(false)
 	

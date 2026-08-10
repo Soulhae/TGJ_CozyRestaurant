@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c05f41hao6ghw"]
+
+[ext_resource type="Texture2D" uid="uid://b5fdl678edfqb" path="res://entities/food_items/sprites/ingredientes/Cebollín-removebg-preview.png" id="1_0dccp"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_4te18"]
+
+[resource]
+script = ExtResource("1_4te18")
+item_name = "Cebollín"
+item_icon = ExtResource("1_0dccp")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

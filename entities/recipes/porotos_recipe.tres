@@ -3,9 +3,18 @@
 [ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_omqk5"]
 [ext_resource type="Resource" uid="uid://bnv2j711ml33m" path="res://entities/food_items/porotos.tres" id="1_xbcru"]
 [ext_resource type="Script" uid="uid://c5u3f86brbmqi" path="res://utilities/recipe_data/recipe_data.gd" id="2_xbcru"]
+[ext_resource type="Resource" uid="uid://f2emwla5meny" path="res://entities/food_items/agua.tres" id="3_3h72r"]
+[ext_resource type="Resource" uid="uid://7mxrgulyr3gy" path="res://entities/food_items/porotos_raw.tres" id="3_g4fdo"]
+[ext_resource type="Resource" uid="uid://cm58rxg0rm0j5" path="res://entities/food_items/tallarines.tres" id="4_d16y7"]
+[ext_resource type="Resource" uid="uid://djbf3dgx17q3t" path="res://entities/food_items/sal.tres" id="5_f6ies"]
+[ext_resource type="Resource" uid="uid://bf2nve00o658b" path="res://entities/food_items/sliced_onion.tres" id="5_v2u55"]
+[ext_resource type="Resource" uid="uid://nmsdl4ft6qfo" path="res://entities/food_items/zapallo.tres" id="6_nqs8j"]
+[ext_resource type="Resource" uid="uid://bddagv5vgcnbi" path="res://entities/food_items/comino.tres" id="8_p5cin"]
+[ext_resource type="Resource" uid="uid://db27eumynmfen" path="res://entities/food_items/aji_a_color.tres" id="9_yt5no"]
 
 [resource]
 script = ExtResource("2_xbcru")
+required_items = Array[ExtResource("1_omqk5")]([ExtResource("3_3h72r"), ExtResource("3_g4fdo"), ExtResource("5_v2u55"), ExtResource("6_nqs8j"), ExtResource("5_f6ies"), ExtResource("8_p5cin"), ExtResource("9_yt5no"), ExtResource("4_d16y7")])
 cooking_time = 4.0
 final_result = ExtResource("1_xbcru")
 metadata/_custom_type_script = "uid://c5u3f86brbmqi"

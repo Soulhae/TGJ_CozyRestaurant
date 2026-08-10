@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cm58rxg0rm0j5"]
+
+[ext_resource type="Texture2D" uid="uid://4wb6wycbtsdo" path="res://entities/food_items/sprites/ingredientes/Tallarines-removebg-preview.png" id="1_lbxri"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_mjgdn"]
+
+[resource]
+script = ExtResource("1_mjgdn")
+item_name = "Tallarines"
+item_icon = ExtResource("1_lbxri")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

@@ -3,9 +3,14 @@
 [ext_resource type="Script" uid="uid://brnhy0jb377pq" path="res://entities/fridge_station/fridge_station_area.gd" id="1_2x75h"]
 [ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="2_5eet2"]
 [ext_resource type="Resource" uid="uid://d2x2lmwj00u0f" path="res://entities/food_items/raw_meat.tres" id="3_8m2h0"]
-[ext_resource type="Resource" uid="uid://0y850h1a4j34" path="res://entities/food_items/full_potato.tres" id="4_l5sxd"]
-[ext_resource type="Resource" uid="uid://lmy4uqp70n8" path="res://entities/food_items/full_onion.tres" id="5_1g07o"]
-[ext_resource type="Resource" uid="uid://bnv2j711ml33m" path="res://entities/food_items/porotos.tres" id="6_t2c5m"]
+[ext_resource type="Resource" uid="uid://b75y417v1mjiw" path="res://entities/food_items/rollo_de_carne.tres" id="4_p0cgs"]
+[ext_resource type="Resource" uid="uid://dtv8qfy0mj483" path="res://entities/food_items/huevos.tres" id="5_gxtii"]
+[ext_resource type="Resource" uid="uid://c05f41hao6ghw" path="res://entities/food_items/cebollin.tres" id="6_uwosg"]
+[ext_resource type="Resource" uid="uid://b3uskp6oedarq" path="res://entities/food_items/poro.tres" id="7_sab83"]
+[ext_resource type="Resource" uid="uid://c85tq5d50brm5" path="res://entities/food_items/aji_amarillo.tres" id="8_g84wb"]
+[ext_resource type="Resource" uid="uid://db27eumynmfen" path="res://entities/food_items/aji_a_color.tres" id="9_cxrbs"]
+[ext_resource type="Resource" uid="uid://bqk3a4rqx1dr4" path="res://entities/food_items/salsa_de_ostion.tres" id="10_epbes"]
+[ext_resource type="Resource" uid="uid://f2emwla5meny" path="res://entities/food_items/agua.tres" id="11_rvtvb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cke8t"]
 
@@ -34,7 +39,7 @@ mesh = SubResource("BoxMesh_cv0ty")
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_2x75h")
-available_items = Array[ExtResource("2_5eet2")]([ExtResource("3_8m2h0"), ExtResource("4_l5sxd"), ExtResource("5_1g07o"), ExtResource("6_t2c5m")])
+available_items = Array[ExtResource("2_5eet2")]([ExtResource("3_8m2h0"), ExtResource("4_p0cgs"), ExtResource("5_gxtii"), ExtResource("6_uwosg"), ExtResource("7_sab83"), ExtResource("8_g84wb"), ExtResource("9_cxrbs"), ExtResource("10_epbes"), ExtResource("11_rvtvb")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DispenserStationArea" unique_id=748922211]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

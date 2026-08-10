@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cooj4qbjiuslm"]
+
+[ext_resource type="Texture2D" uid="uid://cju0g6e65pyw5" path="res://entities/food_items/sprites/ingredientes/Salsa_Inglesa-removebg-preview.png" id="1_8hcwc"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_chnq4"]
+
+[resource]
+script = ExtResource("1_chnq4")
+item_name = "Salsa Inglesa"
+item_icon = ExtResource("1_8hcwc")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

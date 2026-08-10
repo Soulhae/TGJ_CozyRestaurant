@@ -9,6 +9,6 @@
 
 [resource]
 script = ExtResource("2_dk65h")
-lines = Array[String](["Carmen: ¡Mateo!. Tenemos un cliente, te está esperando.", "Mateo: ¿Estás segura que quieres que yo lo atienda?.", "Carmen: Muy segura. No lo hagas esperar más!", "Mateo: Está bien…"])
+lines = Array[String](["Carmen: ¡Mateo! Tenemos un cliente, te está esperando.", "Mateo: ¿Estás segura que quieres que yo lo atienda?.", "Carmen: Muy segura. No lo hagas esperar más!", "Mateo: Está bien…"])
 portraits = Array[Texture2D]([ExtResource("2_754xt"), ExtResource("3_jje0h"), ExtResource("4_75y2q"), ExtResource("5_c05gd")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

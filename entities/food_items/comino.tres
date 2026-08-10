@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bddagv5vgcnbi"]
+
+[ext_resource type="Texture2D" uid="uid://dugpd3h0amfd4" path="res://entities/food_items/sprites/ingredientes/Comino-removebg-preview.png" id="1_qh81p"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_y2ny2"]
+
+[resource]
+script = ExtResource("1_y2ny2")
+item_name = "Comino"
+item_icon = ExtResource("1_qh81p")
+metadata/_custom_type_script = "uid://dmkvfc8a3wrie"

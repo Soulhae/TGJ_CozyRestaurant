@@ -17,6 +17,7 @@ const GAME_SCENE: PackedScene = preload("res://stages/mateo_room/mateo_room.tscn
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	AudioManager.play_music(AudioManager.track_menu)
 	settings_view.visible = false
 	controls_view.visible = false

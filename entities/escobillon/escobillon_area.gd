@@ -2,7 +2,7 @@ extends Area3D
 
 var day_manager: Node = null
 
-@onready var arrow_indicator: Sprite3D = %ArrowIndicator
+@onready var arrow_indicator: Node3D = %ArrowIndicator
 
 func _ready() -> void:
 	day_manager = get_tree().current_scene.get_node_or_null("DayFlowManager")

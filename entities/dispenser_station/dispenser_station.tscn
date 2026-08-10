@@ -3,7 +3,23 @@
 [ext_resource type="Script" uid="uid://dhu1n73m0w46s" path="res://entities/dispenser_station/dispenser_station_area.gd" id="1_71ijm"]
 [ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="2_minyl"]
 [ext_resource type="Resource" uid="uid://lmy4uqp70n8" path="res://entities/food_items/full_onion.tres" id="4_28hjs"]
+[ext_resource type="Resource" uid="uid://dgmdhmoe0k87w" path="res://entities/food_items/aceite.tres" id="5_olcfd"]
 [ext_resource type="Resource" uid="uid://0y850h1a4j34" path="res://entities/food_items/full_potato.tres" id="5_p35pc"]
+[ext_resource type="Resource" uid="uid://brhf62vxcsjko" path="res://entities/food_items/aceite_de_oliva.tres" id="6_5tg82"]
+[ext_resource type="Resource" uid="uid://db8oaocfno8dj" path="res://entities/food_items/aji_dulce.tres" id="10_1hq4v"]
+[ext_resource type="Resource" uid="uid://nmsdl4ft6qfo" path="res://entities/food_items/zapallo.tres" id="10_l5vhn"]
+[ext_resource type="Resource" uid="uid://pga1rqufxwn6" path="res://entities/food_items/ajo.tres" id="11_7cgoo"]
+[ext_resource type="Resource" uid="uid://6r72xpmh11k5" path="res://entities/food_items/pimenton.tres" id="11_vq8vm"]
+[ext_resource type="Resource" uid="uid://d1ogy5kyrjrh7" path="res://entities/food_items/arroz.tres" id="12_6bywt"]
+[ext_resource type="Resource" uid="uid://cxjg8rkd1oty6" path="res://entities/food_items/jalapenos.tres" id="12_uhrtq"]
+[ext_resource type="Resource" uid="uid://cm58rxg0rm0j5" path="res://entities/food_items/tallarines.tres" id="13_lgcjm"]
+[ext_resource type="Resource" uid="uid://7mxrgulyr3gy" path="res://entities/food_items/porotos_raw.tres" id="14_0ws2j"]
+[ext_resource type="Resource" uid="uid://djbf3dgx17q3t" path="res://entities/food_items/sal.tres" id="15_xvtxl"]
+[ext_resource type="Resource" uid="uid://bddagv5vgcnbi" path="res://entities/food_items/comino.tres" id="16_knkb5"]
+[ext_resource type="Resource" uid="uid://b5217cn02y7h6" path="res://entities/food_items/oregano.tres" id="17_cuigo"]
+[ext_resource type="Resource" uid="uid://ba17ch8dcs5xb" path="res://entities/food_items/sillao.tres" id="18_l3bti"]
+[ext_resource type="Resource" uid="uid://cooj4qbjiuslm" path="res://entities/food_items/salsa_inglesa.tres" id="19_0khtp"]
+[ext_resource type="Resource" uid="uid://c7eg4puwf8uid" path="res://entities/food_items/vino_tinto.tres" id="20_cqhtl"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cke8t"]
 
@@ -28,7 +44,7 @@ mesh = SubResource("BoxMesh_cv0ty")
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_71ijm")
-available_items = Array[ExtResource("2_minyl")]([ExtResource("5_p35pc"), ExtResource("4_28hjs")])
+available_items = Array[ExtResource("2_minyl")]([ExtResource("5_p35pc"), ExtResource("4_28hjs"), ExtResource("5_olcfd"), ExtResource("6_5tg82"), ExtResource("10_1hq4v"), ExtResource("11_7cgoo"), ExtResource("12_6bywt"), ExtResource("10_l5vhn"), ExtResource("11_vq8vm"), ExtResource("12_uhrtq"), ExtResource("13_lgcjm"), ExtResource("14_0ws2j"), ExtResource("15_xvtxl"), ExtResource("16_knkb5"), ExtResource("17_cuigo"), ExtResource("18_l3bti"), ExtResource("19_0khtp"), ExtResource("20_cqhtl")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DispenserStationArea" unique_id=748922211]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

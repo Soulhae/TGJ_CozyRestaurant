@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bd00r7ti4f8jw"]
 
 [ext_resource type="Script" uid="uid://domdrj48d6re" path="res://entities/escobillon/escobillon_area.gd" id="1_c5l53"]
+[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="2_6g7lg"]
+[ext_resource type="Script" uid="uid://cma2f3bk5niy0" path="res://utilities/bouncing_arrow.gd" id="3_cvh3m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cke8t"]
 
@@ -33,3 +35,12 @@ script = ExtResource("1_c5l53")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DispenserStationArea" unique_id=748922211]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("BoxShape3D_cv0ty")
+
+[node name="ArrowIndicator" type="Sprite3D" parent="." unique_id=422624858]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+visible = false
+pixel_size = 0.005
+billboard = 1
+texture = ExtResource("2_6g7lg")
+script = ExtResource("3_cvh3m")

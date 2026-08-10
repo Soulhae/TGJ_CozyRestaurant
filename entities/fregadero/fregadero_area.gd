@@ -4,8 +4,19 @@ const DIRTY_DISHES: ItemData = preload("res://entities/various_items/dirty_dishe
 
 var player: CharacterBody3D = null
 
+@onready var arrow_indicator: Sprite3D = $"../ArrowIndicator"
+
+
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
+
+
+func _process(_delta: float) -> void:
+	if player and player.held_item == DIRTY_DISHES:
+		arrow_indicator.visible = true
+	else:
+		arrow_indicator.visible = false
+
 
 func on_interact() -> void:
 	if player and player.held_item == DIRTY_DISHES:

@@ -24,6 +24,7 @@ disabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1109196315]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_cv0ty")
 
 [node name="InteractableArea" type="Area3D" parent="." unique_id=127561350]
@@ -39,3 +40,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1, 0, 0)
 shape = SubResource("BoxShape3D_c1bfg")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=101096791]
+
+[node name="ClientSprite" type="Sprite3D" parent="." unique_id=247766363]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+pixel_size = 0.002
+billboard = 1
+texture_filter = 0

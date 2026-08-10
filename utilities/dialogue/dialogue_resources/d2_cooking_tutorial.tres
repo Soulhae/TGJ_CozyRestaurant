@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cudm44w2s0dd5"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_qrjxg"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_vvj7h"]
+
+[resource]
+script = ExtResource("2_vvj7h")
+lines = Array[String](["Mateo: Abuela, el joven Pedro me pidió un platillo para subirle la moral.", "Mateo: Pero no se que podría prepararle.", "Mateo: Dice que viene de Venezuela, ¿Tienes algo en mente?", "Carmen: Claro que tengo algo!", "Carmen: Con tu tío solíamos ir a muchos lugares antes de abrir el restaurante.", "Carmen: Ten, esto le alegrará el día.", "Carmen: Es un platillo que comen mucho por allá.", "Carmen: En especial en reuniones familiares.", "Carmen: Revisa la receta y pónte a ello!", "Mateo: Haré mi mejor intento por hacer bien las cosas.", "Carmen: Tú puedes!"])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

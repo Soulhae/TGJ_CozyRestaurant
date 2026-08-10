@@ -27,6 +27,10 @@ func setup_catalog(available_items: Array[ItemData]) -> void:
 		var item_button := Button.new()
 		item_button.text = item.item_name
 		item_button.icon = item.item_icon
+		item_button.expand_icon = true
+		item_button.custom_minimum_size = Vector2(273, 100)
+		item_button.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		item_button.vertical_icon_alignment = VERTICAL_ALIGNMENT_TOP
 		item_button.pressed.connect(_on_button_pressed.bind(item))
 		grid_container.add_child(item_button)
 	if grid_container.get_child_count() > 0:

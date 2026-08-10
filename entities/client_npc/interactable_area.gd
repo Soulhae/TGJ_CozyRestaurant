@@ -5,13 +5,17 @@ const DIALOGUE_BOX_UI_SCENE: PackedScene = preload("res://utilities/2d_over_3d/d
 @export var correct_food_dialogue: DialogueData 
 @export var wrong_food_dialogue: DialogueData
 @export var target_dish: ItemData
+@export var client_texture: Texture2D
 
 var player: CharacterBody3D = null
 var has_ordered: bool = false
 
+@onready var client_sprite: Sprite3D = %ClientSprite
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
+	if client_texture != null:
+		client_sprite.texture = client_texture
 
 
 func on_interact() -> void:

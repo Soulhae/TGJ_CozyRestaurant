@@ -17,9 +17,10 @@ enum DayPhase {
 @export var abuela_npc: Node3D
 @export var frying_pan_node: StaticBody3D
 @export var garbage_can: StaticBody3D
+@export var cutting_board_area: Area3D
 @export var next_day_scene: PackedScene
-#@export var main_menu_scene: PackedScene
 @export var has_morning_camera_tour: bool = false
+@export var is_day_one: bool = false
 
 @export_group("Diálogos del Día")
 @export var morning_dialogue: DialogueData
@@ -193,6 +194,8 @@ func _play_sleep_sequence() -> void:
 	if dialogue_mateo_thoughts:
 		await _play_dialogue_and_wait(dialogue_mateo_thoughts)
 	
+	await get_tree().create_timer(2).timeout
+	
 	if next_day_scene:
 		get_tree().change_scene_to_packed(next_day_scene)
 	else:
@@ -275,6 +278,9 @@ func play_afternoon_sequence() -> void:
 		canvas_layer.queue_free()
 		
 		await _play_dialogue_and_wait(dialogue_cooking_tutorial)
+		
+		if is_day_one and cutting_board_area and cutting_board_area.has_method("hide_tutorial_arrow"):
+			cutting_board_area.hide_tutorial_arrow()
 	
 	current_phase = DayPhase.AFTERNOON_COOKING
 	
@@ -306,8 +312,15 @@ func _on_dish_cooked(_dish: ItemData) -> void:
 func _play_dialogue_and_wait(data: DialogueData) -> void:
 	var new_dialogue = DIALOGUE_BOX_UI_SCENE.instantiate()
 	get_tree().current_scene.add_child(new_dialogue)
+	new_dialogue.line_shown.connect(_on_any_dialogue_line_shown.bind(data))
 	new_dialogue.start_dialogue(data)
 	await new_dialogue.dialogue_finished
+
+
+func _on_any_dialogue_line_shown(index: int, data: DialogueData) -> void:
+	if is_day_one and data == dialogue_cooking_tutorial and index == 3:
+		if cutting_board_area and cutting_board_area.has_method("show_tutorial_arrow"):
+			cutting_board_area.show_tutorial_arrow()
 
 
 func advance_to_night() -> void:

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bghedf4wxsptw"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_ckgeb"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_hts60"]
+
+[resource]
+script = ExtResource("2_hts60")
+lines = Array[String](["Mateo: Abuela, el cliente se siente muy mal. ¿Sabés qué podríamos prepararle?", "Carmen: Esto lo hará sentir mejor, sin dudas. Toma esta receta.", "Mateo: Gracias abuela, me pondré en ello."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

@@ -9,7 +9,7 @@ const MINIGAME_QTE_SCENE: PackedScene = preload("res://utilities/2d_over_3d/mini
 var player: CharacterBody3D = null
 
 @onready var test_interact_label: Label3D = %TestInteractLabel
-@onready var can_interact_icon: Sprite3D = %CanInteractIcon
+@onready var arrow_indicator: Sprite3D = %ArrowIndicator
 @onready var table_item_sprite: Sprite3D = %TableItemSprite
 @onready var table_item_name: Label3D = %TableItemName
 
@@ -86,3 +86,13 @@ func update_table_item_visual() -> void:
 	else:
 		table_item_sprite.visible = false
 		table_item_name.visible = false
+
+
+func show_tutorial_arrow() -> void:
+	if arrow_indicator:
+		arrow_indicator.visible = true
+
+
+func hide_tutorial_arrow() -> void:
+	if arrow_indicator and arrow_indicator.visible:
+		arrow_indicator.visible = false

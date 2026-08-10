@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RecipeData" format=3 uid="uid://d1ujn1cn7lt2r"]
+
+[ext_resource type="Resource" uid="uid://ntx8max2cvqy" path="res://entities/food_items/asado_negro.tres" id="1_g12lw"]
+[ext_resource type="Script" uid="uid://dmkvfc8a3wrie" path="res://utilities/item_data/item_data.gd" id="1_nyj6o"]
+[ext_resource type="Script" uid="uid://c5u3f86brbmqi" path="res://utilities/recipe_data/recipe_data.gd" id="2_g12lw"]
+
+[resource]
+script = ExtResource("2_g12lw")
+cooking_time = 4.0
+final_result = ExtResource("1_g12lw")
+metadata/_custom_type_script = "uid://c5u3f86brbmqi"

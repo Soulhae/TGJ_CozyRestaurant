@@ -9,7 +9,7 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49999994, 0)
 cast_shadow = 0
 offset = Vector2(0, 315)
-pixel_size = 0.00155
+pixel_size = 0.00167
 billboard = 1
 alpha_cut = 1
 texture_filter = 0

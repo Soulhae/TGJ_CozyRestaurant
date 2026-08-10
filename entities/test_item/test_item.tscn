@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://d28bwu3xilgxl" path="res://entities/test_item/interactable_area.gd" id="2_3dqdi"]
 [ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="2_riajg"]
+[ext_resource type="Script" uid="uid://bnptmi51ejl8s" path="res://entities/test_item/silueta_nombre_item.gd" id="3_dt62p"]
+[ext_resource type="Script" uid="uid://cma2f3bk5niy0" path="res://utilities/bouncing_arrow.gd" id="4_dt62p"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bf5uu"]
 radius = 0.25
@@ -12,9 +14,6 @@ size = Vector3(1.5, 1, 3)
 [sub_resource type="SphereMesh" id="SphereMesh_cke8t"]
 radius = 0.25
 height = 0.3
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_3dqdi"]
-viewport_path = NodePath("CanInteractIcon/SubViewport")
 
 [node name="TestItem" type="StaticBody3D" unique_id=2131828178]
 collision_layer = 8
@@ -38,13 +37,23 @@ shape = SubResource("BoxShape3D_3dqdi")
 [node name="TableItemSprite" type="Sprite3D" parent="Pivot/InteractableArea" unique_id=2102586852]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6999999, 0)
-pixel_size = 0.003
+pixel_size = 0.00075
 billboard = 1
+texture_filter = 0
 
 [node name="TableItemName" type="Label3D" parent="Pivot/InteractableArea/TableItemSprite" unique_id=121336239]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20000005, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10000004, 0.20000005, -0.20000002)
 billboard = 1
+alpha_cut = 1
+
+[node name="SiluetaNombreItem" type="Label3D" parent="Pivot/InteractableArea/TableItemSprite/TableItemName" unique_id=1287413137]
+visible = false
+billboard = 1
+no_depth_test = true
+alpha_cut = 1
+render_priority = -1
+script = ExtResource("3_dt62p")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=1444092579]
 mesh = SubResource("SphereMesh_cke8t")
@@ -56,22 +65,11 @@ visible = false
 billboard = 1
 text = "Ouch!"
 
-[node name="CanInteractIcon" type="Sprite3D" parent="." unique_id=734687932]
+[node name="ArrowIndicator" type="Sprite3D" parent="." unique_id=1621141128]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 visible = false
+pixel_size = 0.005
 billboard = 1
-texture = SubResource("ViewportTexture_3dqdi")
-
-[node name="SubViewport" type="SubViewport" parent="CanInteractIcon" unique_id=792143596]
-transparent_bg = true
-size = Vector2i(32, 32)
-
-[node name="TextureRect" type="TextureRect" parent="CanInteractIcon/SubViewport" unique_id=1660652350]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 texture = ExtResource("2_riajg")
-expand_mode = 1
+script = ExtResource("4_dt62p")

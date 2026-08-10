@@ -21,7 +21,7 @@ func on_interact():
 	var day_manager := get_tree().current_scene.get_node("DayFlowManager")
 	
 	if player.held_item != null:
-		AudioManager.play_sfx(AudioManager.error_sfx)
+		AudioManager.play_sfx(AudioManager.cancel_sfx)
 		return
 	
 	if day_manager.current_phase != day_manager.DayPhase.AFTERNOON_COOKING:
@@ -35,10 +35,13 @@ func on_interact():
 	item_selector.select_canceled.connect(_on_select_canceled)
 	get_tree().current_scene.add_child(item_selector)
 	item_selector.setup_catalog(available_items)
+	AudioManager.play_sfx(AudioManager.refrigerator_sfx)
 	
 
 
 func _on_item_selected(selected_item: ItemData) -> void:
+	AudioManager.sfx_player.stop()
+	AudioManager.play_sfx(AudioManager.veg_sfx)
 	player.held_item = selected_item
 	player.update_held_item_visual()
 	
@@ -47,5 +50,7 @@ func _on_item_selected(selected_item: ItemData) -> void:
 
 
 func _on_select_canceled() -> void:
+	AudioManager.sfx_player.stop()
+	AudioManager.play_sfx(AudioManager.close_menu_sfx)
 	player.set_physics_process(true)
 	player.set_process_unhandled_input(true)

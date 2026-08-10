@@ -118,6 +118,11 @@ func _on_cooking_timer_timeout() -> void:
 	reset_tween.tween_property(mat, "albedo_color", og_color, 0.2)
 	
 	ready_dish = current_recipe.final_result
+	
+	var day_manager = get_tree().current_scene.get_node_or_null("DayFlowManager")
+	if day_manager and day_manager.has_method("_on_dish_cooked"):
+		day_manager._on_dish_cooked(ready_dish)
+	
 	added_items.clear()
 	current_recipe = null
 	TimeManager.set_normal_speed()

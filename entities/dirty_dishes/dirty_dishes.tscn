@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://beyirkbwuel1b"]
 
 [ext_resource type="Script" uid="uid://b8r7nxr53vm6b" path="res://entities/dirty_dishes/interactable_area.gd" id="1_s0d8y"]
+[ext_resource type="Texture2D" uid="uid://difj34v7jvwth" path="res://icon.svg" id="2_nyw5m"]
+[ext_resource type="Script" uid="uid://cma2f3bk5niy0" path="res://utilities/bouncing_arrow.gd" id="3_jebin"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8ixq5"]
 size = Vector3(0.35, 0.35, 0.2)
@@ -13,7 +15,7 @@ material = SubResource("StandardMaterial3D_oiqvi")
 size = Vector3(0.35, 0.35, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_74gyn"]
-size = Vector3(0.5, 0.35, 0.5)
+size = Vector3(1, 0.35, 1)
 
 [node name="DirtyDishes" type="StaticBody3D" unique_id=255311217]
 collision_layer = 8
@@ -35,3 +37,9 @@ script = ExtResource("1_s0d8y")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractableArea" unique_id=302397450]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 shape = SubResource("BoxShape3D_74gyn")
+
+[node name="ArrowIndicator" type="Sprite3D" parent="." unique_id=1715069630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+billboard = 1
+texture = ExtResource("2_nyw5m")
+script = ExtResource("3_jebin")

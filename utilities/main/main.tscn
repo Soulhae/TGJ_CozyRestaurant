@@ -4,18 +4,25 @@
 [ext_resource type="PackedScene" uid="uid://cji0q1pa1t4d0" path="res://utilities/main/main_dia_2.tscn" id="2_qxaxp"]
 [ext_resource type="PackedScene" uid="uid://b1qddo55jmigu" path="res://utilities/camera_3d.tscn" id="3_gx7we"]
 [ext_resource type="Resource" uid="uid://b505pdbpv4r3i" path="res://utilities/dialogue/dialogue_resources/dialogue_client_arrived.tres" id="3_i7lud"]
+[ext_resource type="Resource" uid="uid://coftl5mymhlnv" path="res://utilities/dialogue/dialogue_resources/tut_1.tres" id="3_mn6k3"]
 [ext_resource type="PackedScene" uid="uid://ikxmvnvqpwb" path="res://entities/player/player.tscn" id="4_2as35"]
+[ext_resource type="Resource" uid="uid://d2pxlc7nvyoss" path="res://utilities/dialogue/dialogue_resources/tut_2.tres" id="4_irlty"]
 [ext_resource type="Resource" uid="uid://cqn5pb3wttros" path="res://utilities/dialogue/dialogue_resources/dialogue_camila_order.tres" id="4_wj0kv"]
+[ext_resource type="Resource" uid="uid://8xeffu7u74kj" path="res://utilities/dialogue/dialogue_resources/tut_3.tres" id="5_bpt2k"]
 [ext_resource type="PackedScene" uid="uid://cn5o0mlxuoim" path="res://entities/test_item/test_item.tscn" id="5_gb4hc"]
 [ext_resource type="Resource" uid="uid://dh3tyt1gx3ry0" path="res://utilities/dialogue/dialogue_resources/dialogue_cooking_tutorial.tres" id="5_qptty"]
+[ext_resource type="Resource" uid="uid://d2f1cnesy7g1" path="res://utilities/dialogue/dialogue_resources/tut_4.tres" id="6_esr6b"]
 [ext_resource type="PackedScene" uid="uid://cfhmn0i1vi5to" path="res://utilities/hud/hud.tscn" id="6_gx7we"]
 [ext_resource type="Resource" uid="uid://yijdgsvr1nnm" path="res://utilities/dialogue/dialogue_resources/dialogue_qte_tutorial.tres" id="6_wj0kv"]
 [ext_resource type="PackedScene" uid="uid://dinc8bynplcn2" path="res://entities/dispenser_station/dispenser_station.tscn" id="7_1vks7"]
+[ext_resource type="Resource" uid="uid://sbv8jmcxyf46" path="res://utilities/dialogue/dialogue_resources/tut_5.tres" id="7_pvw2d"]
 [ext_resource type="Resource" uid="uid://bbursvu3ecneb" path="res://utilities/dialogue/dialogue_resources/dialogue_dish_ready.tres" id="7_qptty"]
 [ext_resource type="Resource" uid="uid://dn1x5qtduwydt" path="res://utilities/dialogue/dialogue_resources/dialogue_night_congrats.tres" id="8_0lyew"]
 [ext_resource type="PackedScene" uid="uid://bho5fa5orac3x" path="res://entities/garbage_can/garbage_can.tscn" id="8_6mne0"]
 [ext_resource type="PackedScene" uid="uid://vyuwbi4o0pi" path="res://entities/frying_pan/frying_pan.tscn" id="8_h2y38"]
+[ext_resource type="Resource" uid="uid://q7pnxqw15xgc" path="res://utilities/dialogue/dialogue_resources/tut_6.tres" id="8_xuw4y"]
 [ext_resource type="Resource" uid="uid://2b2pi5pggvfl" path="res://utilities/dialogue/dialogue_resources/dialogue_mateo_thoughts.tres" id="9_861tw"]
+[ext_resource type="Resource" uid="uid://ggcnk5uof3n" path="res://utilities/dialogue/dialogue_resources/tut_7.tres" id="9_1046n"]
 [ext_resource type="PackedScene" uid="uid://bkh3e2xuguexr" path="res://entities/client_npc/client_npc.tscn" id="9_sdbsj"]
 [ext_resource type="Script" uid="uid://bujjbbfm8mrl1" path="res://utilities/day_flow_manager/day_flow_manager.gd" id="11_2as35"]
 [ext_resource type="Resource" uid="uid://4dxe11csnnrb" path="res://entities/recipes/mini_lomo_saltado_recipe.tres" id="11_qxaxp"]
@@ -100,6 +107,13 @@ cutting_board_area = NodePath("../World3D/CuttingBoard/Pivot/InteractableArea")
 next_day_scene = ExtResource("2_qxaxp")
 has_morning_camera_tour = true
 is_day_one = true
+tut_01_intro = ExtResource("3_mn6k3")
+tut_02_cut = ExtResource("4_irlty")
+tut_03_oil = ExtResource("5_bpt2k")
+tut_04_pan = ExtResource("6_esr6b")
+tut_05_onion = ExtResource("7_pvw2d")
+tut_06_trash = ExtResource("8_xuw4y")
+tut_07_finish = ExtResource("9_1046n")
 morning_dialogue = ExtResource("2_6mne0")
 dialogue_client_arrived = ExtResource("3_i7lud")
 dialogue_client_order = ExtResource("4_wj0kv")
@@ -136,6 +150,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -4.6000004, 1.6, 2.7999997)
 [node name="MeshInstance3D" parent="World3D/DispenserStation" index="1" unique_id=684297760]
 visible = false
 
+[node name="DispenserStationArea" parent="World3D/DispenserStation" index="2" unique_id=1517230713 groups=["dispenser"]]
+
 [node name="GarbageCan" parent="World3D" unique_id=1174244789 instance=ExtResource("8_6mne0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1, 0, 35.8)
 
@@ -164,6 +180,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -10.8, 2.4, -11.499999)
 
 [node name="MeshInstance3D" parent="World3D/FridgeStation" index="1" unique_id=684297760]
 visible = false
+
+[node name="DispenserStationArea" parent="World3D/FridgeStation" index="2" unique_id=1517230713 groups=["fridge"]]
 
 [node name="DirtyDishes" parent="World3D" unique_id=1511041932 instance=ExtResource("13_gx7we")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6, 4.7, -0.099999905)

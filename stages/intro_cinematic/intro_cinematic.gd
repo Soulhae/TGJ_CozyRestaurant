@@ -6,7 +6,7 @@ const MAIN_MENU_SCENE: PackedScene = preload("res://stages/main_menu/main_menu.t
 const SKIP_DELAY: float = 0.15
 
 @export_multiline var mateo_phrases: Array[String]
-@export var char_speed: float = 25.0
+@export var char_speed: float = 15.0
 
 var current_index: int = 0
 var tween: Tween
@@ -42,8 +42,17 @@ func _process(delta: float) -> void:
 func advance_dialogue() -> void:
 	if tween and tween.is_running():
 		tween.kill()
-		label.visible_ratio = 1.0
-		label.modulate.a = 1.0
+		if label.visible_ratio < 1.0:
+			label.visible_ratio = 1.0
+			label.modulate.a = 1.0
+			
+			tween = create_tween()
+			tween.tween_interval(1)
+			tween.tween_property(label, "modulate:a", 0, 1.5)
+			tween.tween_callback(_on_phrase_finished)
+		else:
+			current_index += 1
+			play_next_phrase()
 	else:
 		current_index += 1
 		play_next_phrase()

@@ -2,8 +2,13 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_8ejqt"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_pjaox"]
+[ext_resource type="Texture2D" uid="uid://ccpx0hkedx8jm" path="res://entities/player/expresiones/6.png" id="2_wmjtb"]
+[ext_resource type="Texture2D" uid="uid://c6gj8w4lbwqft" path="res://entities/player/expresiones/4.png" id="3_1dydt"]
+[ext_resource type="Texture2D" uid="uid://cejd83lh8n51h" path="res://entities/player/expresiones/10.png" id="4_oim51"]
+[ext_resource type="Texture2D" uid="uid://vtbuowhcg8xt" path="res://entities/player/expresiones/11.png" id="5_ym3a6"]
 
 [resource]
 script = ExtResource("2_pjaox")
 lines = Array[String](["Mateo: Hay muchas cosas en mi cabeza que quizá aún no termino de entender.", "Mateo: Se que con el tiempo seré capaz de hacerlo.", "Mateo: Pero por ahora...", "Mateo: Puedo decir que no fue un mal día."])
+portraits = Array[Texture2D]([ExtResource("2_wmjtb"), ExtResource("3_1dydt"), ExtResource("4_oim51"), ExtResource("5_ym3a6")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

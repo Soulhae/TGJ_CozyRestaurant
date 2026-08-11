@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://coftl5mymhlnv"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_q35eb"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_6sxmd"]
+
+[resource]
+script = ExtResource("2_6sxmd")
+lines = Array[String](["Carmen: Aquí tienes la receta, con ella podrás guiarte paso a paso en cómo
+debes preparar la comida.", "Carmen: Puedes acceder a ella pulsando la letra \"R\".", "Carmen: Empecemos por la carne. Cada carne tiene distintos usos, recuerda eso.", "Carmen: Ve a la refrigeradora y saca el trozo de carne cruda. Para abrirla pulsa la letra \"E\"."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://sbv8jmcxyf46"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_axled"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_5idah"]
+
+[resource]
+script = ExtResource("2_5idah")
+lines = Array[String](["Carmen: ¡Excelente! como el aceite ya está caliente, puedes dejar la carne en la sartén.", "Carmen: Mientras la carne está en la sartén, pica la cebolla, una vez picada, de nuevo a la sartén."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

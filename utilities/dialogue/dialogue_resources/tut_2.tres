@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://d2pxlc7nvyoss"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_lkiim"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_31upj"]
+
+[resource]
+script = ExtResource("2_31upj")
+lines = Array[String](["Carmen: Ese mismo, ahora que lo tienes...", "Carmen: Ve a la tabla de picar y córtala presionando nuevamente \"E\"."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

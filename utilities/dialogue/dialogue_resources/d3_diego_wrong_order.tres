@@ -1,9 +1,12 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://d3jx5xgsfdlg0"]
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_u1qwn"]
+[ext_resource type="Texture2D" uid="uid://yt4ytbh6wnrc" path="res://entities/client_npc/expresiones/Diego/4.png" id="2_h6wwj"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_xffg2"]
+[ext_resource type="Texture2D" uid="uid://l3le1nodq5vh" path="res://entities/client_npc/expresiones/Diego/5.png" id="3_a151x"]
 
 [resource]
 script = ExtResource("2_xffg2")
 lines = Array[String](["Diego: Qué comida mas \"wena\"!.", "Diego: Creo que vendré más seguido acá.", "Diego: Gracias!"])
+portraits = Array[Texture2D]([ExtResource("2_h6wwj"), ExtResource("2_h6wwj"), ExtResource("3_a151x")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

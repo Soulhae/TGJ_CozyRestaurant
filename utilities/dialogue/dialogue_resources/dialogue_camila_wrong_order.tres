@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_vcdug"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_fg1gt"]
+[ext_resource type="Texture2D" uid="uid://23avrqg131jv" path="res://entities/client_npc/expresiones/Camila/2.png" id="2_gtd75"]
+[ext_resource type="Texture2D" uid="uid://bhg27wfq5cfnx" path="res://entities/client_npc/expresiones/Camila/1.png" id="3_gus7o"]
 
 [resource]
 script = ExtResource("2_fg1gt")
 lines = Array[String](["Camila: Mmmm, esto no parece lomo saltado...", "Camila: Pero a veces las mejores cosas en la vida son imprevistas, muchas gracias de todas maneras!."])
+portraits = Array[Texture2D]([ExtResource("2_gtd75"), ExtResource("3_gus7o")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

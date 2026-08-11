@@ -1,5 +1,7 @@
 extends Area3D
 
+signal item_cut(item: ItemData)
+
 const MINIGAME_QTE_SCENE: PackedScene = preload("res://utilities/2d_over_3d/minigame_qte/minigame_qte.tscn")
 
 @export var item_on_table: ItemData = null
@@ -52,6 +54,7 @@ func on_interact() -> void:
 		AudioManager.play_sfx(AudioManager.cutting_meat_sfx)
 		AudioManager.play_sfx(AudioManager.cutting_vegetables_sfx)
 		item_on_table = item_on_table.processed_result
+		item_cut.emit(item_on_table)
 		update_table_item_visual()
 	elif player.held_item == null and item_on_table != null and item_on_table.processed_result == null:
 		player.held_item = item_on_table

@@ -1,9 +1,19 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cv52i7j51nhsw"]
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_o5s26"]
+[ext_resource type="Texture2D" uid="uid://5h28k3v6xnrk" path="res://utilities/sprites_mary/3.png" id="2_xdwfi"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_y58rv"]
+[ext_resource type="Texture2D" uid="uid://b07g32lt2v58e" path="res://utilities/sprites_mary/1.png" id="3_87rns"]
+[ext_resource type="Texture2D" uid="uid://ccpx0hkedx8jm" path="res://entities/player/expresiones/6.png" id="4_r7y4h"]
+[ext_resource type="Texture2D" uid="uid://b22cd7i7eyp5m" path="res://entities/player/expresiones/3.png" id="5_ljrfa"]
+[ext_resource type="Texture2D" uid="uid://cejd83lh8n51h" path="res://entities/player/expresiones/10.png" id="6_kppg3"]
+[ext_resource type="Texture2D" uid="uid://47vj7di56835" path="res://entities/player/expresiones/8.png" id="7_wthuy"]
+[ext_resource type="Texture2D" uid="uid://vtbuowhcg8xt" path="res://entities/player/expresiones/11.png" id="8_4cwtm"]
+[ext_resource type="Texture2D" uid="uid://cicqhknpkr1sw" path="res://entities/player/expresiones/2.png" id="9_omw85"]
+[ext_resource type="Texture2D" uid="uid://bvfmtn8snw1h2" path="res://entities/player/expresiones/5.png" id="10_kmm1t"]
 
 [resource]
 script = ExtResource("2_y58rv")
 lines = Array[String](["Mary: eo..", "Mary: teo..", "Mary: Mateo, reacciona, tu abuela está esperándote en la mesa.", "Mateo: (¿En qué momento llegamos?)", "Mateo: Hola abuela, hace mucho que no te veo, ¿Cómo has estado?", "Carmen: Mi querido nieto, me alegra tanto verte, has crecido más de lo que imaginé.", "Carmen: Yo me encuentro mejor que nunca, es decir, puedo caminar a pesar de tener 80 años, ¿No te parece increíble?", "Mateo: Tienes razón abue, si hay algo que siempre te ha caracterizado es la positividad que transmites al resto.", "Mateo: En cambio yo...", "Carmen: En cambio tú sigues siendo tan tenaz y perseverante como siempre, ¿No es así? Seguro estás cansado cariño, ven, te llevaré a tu cuarto.", "Mateo: Gracias abuela, si estoy a decir verdad.", "Carmen: Vamos, te llevaré a tu habitación y luego me despido de tu madre. Que tengas una muy buena noche hijito, ya nos pondremos al corriente mañana.", "Mateo: Abue...", "Carmen: ¿Si hijo?.", "Mateo: Dile a mamá que vuelva con cuidado por favor.", "Carmen: Se lo haré saber corazón, que tengas muy buena noche."])
+portraits = Array[Texture2D]([ExtResource("2_xdwfi"), ExtResource("2_xdwfi"), ExtResource("3_87rns"), ExtResource("4_r7y4h"), ExtResource("5_ljrfa"), null, null, ExtResource("6_kppg3"), ExtResource("7_wthuy"), null, ExtResource("8_4cwtm"), null, ExtResource("9_omw85"), null, ExtResource("10_kmm1t"), null])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

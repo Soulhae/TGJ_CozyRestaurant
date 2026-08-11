@@ -22,6 +22,15 @@ enum DayPhase {
 @export var has_morning_camera_tour: bool = false
 @export var is_day_one: bool = false
 
+@export_group("Tutorial Paso a Paso (día 1)")
+@export var tut_01_intro: DialogueData
+@export var tut_02_cut: DialogueData
+@export var tut_03_oil: DialogueData
+@export var tut_04_pan: DialogueData
+@export var tut_05_onion: DialogueData
+@export var tut_06_trash: DialogueData
+@export var tut_07_finish: DialogueData
+
 @export_group("Diálogos del Día")
 @export var morning_dialogue: DialogueData
 @export var dialogue_client_arrived: DialogueData
@@ -217,7 +226,7 @@ func _play_sleep_sequence() -> void:
 	if next_day_scene:
 		get_tree().change_scene_to_packed(next_day_scene)
 	else:
-		get_tree().change_scene_to_file("res://stages/main_menu/main_menu.tscn")
+		get_tree().change_scene_to_file("res://stages/outro_cinematic/outro_cinematic.tscn")
 
 
 func _on_dialogue_line_shown(index: int) -> void:
@@ -304,6 +313,64 @@ func play_afternoon_sequence() -> void:
 			cutting_board_area.hide_tutorial_arrow()
 	
 	current_phase = DayPhase.AFTERNOON_COOKING
+	
+	if is_day_one:
+		if tut_01_intro:
+			await _play_dialogue_and_wait(tut_01_intro)
+		if player: player.set_physics_process(true)
+		if player: player.set_process_unhandled_input(true)
+		
+		var fridge = get_tree().get_first_node_in_group("fridge")
+		if fridge:
+			await fridge.item_taken_from_fridge 
+		if player: player.set_physics_process(false)
+		
+		if tut_02_cut:
+			await _play_dialogue_and_wait(tut_02_cut)
+		if cutting_board_area and cutting_board_area.has_method("show_tutorial_arrow"):
+			cutting_board_area.show_tutorial_arrow()
+		if player: player.set_physics_process(true)
+		await cutting_board_area.item_cut
+		if cutting_board_area and cutting_board_area.has_method("hide_tutorial_arrow"):
+			cutting_board_area.hide_tutorial_arrow()
+		if player: player.set_physics_process(false)
+		
+		if tut_03_oil:
+			await _play_dialogue_and_wait(tut_03_oil)
+		if player: player.set_physics_process(true)
+		
+		var dispenser= get_tree().get_first_node_in_group("dispenser")
+		if dispenser:
+			await dispenser.item_taken_from_dispenser
+		if player: player.set_physics_process(false)
+		
+		if tut_04_pan:
+			await _play_dialogue_and_wait(tut_04_pan)
+		if player: player.set_physics_process(true)
+		if frying_pan_node:
+			var pan_area = frying_pan_node.get_node_or_null("InteractableArea")
+			if pan_area:
+				await pan_area.item_added_to_pan
+		if player: player.set_physics_process(false)
+		
+		if tut_05_onion:
+			await _play_dialogue_and_wait(tut_05_onion)
+		if player: player.set_physics_process(true)
+		await cutting_board_area.item_cut
+		if player: player.set_physics_process(false)
+		
+		if tut_06_trash:
+			await _play_dialogue_and_wait(tut_06_trash)
+		if player: player.set_physics_process(true)
+		if player:
+			await player.item_deleted
+		
+		await cutting_board_area.item_cut
+		
+		if player: player.set_physics_process(false)
+		if tut_07_finish:
+			await _play_dialogue_and_wait(tut_07_finish)
+	
 	AudioManager.play_music(AudioManager.track_gameplay)
 	
 	if player:

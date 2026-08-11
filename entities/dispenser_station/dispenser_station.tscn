@@ -44,7 +44,7 @@ mesh = SubResource("BoxMesh_cv0ty")
 collision_layer = 8
 collision_mask = 0
 script = ExtResource("1_71ijm")
-available_items = Array[ExtResource("2_minyl")]([ExtResource("5_p35pc"), ExtResource("4_28hjs"), ExtResource("5_olcfd"), ExtResource("6_5tg82"), ExtResource("10_1hq4v"), ExtResource("11_7cgoo"), ExtResource("12_6bywt"), ExtResource("10_l5vhn"), ExtResource("11_vq8vm"), ExtResource("12_uhrtq"), ExtResource("13_lgcjm"), ExtResource("14_0ws2j"), ExtResource("15_xvtxl"), ExtResource("16_knkb5"), ExtResource("17_cuigo"), ExtResource("18_l3bti"), ExtResource("19_0khtp"), ExtResource("20_cqhtl")])
+available_items = Array[ExtResource("2_minyl")]([ExtResource("4_28hjs"), ExtResource("5_p35pc"), ExtResource("5_olcfd"), ExtResource("6_5tg82"), ExtResource("10_1hq4v"), ExtResource("11_7cgoo"), ExtResource("12_6bywt"), ExtResource("10_l5vhn"), ExtResource("11_vq8vm"), ExtResource("12_uhrtq"), ExtResource("13_lgcjm"), ExtResource("14_0ws2j"), ExtResource("15_xvtxl"), ExtResource("16_knkb5"), ExtResource("17_cuigo"), ExtResource("18_l3bti"), ExtResource("19_0khtp"), ExtResource("20_cqhtl")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DispenserStationArea" unique_id=748922211]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

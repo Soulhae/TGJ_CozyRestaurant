@@ -2,9 +2,16 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_bhf4q"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_2dqgf"]
+[ext_resource type="Texture2D" uid="uid://cicqhknpkr1sw" path="res://entities/player/expresiones/2.png" id="2_d4i6i"]
+[ext_resource type="Texture2D" uid="uid://b22cd7i7eyp5m" path="res://entities/player/expresiones/3.png" id="3_54r4t"]
+[ext_resource type="Texture2D" uid="uid://bbwxl7tngs11t" path="res://entities/client_npc/expresiones/Pedro/4.png" id="4_j43p2"]
+[ext_resource type="Texture2D" uid="uid://c323uwfkpxk7x" path="res://entities/client_npc/expresiones/Pedro/2.png" id="5_5vdil"]
+[ext_resource type="Texture2D" uid="uid://dtductm3o8c32" path="res://entities/client_npc/expresiones/Pedro/3.png" id="6_vjs7w"]
+[ext_resource type="Texture2D" uid="uid://rhcdsuyrm538" path="res://entities/player/expresiones/9.png" id="7_0b0xx"]
 
 [resource]
 script = ExtResource("2_2dqgf")
 lines = Array[String](["Mateo: (Creo que ha quedado bien, espero le guste).", "Mateo: Joven Pedro, aquí tiene su comida, espero que sea de su agrado.", "Pedro: Esta era la comida favorita de mis padres.
 ", "Pedro: Aún recuerdo cuando nos llamaban a la mesa con mi hermano y nunca hacíamos caso.", "Pedro: Habían veces en las que incluso no bajábamos a comer con ellos...", "Pedro: En ese entonces estaba tan centrado en mí que no podía ver a mi alrededor.", "Pedro: Y ahora que ya no los tengo cerca, es dónde más siento que quisiera compartirlo con ellos.", "Pedro: ...", "Pedro: Gracias Mateo, me aseguraré de dejar el plato totalmente limpio!.", "Mateo: ¡Provecho!"])
+portraits = Array[Texture2D]([ExtResource("2_d4i6i"), ExtResource("3_54r4t"), ExtResource("4_j43p2"), ExtResource("5_5vdil"), ExtResource("6_vjs7w"), ExtResource("6_vjs7w"), ExtResource("6_vjs7w"), ExtResource("6_vjs7w"), ExtResource("5_5vdil"), ExtResource("7_0b0xx")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

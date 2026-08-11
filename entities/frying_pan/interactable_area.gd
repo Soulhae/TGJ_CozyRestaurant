@@ -1,5 +1,7 @@
 extends Area3D
 
+signal item_added_to_pan(item: ItemData)
+
 const MINIGAME_QTE_SCENE: PackedScene = preload("res://utilities/2d_over_3d/minigame_qte/minigame_qte.tscn")
 
 @export var available_recipes: Array[RecipeData]
@@ -61,6 +63,7 @@ func on_interact() -> void:
 					and added_items.count(player.held_item) < recipe.required_items.count(player.held_item)
 			):
 				added_items.append(player.held_item)
+				item_added_to_pan.emit(player.held_item)
 				player.held_item = null
 				player.update_held_item_visual()
 				

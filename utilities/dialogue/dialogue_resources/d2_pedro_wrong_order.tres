@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_ca3d0"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_8yo8s"]
+[ext_resource type="Texture2D" uid="uid://b8k6mpkgmygtl" path="res://entities/client_npc/expresiones/Pedro/1.png" id="2_mbkm5"]
+[ext_resource type="Texture2D" uid="uid://c323uwfkpxk7x" path="res://entities/client_npc/expresiones/Pedro/2.png" id="3_y1vs7"]
 
 [resource]
 script = ExtResource("2_8yo8s")
 lines = Array[String](["Pedro: Nunca había probado esto!, pero...", "Pedro: En la vida nunca dejan de existir nuevas oportunidades.", "Pedro: Muchas gracias Mateo."])
+portraits = Array[Texture2D]([ExtResource("2_mbkm5"), ExtResource("3_y1vs7"), ExtResource("3_y1vs7")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

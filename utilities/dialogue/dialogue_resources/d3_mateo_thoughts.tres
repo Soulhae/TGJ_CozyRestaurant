@@ -1,9 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://qnuls234hq5"]
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_2i8ka"]
+[ext_resource type="Texture2D" uid="uid://bvfmtn8snw1h2" path="res://entities/player/expresiones/5.png" id="2_d72m2"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_hx68t"]
+[ext_resource type="Texture2D" uid="uid://c6gj8w4lbwqft" path="res://entities/player/expresiones/4.png" id="3_ogncn"]
+[ext_resource type="Texture2D" uid="uid://cejd83lh8n51h" path="res://entities/player/expresiones/10.png" id="4_dpiy4"]
+[ext_resource type="Texture2D" uid="uid://vtbuowhcg8xt" path="res://entities/player/expresiones/11.png" id="5_bohfv"]
 
 [resource]
 script = ExtResource("2_hx68t")
-lines = Array[String](["Mateo: No había visto a un cliente tan triste como el día de hoy.", "Mateo: De corazón espero que pueda hallar consuelo en la familia que le quede.", "Mateo: Desde que llegué a este lugar todo ha sido un mar de emociones.", "Mateo: Las cosas a veces suelen ser más complicadas de lo que creo.", "Mateo: Pero he aprendido a que puedo con todo ello.", "Mateo: ...", "Mateo: Creo que me quedaré aquí un tiempo más."])
+lines = Array[String](["Mateo: No había visto a un cliente tan triste como el del día de hoy.", "Mateo: De corazón espero que pueda hallar consuelo en la familia que le quede.", "Mateo: Desde que llegué a este lugar todo ha sido un mar de emociones.", "Mateo: Las cosas a veces suelen ser más complicadas de lo que creo.", "Mateo: Pero he aprendido a que puedo con todo ello.", "Mateo: ...", "Mateo: Creo que me quedaré aquí un tiempo más."])
+portraits = Array[Texture2D]([ExtResource("2_d72m2"), ExtResource("2_d72m2"), ExtResource("2_d72m2"), ExtResource("3_ogncn"), ExtResource("4_dpiy4"), ExtResource("4_dpiy4"), ExtResource("5_bohfv")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

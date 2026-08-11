@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://ggcnk5uof3n"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_l4qjh"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_gr2ay"]
+
+[resource]
+script = ExtResource("2_gr2ay")
+lines = Array[String](["Carmen: Así está perfectamente cortada Mateo!", "Carmen: Ahora que ya sabes como funciona todo, intenta seguir por tu cuenta.", "Carmen: Yo estaré aquí viéndote mientras lo haces.", "Carmen: Recuerda ir revisando tu receta!"])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

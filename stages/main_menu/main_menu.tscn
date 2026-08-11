@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://depxn0flyfjgc" path="res://stages/main_menu/main_menu.gd" id="1_owbi8"]
 [ext_resource type="StyleBox" uid="uid://wbtxw44f3k50" path="res://utilities/ui_presets/new_style_box_flat.tres" id="1_phs36"]
 [ext_resource type="Texture2D" uid="uid://uu410e84a2so" path="res://stages/main_menu/MENU.png" id="2_wxx16"]
+[ext_resource type="PackedScene" uid="uid://d0bwo831chpn4" path="res://stages/main_menu/credits_view.tscn" id="4_wyd67"]
 
 [sub_resource type="Theme" id="Theme_tvbev"]
 Button/styles/focus = ExtResource("1_phs36")
@@ -88,6 +89,7 @@ text = "Salir"
 
 [node name="SettingsView" type="ColorRect" parent="." unique_id=260745063]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -111,7 +113,20 @@ theme = SubResource("Theme_owbi8")
 theme_override_font_sizes/font_size = 32
 text = "Ir Atrás"
 
-[node name="ControlsView" type="ColorRect" parent="." unique_id=1807615445]
+[node name="CreditsView" parent="." unique_id=1841462331 instance=ExtResource("4_wyd67")]
+unique_name_in_owner = true
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -27.5
+offset_top = -12.5
+offset_right = 27.5
+offset_bottom = 12.5
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="ControlsView" type="TextureRect" parent="." unique_id=2014163663]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -119,7 +134,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.12616834, 0.6415548, 0.74908507, 1)
+texture = ExtResource("2_wxx16")
 
 [node name="BackButton" type="Button" parent="ControlsView" unique_id=1610127514]
 custom_minimum_size = Vector2(240, 0)
@@ -136,27 +151,55 @@ theme = SubResource("Theme_owbi8")
 theme_override_font_sizes/font_size = 32
 text = "Ir Atrás"
 
-[node name="CreditsView" type="ColorRect" parent="." unique_id=1304839252]
-unique_name_in_owner = true
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlsView" unique_id=2083182376]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.797629, 0.6776064, 0, 1)
+theme_override_constants/separation = 30
 
-[node name="BackButton" type="Button" parent="CreditsView" unique_id=1903480665]
-custom_minimum_size = Vector2(240, 0)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.025
-anchor_top = 0.975
-anchor_right = 0.025
-anchor_bottom = 0.975
-offset_top = -96.0
-offset_right = 240.0
-grow_vertical = 0
-theme = SubResource("Theme_owbi8")
-theme_override_font_sizes/font_size = 32
-text = "Ir Atrás"
+[node name="Label5" type="Label" parent="ControlsView/VBoxContainer" unique_id=820007152]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "'W/A/S/D' - Movimiento"
+
+[node name="Label" type="Label" parent="ControlsView/VBoxContainer" unique_id=342851516]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "'E' - Interactuar"
+
+[node name="Label6" type="Label" parent="ControlsView/VBoxContainer" unique_id=1433714684]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "'R' - Ver receta"
+
+[node name="Label2" type="Label" parent="ControlsView/VBoxContainer" unique_id=1671214945]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "'X' - Destruir ítem en mano"
+
+[node name="Label3" type="Label" parent="ControlsView/VBoxContainer" unique_id=1321725451]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "'Espacio' - QTE y Saltar diálogos"
+
+[node name="Label4" type="Label" parent="ControlsView/VBoxContainer" unique_id=2072040122]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "'Escape' - Salir de menús"
+
+[editable path="CreditsView"]

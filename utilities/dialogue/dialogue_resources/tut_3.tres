@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://8xeffu7u74kj"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_3pbgr"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_hncvl"]
+
+[resource]
+script = ExtResource("2_hncvl")
+lines = Array[String](["Carmen: Ahora que tienes la carne cortada, déjala en la mesa y ve por el aceite.", "Carmen: Ah, se me olvidaba mencionar!", "Carmen: Si agregas un ingrediente al sartén, este se actualiza en tu receta."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"

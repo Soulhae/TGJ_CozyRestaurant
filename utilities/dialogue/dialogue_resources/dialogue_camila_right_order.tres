@@ -1,9 +1,12 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://y5euv1ilr6x2"]
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_3tjv5"]
+[ext_resource type="Texture2D" uid="uid://cpnhgjilmcv6w" path="res://entities/player/expresiones/12.png" id="2_1nrfa"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_hduwk"]
+[ext_resource type="Texture2D" uid="uid://bhg27wfq5cfnx" path="res://entities/client_npc/expresiones/Camila/1.png" id="3_3g2y3"]
 
 [resource]
 script = ExtResource("2_hduwk")
 lines = Array[String](["Mateo: Aquí tiene! Espero le guste.", "Camila: Puedo notar el esfuerzo que has puesto en la comida.", "Camila: Es una sensación muy familiar a cuando lo preparaban mis hijas...", "Camila: Creo que son las papas, ellas siempre se enorgullecían de eso. Aunque se les quemaba un poco la carne, pero aún así sabía muy bien.", "Camila: Gracias por haberlo cocinado, me siento muy feliz."])
+portraits = Array[Texture2D]([ExtResource("2_1nrfa"), ExtResource("3_3g2y3"), ExtResource("3_3g2y3"), ExtResource("3_3g2y3"), ExtResource("3_3g2y3")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

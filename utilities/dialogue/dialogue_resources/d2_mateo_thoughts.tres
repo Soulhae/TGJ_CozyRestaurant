@@ -2,8 +2,13 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_s0lmt"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_n84aj"]
+[ext_resource type="Texture2D" uid="uid://bvfmtn8snw1h2" path="res://entities/player/expresiones/5.png" id="2_rfsv3"]
+[ext_resource type="Texture2D" uid="uid://cicqhknpkr1sw" path="res://entities/player/expresiones/2.png" id="3_hvb8v"]
+[ext_resource type="Texture2D" uid="uid://dq57mevrn4qol" path="res://entities/player/expresiones/1.png" id="4_ovnv7"]
+[ext_resource type="Texture2D" uid="uid://cejd83lh8n51h" path="res://entities/player/expresiones/10.png" id="5_ydjje"]
 
 [resource]
 script = ExtResource("2_n84aj")
 lines = Array[String](["Mateo: Algunas personas si la tienen muy difícil.", "Mateo: Debería ser más agradecido y hacerle saber a mi mamá cuánto la quiero.", "Mateo: También se lo diré a mi abuela mañana.", "Mateo: ...", "Mateo: Me estoy sintiendo mejor de lo que esperaba."])
+portraits = Array[Texture2D]([ExtResource("2_rfsv3"), ExtResource("3_hvb8v"), ExtResource("2_rfsv3"), ExtResource("4_ovnv7"), ExtResource("5_ydjje")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

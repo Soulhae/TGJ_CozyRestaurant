@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_5ju1v"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_724nq"]
+[ext_resource type="Texture2D" uid="uid://yt4ytbh6wnrc" path="res://entities/client_npc/expresiones/Diego/4.png" id="2_p7t1g"]
 
 [resource]
 script = ExtResource("2_724nq")
 lines = Array[String](["Diego: Aquí estaré esperando bro, \"vale!\"."])
+portraits = Array[Texture2D]([ExtResource("2_p7t1g")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

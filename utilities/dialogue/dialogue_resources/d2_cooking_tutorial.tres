@@ -1,9 +1,16 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cudm44w2s0dd5"]
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_qrjxg"]
+[ext_resource type="Texture2D" uid="uid://rhcdsuyrm538" path="res://entities/player/expresiones/9.png" id="2_j8er6"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_vvj7h"]
+[ext_resource type="Texture2D" uid="uid://c6gj8w4lbwqft" path="res://entities/player/expresiones/4.png" id="3_t6u5e"]
+[ext_resource type="Texture2D" uid="uid://ccpx0hkedx8jm" path="res://entities/player/expresiones/6.png" id="4_svqvw"]
+[ext_resource type="Texture2D" uid="uid://b67hc68jnghai" path="res://entities/abuela_npc/expresiones/2.png" id="5_dwk0j"]
+[ext_resource type="Texture2D" uid="uid://bmhiidmaotkeg" path="res://entities/abuela_npc/expresiones/1.png" id="6_838lk"]
+[ext_resource type="Texture2D" uid="uid://b22cd7i7eyp5m" path="res://entities/player/expresiones/3.png" id="7_8t5kj"]
 
 [resource]
 script = ExtResource("2_vvj7h")
 lines = Array[String](["Mateo: Abuela, el joven Pedro me pidió un platillo para subirle la moral.", "Mateo: Pero no se que podría prepararle.", "Mateo: Dice que viene de Venezuela, ¿Tienes algo en mente?", "Carmen: Claro que tengo algo!", "Carmen: Con tu tío solíamos ir a muchos lugares antes de abrir el restaurante.", "Carmen: Ten, esto le alegrará el día.", "Carmen: Es un platillo que comen mucho por allá.", "Carmen: En especial en reuniones familiares.", "Carmen: Revisa la receta y pónte a ello!", "Mateo: Haré mi mejor intento por hacer bien las cosas.", "Carmen: Tú puedes!"])
+portraits = Array[Texture2D]([ExtResource("2_j8er6"), ExtResource("3_t6u5e"), ExtResource("4_svqvw"), ExtResource("5_dwk0j"), ExtResource("6_838lk"), ExtResource("6_838lk"), ExtResource("5_dwk0j"), ExtResource("6_838lk"), ExtResource("5_dwk0j"), ExtResource("7_8t5kj"), ExtResource("5_dwk0j")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

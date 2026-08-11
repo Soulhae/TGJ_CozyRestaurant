@@ -1,10 +1,21 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://68mthw8ejk4x"]
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_05167"]
+[ext_resource type="Texture2D" uid="uid://b22cd7i7eyp5m" path="res://entities/player/expresiones/3.png" id="2_2xmip"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_htt2x"]
+[ext_resource type="Texture2D" uid="uid://c323uwfkpxk7x" path="res://entities/client_npc/expresiones/Pedro/2.png" id="3_ty0tj"]
+[ext_resource type="Texture2D" uid="uid://ccpx0hkedx8jm" path="res://entities/player/expresiones/6.png" id="4_kxr32"]
+[ext_resource type="Texture2D" uid="uid://bbwxl7tngs11t" path="res://entities/client_npc/expresiones/Pedro/4.png" id="5_a3bx0"]
+[ext_resource type="Texture2D" uid="uid://rhcdsuyrm538" path="res://entities/player/expresiones/9.png" id="6_7nelw"]
+[ext_resource type="Texture2D" uid="uid://cpnhgjilmcv6w" path="res://entities/player/expresiones/12.png" id="7_fadlq"]
+[ext_resource type="Texture2D" uid="uid://vtbuowhcg8xt" path="res://entities/player/expresiones/11.png" id="8_7jkoo"]
+[ext_resource type="Texture2D" uid="uid://b8k6mpkgmygtl" path="res://entities/client_npc/expresiones/Pedro/1.png" id="9_gk866"]
+[ext_resource type="Texture2D" uid="uid://dtductm3o8c32" path="res://entities/client_npc/expresiones/Pedro/3.png" id="10_xn6wt"]
+[ext_resource type="Texture2D" uid="uid://cejd83lh8n51h" path="res://entities/player/expresiones/10.png" id="11_yk2ss"]
 
 [resource]
 script = ExtResource("2_htt2x")
 lines = Array[String](["Mateo: Bienvenido a Yuyay, ¿Cómo puedo ayudarle el día de hoy?", "Pedro: Épale Mateo, que tal, soy Pedro.", "Mateo: ¿É-Épale?", "Pedro: Oh, disculpa si te sorprendí, así saludaba en mi país, es algo que me gusta mantener. Soy de Venezuela.", "Mateo: Es primera vez que alguien me saluda así, fue inesperado!.", "Mateo: Un gusto joven Pedro.", "Mateo: Dígame, ¿Cómo puedo ayudarle?", "Pedro: Verás Mateo, hoy es mi día libre, trabajo 6 días a la semana y me sentía muy cansado para cocinar algo.", "Pedro: Y aunque lo haga, no me siento muy cómodo cuando termino de preparar la comida y me voy a sentar a la mesa.", "Pedro: No hay nadie ahí que me espere.", "Pedro: Extraño mucho la compañía de mi mamá y mis amigos, ellos están muy lejos.", "Pedro: Me preguntaba si podrían darme algo aquí que me suba un poco la moral.
 ", "Mateo: Deme un segundo, veré que puedo hacer."])
+portraits = Array[Texture2D]([ExtResource("2_2xmip"), ExtResource("3_ty0tj"), ExtResource("4_kxr32"), ExtResource("5_a3bx0"), ExtResource("6_7nelw"), ExtResource("7_fadlq"), ExtResource("8_7jkoo"), ExtResource("9_gk866"), ExtResource("10_xn6wt"), ExtResource("10_xn6wt"), ExtResource("10_xn6wt"), ExtResource("9_gk866"), ExtResource("11_yk2ss")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

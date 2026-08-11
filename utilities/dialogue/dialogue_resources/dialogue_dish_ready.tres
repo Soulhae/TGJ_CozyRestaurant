@@ -1,9 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bbursvu3ecneb"]
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_bcg7o"]
+[ext_resource type="Texture2D" uid="uid://rhcdsuyrm538" path="res://entities/player/expresiones/9.png" id="2_drtay"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_j3k6n"]
+[ext_resource type="Texture2D" uid="uid://bmhiidmaotkeg" path="res://entities/abuela_npc/expresiones/1.png" id="3_atkyv"]
+[ext_resource type="Texture2D" uid="uid://b67hc68jnghai" path="res://entities/abuela_npc/expresiones/2.png" id="4_0hxok"]
+[ext_resource type="Texture2D" uid="uid://b22cd7i7eyp5m" path="res://entities/player/expresiones/3.png" id="5_rsvwa"]
 
 [resource]
 script = ExtResource("2_j3k6n")
 lines = Array[String](["Mateo: Abuela, ¡mira!", "Carmen: Sabía que lo conseguirías, se ve delicioso.", "Carmen: Ahora ve y entrega tu platillo.", "Carmen: Ya limpiamos el resto para el día de mañana.", "Mateo: Claro, ahora voy!"])
+portraits = Array[Texture2D]([ExtResource("2_drtay"), ExtResource("3_atkyv"), ExtResource("3_atkyv"), ExtResource("4_0hxok"), ExtResource("5_rsvwa")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

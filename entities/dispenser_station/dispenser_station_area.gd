@@ -1,5 +1,7 @@
 extends Area3D
 
+signal item_taken_from_dispenser(item: ItemData)
+
 const ITEM_SELECTOR_SCENE: PackedScene = preload("res://utilities/2d_over_3d/item_selector_ui/item_selector_ui.tscn")
 
 @export var available_items: Array[ItemData]
@@ -47,6 +49,7 @@ func _on_item_selected(selected_item: ItemData) -> void:
 	
 	player.set_physics_process(true)
 	player.set_process_unhandled_input(true)
+	item_taken_from_dispenser.emit(selected_item)
 
 
 func _on_select_canceled() -> void:

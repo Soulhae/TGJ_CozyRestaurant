@@ -27,11 +27,11 @@ func _unhandled_input(event: InputEvent) -> void:
 				needle_final_position >= success_zone.position.x - needle.size.x 
 				and needle_final_position <= success_zone.position.x + success_zone.size.x
 		) :
-			outcome_label.text = 'Success!! :D'
+			outcome_label.text = 'Lograste controlar la llama!'
 			outcome_label.visible = true
 			qte_finished.emit(true)
 		else:
-			outcome_label.text = 'Failure :('
+			outcome_label.text = 'Ooops! se pasó un poco'
 			outcome_label.visible = true
 			qte_finished.emit(false)
 		await get_tree().create_timer(1.5).timeout

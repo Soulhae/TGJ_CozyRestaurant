@@ -2,8 +2,16 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_qih17"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_eois8"]
+[ext_resource type="Texture2D" uid="uid://b67hc68jnghai" path="res://entities/abuela_npc/expresiones/2.png" id="2_h7ob4"]
+[ext_resource type="Texture2D" uid="uid://cpnhgjilmcv6w" path="res://entities/player/expresiones/12.png" id="3_vveey"]
+[ext_resource type="Texture2D" uid="uid://ccpx0hkedx8jm" path="res://entities/player/expresiones/6.png" id="4_64alh"]
+[ext_resource type="Texture2D" uid="uid://b22cd7i7eyp5m" path="res://entities/player/expresiones/3.png" id="5_2rp3e"]
+[ext_resource type="Texture2D" uid="uid://bmhiidmaotkeg" path="res://entities/abuela_npc/expresiones/1.png" id="6_l5ry3"]
+[ext_resource type="Texture2D" uid="uid://rhcdsuyrm538" path="res://entities/player/expresiones/9.png" id="7_2qte3"]
+[ext_resource type="Texture2D" uid="uid://bvfmtn8snw1h2" path="res://entities/player/expresiones/5.png" id="8_dkabh"]
 
 [resource]
 script = ExtResource("2_eois8")
-lines = Array[String](["Carmen: Mateo, buenos días.", "Carmen: Te noto más feliz hoy.", "Mateo: Hola abuela, buenos días!", "Mateo: Creo que tuve un buen sueño, aunque no recuerdo muy bien sobre qué.", "Mateo: Y siendo honesto, se siente bien ver que la gente se va feliz.", "Carmen: ¡¿Verdad?!", "Carmen: Eso es lo que buscamos generar en las personas y lo estás haciendo muy bien.", "Carmen: Voy a limpiar hijito, luego me ayudas con la cocina por favor.", "Mateo: Claro que si, yo me encargo.", "Mateo: ...", "Mateo: Abuela?", "Carmen: ¿Si, Mateo?", "Mateo: Te quiero mucho, gracias por todo lo que haces por mí.", "Carmen: Gracias a ti, por seguir intentándolo hijito.", "Carmen: Eres más que capaz de hacer todo lo que te propongas.", "Carmen: Nunca dudes de ti, eres increible!", "Mateo: ...", "Carmen: Antes que se haga más tarde iré a limpiar.", "Carmen: Cuento contigo Mateito", "Mateo: ¡Claro!"])
+lines = Array[String](["Carmen: Mateo, buenos días.", "Carmen: Te noto más feliz hoy.", "Mateo: Hola abuela, buenos días!", "Mateo: Creo que tuve un buen sueño, aunque no recuerdo muy bien sobre qué.", "Mateo: Y siendo honesto, se siente bien ver que la gente se va feliz.", "Carmen: ¡¿Verdad?!", "Carmen: Eso es lo que buscamos generar en las personas y lo estás haciendo muy bien.", "Carmen: Voy a limpiar hijito, luego me ayudas con la cocina por favor.", "Mateo: Claro que si, yo me encargo.", "Mateo: ...", "Mateo: Abuela?", "Carmen: ¿Si, Mateo?", "Mateo: Te quiero mucho, gracias por todo lo que haces por mí.", "Carmen: Gracias a ti, por seguir intentándolo hijito.", "Carmen: Eres más que capaz de hacer todo lo que te propongas.", "Carmen: Nunca dudes de ti, eres increible!", "Mateo: ...", "Carmen: Antes que se haga más tarde iré a limpiar.", "Carmen: Cuento contigo Mateito!", "Mateo: ¡Claro!"])
+portraits = Array[Texture2D]([ExtResource("2_h7ob4"), ExtResource("2_h7ob4"), ExtResource("3_vveey"), ExtResource("4_64alh"), ExtResource("5_2rp3e"), ExtResource("2_h7ob4"), ExtResource("6_l5ry3"), ExtResource("6_l5ry3"), ExtResource("7_2qte3"), ExtResource("8_dkabh"), ExtResource("8_dkabh"), ExtResource("6_l5ry3"), ExtResource("8_dkabh"), ExtResource("2_h7ob4"), ExtResource("2_h7ob4"), ExtResource("2_h7ob4"), ExtResource("8_dkabh"), ExtResource("6_l5ry3"), ExtResource("2_h7ob4"), ExtResource("7_2qte3")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

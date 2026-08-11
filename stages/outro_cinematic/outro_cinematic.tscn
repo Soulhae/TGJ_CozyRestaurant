@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://03yt34i7kokv"]
+
+[ext_resource type="Script" uid="uid://c6pq11q1my1yn" path="res://stages/outro_cinematic/outro_cinematic.gd" id="1_ovmfi"]
+[ext_resource type="Texture2D" uid="uid://cjcpl6ypukqc" path="res://utilities/a.png" id="2_ovmfi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ovmfi"]
+font_size = 64
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[node name="OutroCinematic" type="CanvasLayer" unique_id=1514258513]
+script = ExtResource("1_ovmfi")
+mateo_phrases = Array[String](["Gracias a todos esos días que pasé contigo es que ahora soy una persona distinta...", "Manejar este lugar solo es algo complicado, pero me las arreglo.", "Aunque extraño tu presencia, sé que siempre vivirás conmigo.", "Ahora este es mi legado.", "YUYAY"])
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=351057597]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ovmfi")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=308639116]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_right = 0.9
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+label_settings = SubResource("LabelSettings_ovmfi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="ColorRect" unique_id=1923427413]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.995
+anchor_top = 0.995
+anchor_right = 0.995
+anchor_bottom = 0.995
+offset_left = -291.0
+offset_top = -45.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Espacio para saltar"

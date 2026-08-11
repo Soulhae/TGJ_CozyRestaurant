@@ -1,9 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bv1j5xh3cdhc3"]
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_ls8hq"]
+[ext_resource type="Texture2D" uid="uid://cpnhgjilmcv6w" path="res://entities/player/expresiones/12.png" id="2_jftd8"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_t8vci"]
+[ext_resource type="Texture2D" uid="uid://yt4ytbh6wnrc" path="res://entities/client_npc/expresiones/Diego/4.png" id="3_qri0t"]
+[ext_resource type="Texture2D" uid="uid://l3le1nodq5vh" path="res://entities/client_npc/expresiones/Diego/5.png" id="4_83q16"]
+[ext_resource type="Texture2D" uid="uid://rhcdsuyrm538" path="res://entities/player/expresiones/9.png" id="5_na5wu"]
 
 [resource]
 script = ExtResource("2_t8vci")
 lines = Array[String](["Mateo: Aquí tiene, está listo!", "Diego: Hace mucho que no como este plato, no se prepara por aquí.", "Diego: El aroma y la comida se ven exactamente como los preparaba mi madre.", "Diego: Me alegra de haber venido aquí, muchas gracias.", "Mateo: Me alegra haber cumplido con sus expectativas."])
+portraits = Array[Texture2D]([ExtResource("2_jftd8"), ExtResource("3_qri0t"), ExtResource("3_qri0t"), ExtResource("4_83q16"), ExtResource("5_na5wu")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

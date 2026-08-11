@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+signal item_deleted
+
 @export var speed: float = 3.0
 
 var target_velocity := Vector3.ZERO
@@ -28,6 +30,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("delete_item"):
 		if held_item:
 			held_item = null
+			item_deleted.emit()
 			AudioManager.play_sfx(AudioManager.delete_sfx)
 		update_held_item_visual()
 

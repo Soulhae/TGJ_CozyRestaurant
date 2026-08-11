@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_e4a4o"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_prhl3"]
+[ext_resource type="Texture2D" uid="uid://ijffumdqbkv7" path="res://entities/player/expresiones/7.png" id="2_tcvg0"]
+[ext_resource type="Texture2D" uid="uid://b67hc68jnghai" path="res://entities/abuela_npc/expresiones/2.png" id="3_mbvcx"]
 
 [resource]
 script = ExtResource("2_prhl3")
 lines = Array[String](["Mateo: Abue, creo que me iré a dormir por hoy...", "Carmen: Te lo has ganado hijo, que tengas una muy buena noche."])
+portraits = Array[Texture2D]([ExtResource("2_tcvg0"), ExtResource("3_mbvcx")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

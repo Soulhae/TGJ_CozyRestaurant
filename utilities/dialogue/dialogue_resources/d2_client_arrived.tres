@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_xclvw"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_7ikfy"]
+[ext_resource type="Texture2D" uid="uid://bmhiidmaotkeg" path="res://entities/abuela_npc/expresiones/1.png" id="2_vwusq"]
+[ext_resource type="Texture2D" uid="uid://cpnhgjilmcv6w" path="res://entities/player/expresiones/12.png" id="3_4klrp"]
 
 [resource]
 script = ExtResource("2_7ikfy")
 lines = Array[String](["Carmen: Mateo!, tenemos un cliente.", "Mateo: Voooy"])
+portraits = Array[Texture2D]([ExtResource("2_vwusq"), ExtResource("3_4klrp")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

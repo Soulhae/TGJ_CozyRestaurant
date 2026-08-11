@@ -14,7 +14,7 @@ material = SubResource("StandardMaterial3D_oiqvi")
 size = Vector3(0.35, 0.35, 0.2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_74gyn"]
-size = Vector3(1, 0.35, 1)
+size = Vector3(1.5, 1, 1.5)
 
 [node name="DirtyDishes" type="StaticBody3D" unique_id=255311217]
 collision_layer = 8

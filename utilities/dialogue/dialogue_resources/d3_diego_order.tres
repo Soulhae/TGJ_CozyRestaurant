@@ -2,8 +2,17 @@
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_ki5os"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_tlofe"]
+[ext_resource type="Texture2D" uid="uid://cpnhgjilmcv6w" path="res://entities/player/expresiones/12.png" id="2_yl7ju"]
+[ext_resource type="Texture2D" uid="uid://bjg0xoianos7h" path="res://entities/client_npc/expresiones/Diego/3.png" id="3_c2q2w"]
+[ext_resource type="Texture2D" uid="uid://ccpx0hkedx8jm" path="res://entities/player/expresiones/6.png" id="4_ukv31"]
+[ext_resource type="Texture2D" uid="uid://l3le1nodq5vh" path="res://entities/client_npc/expresiones/Diego/5.png" id="5_t44sw"]
+[ext_resource type="Texture2D" uid="uid://b22cd7i7eyp5m" path="res://entities/player/expresiones/3.png" id="6_ybr6c"]
+[ext_resource type="Texture2D" uid="uid://3wodvad7hj28" path="res://entities/client_npc/expresiones/Diego/2.png" id="7_wguy2"]
+[ext_resource type="Texture2D" uid="uid://bvfmtn8snw1h2" path="res://entities/player/expresiones/5.png" id="8_xn3ds"]
+[ext_resource type="Texture2D" uid="uid://yt4ytbh6wnrc" path="res://entities/client_npc/expresiones/Diego/4.png" id="9_5r70u"]
 
 [resource]
 script = ExtResource("2_tlofe")
 lines = Array[String](["Mateo: Bienvenido a Yuyay, ¿Cómo puedo ayudarle el día de hoy?", "Diego: ...", "Mateo: ¿Señor?", "Diego: Disculpa, estaba perdido en mis pensamientos.", "Mateo: ¿Hay algo en que lo pueda ayudar?", "Diego: Hace ya 1 año.", "Mateo: ...", "Diego: Hace ya 1 año desde que mis padres no están conmigo...", "Diego: Como quizá notes por mi acento, vengo desde Chile.", "Diego: Llevo viviendo en Perú hace ya un par de años.", "Diego: Todo estaba bien hasta que…", "Diego: La pandemia nos jodió todo.", "Mateo: ...", "Diego: Pasó sin que nadie lo supiera, fue muy repentino.", "Diego: Controlaron quién entraba y quién salía del país muy difícil alguien podría...", "Diego: Mis papás eran mayores y ellos no, ellos no…", "Diego: ...", "Diego: Lo lamento, me brotaron los sentimientos...", "Diego: Vine a este lugar porque me dijeron que la comida de aquí consuela el alma.", "Mateo: Lamento oír su situación señor.", "Mateo: No me imagino el dolor que conlleva perder a alguien.", "Mateo: Le prepararé algo que le haga sentir mejor, se lo prometo.", "Diego: Muchas gracias..."])
+portraits = Array[Texture2D]([ExtResource("2_yl7ju"), ExtResource("3_c2q2w"), ExtResource("4_ukv31"), ExtResource("5_t44sw"), ExtResource("6_ybr6c"), ExtResource("3_c2q2w"), ExtResource("4_ukv31"), ExtResource("3_c2q2w"), ExtResource("7_wguy2"), ExtResource("7_wguy2"), ExtResource("7_wguy2"), ExtResource("3_c2q2w"), ExtResource("8_xn3ds"), ExtResource("7_wguy2"), ExtResource("7_wguy2"), ExtResource("3_c2q2w"), ExtResource("3_c2q2w"), ExtResource("9_5r70u"), ExtResource("9_5r70u"), ExtResource("8_xn3ds"), ExtResource("8_xn3ds"), ExtResource("6_ybr6c"), ExtResource("5_t44sw")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

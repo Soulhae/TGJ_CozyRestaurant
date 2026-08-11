@@ -1,9 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dn1x5qtduwydt"]
 
 [ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_4fg3l"]
+[ext_resource type="Texture2D" uid="uid://b67hc68jnghai" path="res://entities/abuela_npc/expresiones/2.png" id="2_4cncl"]
 [ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_spd05"]
+[ext_resource type="Texture2D" uid="uid://bmhiidmaotkeg" path="res://entities/abuela_npc/expresiones/1.png" id="3_rnkvd"]
+[ext_resource type="Texture2D" uid="uid://cejd83lh8n51h" path="res://entities/player/expresiones/10.png" id="4_16e8q"]
+[ext_resource type="Texture2D" uid="uid://cpnhgjilmcv6w" path="res://entities/player/expresiones/12.png" id="5_iudau"]
 
 [resource]
 script = ExtResource("2_spd05")
 lines = Array[String](["Carmen: Hiciste un excelente trabajo!", "Carmen: Ahora ve a descansar, mañana será un nuevo día.", "Mateo: Gracias abuela, si no fuera por ti, no habría podido haberlo hecho ni la mitad de bien.", "Mateo: Iré a dormir entonces abue, nos vemos mañana.", "Carmen: Hasta mañana hijito."])
+portraits = Array[Texture2D]([ExtResource("2_4cncl"), ExtResource("3_rnkvd"), ExtResource("4_16e8q"), ExtResource("5_iudau"), ExtResource("2_4cncl")])
 metadata/_custom_type_script = "uid://cytnflbegjbj4"

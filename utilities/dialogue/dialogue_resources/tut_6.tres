@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://q7pnxqw15xgc"]
+
+[ext_resource type="Script" uid="uid://sqowrwv16roo" path="res://utilities/dialogue/dialogue_choice/dialogue_choice.gd" id="1_yimkq"]
+[ext_resource type="Script" uid="uid://cytnflbegjbj4" path="res://utilities/dialogue/dialogue_data/dialogue_data.gd" id="2_c8hk1"]
+
+[resource]
+script = ExtResource("2_c8hk1")
+lines = Array[String](["Carmen: Para esta comida la cebolla te ha quedado muy pequeña.", "Carmen: No te preocupes, toma el alimento y deséchalo.", "Carmen: Para esto, toma la cebolla con \"E\" y luego presiona \"X\".", "Carmen: A continuación, corta una nueva cebolla."])
+metadata/_custom_type_script = "uid://cytnflbegjbj4"
